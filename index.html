@@ -3,24 +3,54 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Ferme aux Sabots Fendus</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header style="display:flex; justify-content:space-between; align-items:center; padding:10px 5%; background:white;">
-        <img src="logofermeauxsabotsfendus.png" alt="Logo" style="height:50px;">
-        <nav style="font-weight:bold; color:#5b8c3d;">Accueil | Boutique | Contact</nav>
+    <header>
+        <img src="logofermeauxsabotsfendus.png" alt="Logo" class="logo">
+        <nav>
+            <a href="#">Accueil</a> | <a href="#">Boutique</a> | <a href="#">Contact</a>
+        </nav>
     </header>
-    <section style="height:400px; background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('header.png'); background-size:cover; background-position:center; display:flex; align-items:center; justify-content:center; color:white; font-size:40px; text-align:center;">
-        <h1 style="margin:0;">La Ferme aux Sabots Fendus</h1>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h1>La Ferme aux Sabots Fendus</h1>
+        </div>
     </section>
-    <section style="display:flex; justify-content:center; gap:20px; padding:40px;">
-        <div style="text-align:center;"><img src="biquette.png" style="width:250px; border-radius:50%; border:5px solid white; box-shadow:0 4px 10px rgba(0,0,0,0.1);"><h3>Produits Laitiers</h3></div>
-        <div style="text-align:center;"><img src="brebis.png" style="width:250px; border-radius:50%; border:5px solid white; box-shadow:0 4px 10px rgba(0,0,0,0.1);"><h3>Viande Bio</h3></div>
+
+    <section class="produits">
+        <div class="produit-card">
+            <div class="image-cercle">
+                <img src="biquette.png" alt="Chèvre">
+            </div>
+            <h3>Yaourts & Glaces</h3>
+            <p>La ferme vous propose ses produits laitiers issus de nos chèvres.</p>
+        </div>
+
+        <div class="produit-card">
+            <div class="image-cercle">
+                <img src="brebis.png" alt="Brebis">
+            </div>
+            <h3>Nos Caissettes</h3>
+            <p>La viande de la ferme est disponible en caissettes sur réservation.</p>
+        </div>
     </section>
-    <footer style="background:#5b8c3d; color:white; padding:40px; display:flex; gap:30px; align-items:center;">
-        <img src="maps.png" alt="Carte" style="width:300px; border-radius:15px; border:3px solid white;">
-        <div><h3 style="margin:0;">Infos pratiques</h3><p>📍 Anglards-de-Saint-Flour</p></div>
+
+    <footer>
+        <div class="footer-content">
+            <img src="maps.png" alt="Carte" class="map">
+            <div class="infos">
+                <h3>Infos pratiques</h3>
+                <p>📍 Anglards-de-Saint-Flour</p>
+                <p>📞 06 XX XX XX XX</p>
+            </div>
+        </div>
     </footer>
     <script src="script.js"></script>
 </body>
 </html>
+
