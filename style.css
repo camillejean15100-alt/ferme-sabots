@@ -1,113 +1,84 @@
-/* 1. IMPORTATION DES POLICES */
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700;800&family=Montserrat+Alternates:wght@400;700&display=swap');
-
-/* 2. STYLE GÉNÉRAL */
-body { 
-    margin: 0; 
-    font-family: 'Montserrat Alternates', sans-serif; 
-    background-color: #fdfcf3; /* Beige crème clair */
-    color: #4a4a4a;
-    line-height: 1.6;
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fdfcf3;
+    color: #333;
 }
 
-/* 3. LE HEADER (MENU DU HAUT) */
-header { 
-    background: white; 
-    padding: 15px 5%; 
-    display: flex; 
-    justify-content: space-between; 
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    padding: 10px 5%;
+    background: white;
 }
 
-.logo-img { 
-    height: 60px; 
+.logo { height: 60px; }
+
+nav { font-weight: bold; color: #5b8c3d; }
+nav a { text-decoration: none; color: inherit; }
+
+/* HERO SECTION */
+.hero {
+    height: 500px;
+    background: url('header.png') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-nav { 
-    font-weight: 700; 
-    color: #5b8c3d; /* Vert signature */
-    font-size: 14px;
-}
-
-/* 4. LA BANNIÈRE (HERO SECTION) */
-.hero { 
-    height: 450px; 
-    background-size: cover; 
-    background-position: center; 
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    position: relative;
-}
-
-.hero h1 { 
-    color: white; 
-    font-family: 'Fraunces', serif; 
-    font-size: 3.5rem; 
-    text-align: center; 
-    text-shadow: 3px 3px 15px rgba(0,0,0,0.6);
+.hero h1 {
+    font-size: 4rem;
+    font-weight: 900;
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 15px rgba(0,0,0,0.5);
     margin: 0;
 }
 
-/* 5. LES PRODUITS (CARTES) */
-.produits { 
-    display: flex; 
-    justify-content: center; 
-    gap: 40px; 
-    padding: 60px 5%; 
-    flex-wrap: wrap;
+/* PRODUITS */
+.produits {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    padding: 80px 10%;
+    text-align: center;
 }
 
-.produit-card { 
-    text-align: center; 
+.image-cercle {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    border: 12px solid white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    overflow: hidden;
+    margin-bottom: 20px;
 }
 
-.produit-card img { 
-    width: 280px; 
-    height: 280px; 
-    object-fit: cover; 
-    border-radius: 50%; 
-    border: 8px solid white; 
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
+.image-cercle img { width: 100%; height: 100%; object-fit: cover; }
+
+.produit-card h3 {
+    font-size: 1.8rem;
+    color: #444;
+    margin-bottom: 10px;
 }
 
-.produit-card img:hover {
-    transform: scale(1.05);
+/* FOOTER */
+footer {
+    background-color: #5b8c3d;
+    color: white;
+    padding: 50px 10%;
 }
 
-.produit-card h3 { 
-    color: #5b8c3d; 
-    font-family: 'Fraunces', serif; 
-    font-size: 1.6rem; 
+.footer-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
 }
 
-/* 6. LE PIED DE PAGE (FOOTER) */
-footer { 
-    background: #5b8c3d; 
-    color: white; 
-    padding: 50px 10%; 
-}
-
-.footer-grid { 
-    display: flex; 
-    max-width: 1000px; 
-    margin: 0 auto; 
-    gap: 40px; 
-    align-items: center; 
-    flex-wrap: wrap;
-}
-
-.map-img { 
-    width: 100%; 
-    max-width: 350px; 
-    border-radius: 20px; 
-    border: 4px solid white; 
-}
-
-.infos h3 { 
-    font-family: 'Fraunces', serif; 
-    font-size: 2rem; 
-    margin-bottom: 15px;
+.map {
+    width: 350px;
+    border-radius: 15px;
+    border: 4px solid white;
 }
