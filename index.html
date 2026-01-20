@@ -4,51 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La Ferme aux Sabots Fendus</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;700;800&family=Montserrat+Alternates:wght@400;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <header>
-        <img src="logofermeauxsabotsfendus.png" alt="Logo" class="logo">
-        <nav>Accueil | Boutique | Contact</nav>
+        <div class="header-inner">
+            <div class="logo">
+                <img src="logofermeauxsabotsfendus.png" alt="Logo">
+                <div class="logo-txt">
+                    <span class="f-1">La Ferme aux</span><br>
+                    <span class="f-2">Sabots Fendus</span>
+                </div>
+            </div>
+            <nav>Accueil | L'Élevage | Boutique | Nous Contacter</nav>
+        </div>
     </header>
 
     <section class="hero">
-        <h1>La Ferme aux Sabots Fendus</h1>
+        <div class="hero-overlay">
+            <h1>"Bienvenue à la <br><strong>Ferme aux Sabots Fendus !"</strong></h1>
+        </div>
+        <div class="vague">
+            <svg viewBox="0 0 1440 320"><path fill="#fdfcf3" d="M0,160L48,176C96,192,192,224,288,213.3C384,203,480,149,576,144C672,139,768,181,864,202.7C960,224,1056,224,1152,202.7C1248,181,1344,139,1392,117.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+        </div>
     </section>
 
-    <div class="container">
-        <section class="produits">
-            <div class="produit-card">
-                <div class="cercle-blanc">
-                    <img src="biquette.png" alt="Chèvre">
-                </div>
-                <h3>Yaourts & Glaces</h3>
-                <p>La ferme vous propose ses produits laitiers issus de nos chèvres.</p>
-            </div>
+    <section class="intro">
+        <p>Nous élevons avec passion un troupeau de chèvres ainsi qu'un troupeau de brebis BMC conduit en agriculture biologique. Deux élevages complémentaires unis par une même exigence : la qualité et la saveur de nos produits.</p>
+        <a href="#" class="btn">DÉCOUVRIR NOS PRODUITS</a>
+    </section>
 
-            <div class="produit-card">
-                <div class="cercle-blanc">
-                    <img src="brebis.png" alt="Brebis">
+    <section class="stars">
+        <h2 class="title">Nos Stars du Goûts</h2>
+        <div class="cards">
+            <div class="card produit-card">
+                <div class="circle"><img src="biquette.png" alt="Chèvre"></div>
+                <div class="card-info">
+                    <span class="small">YAOURTS & GLACES</span>
+                    <h3>on vous prévient, nos produits vous rendront accros !</h3>
+                    <p>100% lait de la ferme</p>
                 </div>
-                <h3>Nos Caissettes</h3>
-                <p>La viande de la ferme est disponible en caissettes sur réservation.</p>
             </div>
-        </section>
-    </div>
+            <div class="card produit-card">
+                <div class="circle"><img src="brebis.png" alt="Brebis"></div>
+                <div class="card-info">
+                    <span class="small">NOS CAISSETTES</span>
+                    <h3>Acheter notre viande BIO, c'est savourer une viande de qualité produite à la ferme</h3>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <footer>
-        <div class="footer-grid">
-            <img src="maps.png" alt="Carte" class="map">
-            <div class="infos">
-                <h3>Infos pratiques</h3>
-                <p>📍 Anglards-de-Saint-Flour</p>
-                <p>📞 06 XX XX XX XX</p>
+        <div class="footer-container">
+            <div class="footer-left">
+                <img src="maps.png" alt="Carte" class="map-img">
+            </div>
+            <div class="footer-right">
+                <img src="logofermeauxsabotsfendus.png" alt="Logo Blanc" class="footer-logo-white">
+                <h3>Infos pratique</h3>
+                <p>📍 <strong>Adresse :</strong> Anglards-de-Saint-Flour</p>
+                <p>📞 <strong>Tel :</strong> 06 XX XX XX XX</p>
+                <p>🕒 <strong>Horaires :</strong> Vente à la ferme : le mardi et le jeudi</p>
             </div>
         </div>
     </footer>
-
     <script src="script.js"></script>
 </body>
 </html>
