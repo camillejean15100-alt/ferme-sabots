@@ -1,17 +1,29 @@
-// Petit effet pour faire apparaître les éléments au défilement
-window.addEventListener('scroll', () => {
+// Attendre que toute la page soit chargée
+document.addEventListener('DOMContentLoaded', () => {
+    
+    // 1. Sélectionner toutes les cartes de produits
     const cards = document.querySelectorAll('.produit-card');
-    const triggerBottom = window.innerHeight / 5 * 4;
 
-    cards.forEach(card => {
-        const cardTop = card.getBoundingClientRect().top;
+    // 2. Fonction pour vérifier la position des cartes au défilement
+    const checkCards = () => {
+        const triggerBottom = window.innerHeight / 5 * 4;
 
-        if(cardTop < triggerBottom) {
-            card.style.opacity = "1";
-            card.style.transform = "translateY(0)";
-        }
-    });
+        cards.forEach(card => {
+            const cardTop = card.getBoundingClientRect().top;
+
+            // Si la carte est visible dans l'écran
+            if (cardTop < triggerBottom) {
+                card.style.opacity = "1";
+                card.style.transform = "translateY(0)";
+            }
+        });
+    };
+
+    // 3. Écouter le défilement de la souris
+    window.addEventListener('scroll', checkCards);
+
+    // Lancer une première vérification au chargement (au cas où les cartes sont déjà visibles)
+    checkCards();
+
+    console.log("Système d'animation de la Ferme chargé !");
 });
-
-// Message de bienvenue dans la console pour vérifier que ça marche
-console.log("Le script de la Ferme aux Sabots Fendus est chargé !");
