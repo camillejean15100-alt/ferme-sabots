@@ -1,16 +1,17 @@
-// On attend que la page soit prête
-document.addEventListener("DOMContentLoaded", () => {
-    const header = document.querySelector("header");
+// Petit effet pour faire apparaître les éléments au défilement
+window.addEventListener('scroll', () => {
+    const cards = document.querySelectorAll('.produit-card');
+    const triggerBottom = window.innerHeight / 5 * 4;
 
-    // Fonction pour ajouter une ombre au menu quand on descend
-    window.addEventListener("scroll", () => {
-        if (window.scrollY > 50) {
-            header.style.boxShadow = "0 4px 15px rgba(0,0,0,0.1)";
-            header.style.transition = "all 0.3s ease";
-        } else {
-            header.style.boxShadow = "none";
+    cards.forEach(card => {
+        const cardTop = card.getBoundingClientRect().top;
+
+        if(cardTop < triggerBottom) {
+            card.style.opacity = "1";
+            card.style.transform = "translateY(0)";
         }
     });
-
-    console.log("Le script de la Ferme aux Sabots Fendus est chargé !");
 });
+
+// Message de bienvenue dans la console pour vérifier que ça marche
+console.log("Le script de la Ferme aux Sabots Fendus est chargé !");
