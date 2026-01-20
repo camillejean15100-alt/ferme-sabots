@@ -1,47 +1,45 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La Ferme aux Sabots Fendus</title>
-    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <header>
         <img src="logofermeauxsabotsfendus.png" alt="Logo" class="logo">
-        <nav>
-            <a href="#">Accueil</a> | <a href="#">Boutique</a> | <a href="#">Contact</a>
-        </nav>
+        <nav>Accueil | Boutique | Contact</nav>
     </header>
 
     <section class="hero">
-        <div class="hero-text">
-            <h1>La Ferme aux Sabots Fendus</h1>
-        </div>
+        <h1>La Ferme aux Sabots Fendus</h1>
     </section>
 
-    <section class="produits">
-        <div class="produit-card">
-            <div class="image-cercle">
-                <img src="biquette.png" alt="Chèvre">
+    <div class="container">
+        <section class="produits">
+            <div class="produit-card">
+                <div class="cercle-blanc">
+                    <img src="biquette.png" alt="Chèvre">
+                </div>
+                <h3>Yaourts & Glaces</h3>
+                <p>La ferme vous propose ses produits laitiers issus de nos chèvres.</p>
             </div>
-            <h3>Yaourts & Glaces</h3>
-            <p>La ferme vous propose ses produits laitiers issus de nos chèvres.</p>
-        </div>
 
-        <div class="produit-card">
-            <div class="image-cercle">
-                <img src="brebis.png" alt="Brebis">
+            <div class="produit-card">
+                <div class="cercle-blanc">
+                    <img src="brebis.png" alt="Brebis">
+                </div>
+                <h3>Nos Caissettes</h3>
+                <p>La viande de la ferme est disponible en caissettes sur réservation.</p>
             </div>
-            <h3>Nos Caissettes</h3>
-            <p>La viande de la ferme est disponible en caissettes sur réservation.</p>
-        </div>
-    </section>
+        </section>
+    </div>
 
     <footer>
-        <div class="footer-content">
+        <div class="footer-grid">
             <img src="maps.png" alt="Carte" class="map">
             <div class="infos">
                 <h3>Infos pratiques</h3>
@@ -50,7 +48,7 @@
             </div>
         </div>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
-
