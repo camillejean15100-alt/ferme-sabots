@@ -77,59 +77,40 @@
     text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
 }
 /* --- biographie --- */
-.wrapper-ferme {
-    position: relative;
-    width: 100%;
-    /* Colle à la bannière du haut */
-    margin-top: -2px; 
-    line-height: 0;
+.ferme-presentation {
+  text-align: center;
+  padding: 50px 20px;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; /* Pour l'aspect arrondi */
+  background-color: #ffffff;
 }
 
-.fond-responsive {
-    width: 100%;
-    height: auto;
-    display: block;
+.description {
+  color: #9e9e9e; /* Gris doux correspondant à l'image */
+  font-size: 1.4rem;
+  line-height: 1.5;
+  margin-bottom: 40px;
+  font-weight: 400;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.contenu-fixe {
-    position: absolute;
-    /* Centrage parfait sur l'image */
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    
-    width: 90%;
-    text-align: center;
-    line-height: normal; /* Réinitialise le line-height pour le texte */
+.btn-produits {
+  display: inline-block;
+  background-color: #f2c06d; /* Le jaune orangé exact de l'image */
+  color: #ffffff;
+  text-decoration: none;
+  padding: 18px 45px;
+  border-radius: 15px; /* Coins arrondis du bouton */
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: background-color 0.3s ease;
 }
 
-.contenu-fixe p {
-    color: #a3a3a2;
-    font-family: 'Montserrat Alternates', sans-serif;
-    /* Le texte rétrécit avec l'image */
-    font-size: clamp(0.7rem, 1.4vw, 1.2rem);
-    margin-bottom: 3%;
+.btn-produits:hover {
+  background-color: #e5b35d; /* Effet de survol léger */
 }
-
-.btn-orange {
-    display: inline-block;
-    background-color: #f2c06d;
-    color: white;
-    text-decoration: none;
-    font-family: 'Montserrat Alternates', sans-serif;
-    font-weight: bold;
-    text-transform: uppercase;
-    
-    /* Taille du bouton proportionnelle */
-    padding: 1% 4%;
-    border-radius: 10px;
-    font-size: clamp(0.6rem, 1.1vw, 1rem);
-}
-
-
-
-
-
 
 
 /* --- RESPONSIVE --- */
