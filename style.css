@@ -95,70 +95,51 @@
     }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500;700&display=swap');
 
-.section-bio {
-    position: relative;
-    background-color: #f2ede0; /* Le beige du fond */
-    padding: 100px 0; /* Espace pour les vagues */
-    text-align: center;
-    overflow: hidden;
-}
-
-.content-wrapper {
-    position: relative;
-    z-index: 2;
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.text-main {
+.section-courbe-elevage {
+    background-color: #f2ede0;
     font-family: 'Montserrat Alternates', sans-serif;
+    text-align: center;
+    /* Création de la forme vague exacte en haut et en bas */
+    clip-path: ellipse(150% 100% at 50% 50%);
+    padding: 120px 20px;
+    margin-top: -50px; /* Pour chevaucher un peu la banner si besoin */
+    display: flex;
+    justify-content: center;
+}
+
+.inner-content {
+    max-width: 900px;
+}
+
+.description-bio {
     color: #A7A79D;
-    font-size: 20px;
-    line-height: 1.6;
+    font-size: 22px;
+    line-height: 1.5;
     margin-bottom: 40px;
     font-weight: 500;
 }
 
-.btn-products {
+.btn-boutique {
     display: inline-block;
-    font-family: 'Montserrat Alternates', sans-serif;
     background-color: #f4c471;
-    color: #FFFFFF !important;
+    color: #ffffff !important;
     padding: 18px 45px;
     text-decoration: none;
-    border-radius: 12px;
-    font-weight: 600;
+    border-radius: 15px;
+    font-weight: 700;
+    font-size: 18px;
     text-transform: uppercase;
     transition: 0.3s;
 }
 
-.btn-products:hover {
+.btn-boutique:hover {
     background-color: #eab459;
-    transform: scale(1.05);
 }
 
-/* Gestion des vagues */
-.wave {
-    position: absolute;
-    left: 0;
-    width: 100%;
-    line-height: 0;
-}
-
-.wave-top {
-    top: 0;
-}
-
-.wave-bottom {
-    bottom: 0;
-    transform: rotate(180deg); /* On retourne la même vague pour le bas */
-}
-
-.wave svg {
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 80px;
+/* Fix mobile */
+@media (max-width: 768px) {
+    .description-bio { font-size: 18px; }
+    .section-courbe-elevage { padding: 80px 15px; }
 }
