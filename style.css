@@ -95,52 +95,70 @@
     }
 }
 
-/* Import de la police Montserrat Alternates */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500;600&display=swap');
 
-.section-produits {
-    background-color: #F2EDE0; /* Fond beige de l'image */
-    padding: 100px 20px;
+.section-bio {
+    position: relative;
+    background-color: #f2ede0; /* Le beige du fond */
+    padding: 100px 0; /* Espace pour les vagues */
     text-align: center;
-    width: 100%;
+    overflow: hidden;
 }
 
-.content-container {
-    max-width: 950px;
+.content-wrapper {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
     margin: 0 auto;
+    padding: 20px;
 }
 
-.description-elevage {
+.text-main {
     font-family: 'Montserrat Alternates', sans-serif;
-    color: #A7A79D; /* Code couleur exact demandé */
+    color: #A7A79D;
     font-size: 20px;
     line-height: 1.6;
     margin-bottom: 40px;
     font-weight: 500;
 }
 
-.btn-decouvrir {
+.btn-products {
     display: inline-block;
     font-family: 'Montserrat Alternates', sans-serif;
-    background-color: #F4C471; /* Orange du bouton */
+    background-color: #f4c471;
     color: #FFFFFF !important;
     padding: 18px 45px;
     text-decoration: none;
     border-radius: 12px;
     font-weight: 600;
-    font-size: 18px;
     text-transform: uppercase;
-    transition: background-color 0.3s ease;
-    border: none;
+    transition: 0.3s;
 }
 
-.btn-decouvrir:hover {
-    background-color: #E8B55F;
+.btn-products:hover {
+    background-color: #eab459;
+    transform: scale(1.05);
 }
 
-/* Version Mobile */
-@media (max-width: 768px) {
-    .description-elevage {
-        font-size: 18px;
-    }
+/* Gestion des vagues */
+.wave {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    line-height: 0;
+}
+
+.wave-top {
+    top: 0;
+}
+
+.wave-bottom {
+    bottom: 0;
+    transform: rotate(180deg); /* On retourne la même vague pour le bas */
+}
+
+.wave svg {
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 80px;
 }
