@@ -67,30 +67,44 @@ body {
     width: 100%;
 }
 
-/* 2. On force l'image à être la base */
+/* 1. On s'assure que le bloc hero est le socle */
+.hero {
+    position: relative;
+    width: 100%;
+}
+
 .hero img {
     width: 100%;
     height: auto;
     display: block;
 }
 
-/* 3. LE TEXTE : On le sort du flux pour le poser SUR l'image */
-.hero-text-overlay, .hero-content, .hero-text-area {
-    position: absolute !important; /* Indispensable pour être SUR l'image */
-    top: 50% !important;           /* Centre vertical */
-    left: 50% !important;          /* Centre horizontal */
-    transform: translate(-50%, -50%) !important; /* Calage parfait au milieu */
-    width: 90% !important;
-    text-align: center !important;
-    z-index: 20 !important;        /* Passe devant tout le reste */
+/* 2. LE TEXTE : On le place au milieu de l'image */
+/* Utilise le nom de la div qui entoure ton texte dans ton HTML */
+.hero-text-area, .hero-content, .hero-overlay {
+    position: absolute;
+    top: 50%; /* Milieu vertical */
+    left: 50%; /* Milieu horizontal */
+    transform: translate(-50%, -50%); /* Ajustement pour un centrage parfait */
+    width: 90%;
+    text-align: center;
+    z-index: 20; /* Pour passer devant l'image et la vague */
 }
 
-/* 4. Style du texte : Fraunces et Blanc pur */
 .hero-title, .hero-text {
     font-family: 'Fraunces', serif !important;
-    color: #ffffff !important;     /* BLANC */
-    font-size: clamp(1.5rem, 5vw, 3.5rem) !important;
-    font-weight: 700 !important;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6) !important; /* Lisibilité */
-    margin: 0 !important;
+    color: #ffffff !important; /* Blanc pur */
+    font-size: clamp(1.5rem, 5vw, 3rem); /* Responsive automatique */
+    font-weight: 700;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* Pour bien lire sur l'image */
+    margin: 0;
+}
+
+/* 3. TA VAGUE : Elle reste en bas, on n'y touche pas */
+.hero-vague, .hero-wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
 }
