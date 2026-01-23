@@ -72,47 +72,53 @@ body {
     width: 100%;
 }
 
-/* Image Responsive */
-.hero-img {
+.hero {
+    position: relative;
     width: 100%;
-    height: auto;
+    overflow: hidden; /* Empêche tout débordement bizarre */
     display: block;
-    min-height: 300px; /* Évite que l'image disparaisse sur tout petit écran */
-    object-fit: cover;
 }
 
-/* Placement du texte AU-DESSUS de l'image */
-.hero-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Centre parfaitement le texte */
+.hero-image {
     width: 100%;
-    text-align: center;
-    z-index: 10;
-    padding: 0 20px;
+    height: auto; /* Garde les proportions de l'image sur tous les écrans */
+    display: block;
 }
 
-.hero-title {
-    font-family: 'Fraunces', serif;
-    color: #ffffff; /* Blanc pur */
-    font-size: clamp(1.5rem, 5vw, 3rem); /* Taille fluide selon l'écran */
-    font-weight: 700;
-    line-height: 1.2;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4); /* Ombre pour la lisibilité */
-}
-
-/* La Vague responsive */
-.wave-divider {
+/* Le texte : toujours centré, peu importe la taille de l'écran */
+.hero-overlay {
     position: absolute;
-    bottom: 0;
+    top: 0;
     left: 0;
-    width: 100%;
-    height: auto;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
 }
 
-.wave-divider svg {
-    display: block;
-    width: 100%;
-    height: 80px; /* Hauteur de la vague */
+.hero-text {
+    font-family: 'Fraunces', serif;
+    color: #ffffff;
+    /* font-size s'adapte à la largeur de la fenêtre (Viewport Width) */
+    font-size: clamp(1.2rem, 4vw, 3rem); 
+    text-align: center;
+    line-height: 1.2;
+    font-weight: 700;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    padding: 0 5%; /* Évite que le texte touche les bords sur mobile */
+}
+
+/* La Vague : Elle est "ancrée" en bas de l'image */
+.hero-vague {
+    position: absolute;
+    bottom: -2px; /* Pour masquer tout filet blanc parasite */
+    left: -10%; /* On dépasse un peu pour que la courbe soit plus large et naturelle */
+    width: 120%; 
+    height: 15vw; /* La hauteur de la vague est proportionnelle à la largeur */
+    background-color: #fdfdf3; /* Ta couleur de fond beige/crème */
+    /* On crée l'arrondi qui remonte */
+    border-radius: 50% 50% 0 0; 
+    z-index: 5;
 }
