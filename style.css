@@ -2,156 +2,55 @@
     --beige: #f4f1e6;
     --vert-fonce: #5d8233;
     --vert-clair: #8bb956;
-    --jaune-orange: #f2c478;
+    --orange: #f2c478;
 }
 
-body {
-    margin: 0;
-    font-family: 'Quicksand', sans-serif;
-    color: #444;
-    overflow-x: hidden;
-}
+body { margin: 0; font-family: 'Quicksand', sans-serif; background: #fff; }
 
-/* HEADER */
-.main-header {
-    background-color: white;
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 50px;
-}
-
-.logo { display: flex; align-items: center; }
-.logo img { width: 50px; margin-right: 10px; }
+/* HEADER & NAV */
+.navbar { display: flex; justify-content: space-between; align-items: center; padding: 10px 5%; }
+.logo { display: flex; align-items: center; gap: 10px; }
+.logo img { height: 60px; }
 .logo-text { font-weight: bold; line-height: 1; }
 .green-dark { color: var(--vert-fonce); }
 .green-light { color: var(--vert-clair); }
-
-.nav-links { list-style: none; display: flex; gap: 20px; }
+.nav-links { display: flex; list-style: none; gap: 20px; }
 .nav-links a { text-decoration: none; color: var(--vert-fonce); font-weight: bold; }
 
-.hero-images {
-    position: relative;
-    height: 400px;
+/* BANNIERE */
+.hero { position: relative; height: 350px; }
+.hero-img { width: 100%; height: 100%; object-fit: cover; }
+.hero-text { position: absolute; top: 50%; width: 100%; text-align: center; transform: translateY(-50%); }
+.hero-text h1 { color: white; font-size: 2.5rem; text-shadow: 2px 2px 10px rgba(0,0,0,0.5); }
+.wave { margin-top: -60px; position: relative; z-index: 10; line-height: 0; }
+
+/* INTRO */
+.intro { background: var(--beige); padding: 40px 10%; text-align: center; }
+.intro p { color: #888; margin-bottom: 25px; line-height: 1.6; }
+.btn { background: var(--orange); color: white; padding: 12px 25px; border-radius: 12px; text-decoration: none; font-weight: bold; display: inline-block; }
+
+/* CARTES PRODUITS */
+.stars { padding: 50px 5%; text-align: center; }
+.title { color: var(--vert-fonce); margin-bottom: 30px; }
+.cards { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; }
+.card { background: var(--beige); border-radius: 20px; padding: 20px; width: 420px; display: flex; align-items: center; box-shadow: 4px 4px 15px rgba(0,0,0,0.05); }
+.img-box { width: 110px; height: 110px; border-radius: 50%; border: 3px solid var(--vert-clair); overflow: hidden; margin-right: 15px; flex-shrink: 0; }
+.img-box img { width: 100%; height: 100%; object-fit: cover; }
+.txt-box { text-align: left; }
+.txt-box h3 { color: var(--vert-clair); margin: 0; font-size: 1.1rem; }
+.farm-label { font-size: 0.8rem; font-weight: bold; color: #aaa; }
+
+/* FOOTER HERBE */
+.footer { background: var(--vert-fonce); color: white; position: relative; margin-top: 80px; padding: 60px 5% 40px; }
+.grass-top { 
+    position: absolute; top: -35px; left: 0; width: 100%; height: 40px; 
+    background-repeat: repeat-x; background-size: contain; 
 }
-
-.full-hero { width: 100%; height: 100%; object-fit: cover; }
-
-.hero-overlay {
-    position: absolute;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    width: 100%;
-    z-index: 2;
-}
-
-.hero-overlay h1 {
-    color: white;
-    font-size: 2.5rem;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
-}
-
-.wave-separator { line-height: 0; }
-.wave-separator-bottom { line-height: 0; margin-top: -1px; }
-
-/* SECTION INTRO BEIGE */
-.intro-section {
-    background-color: var(--beige);
-    padding: 40px 20px;
-    text-align: center;
-}
-
-.intro-section p {
-    max-width: 800px;
-    margin: 0 auto 30px;
-    color: #888;
-    font-weight: 500;
-}
-
-.btn-cta {
-    background-color: var(--jaune-orange);
-    color: white;
-    padding: 15px 35px;
-    text-decoration: none;
-    border-radius: 10px;
-    font-weight: bold;
-    display: inline-block;
-}
-
-/* CARDS SECTION */
-.stars-section { padding: 60px 20px; text-align: center; }
-.section-title { color: var(--vert-fonce); margin-bottom: 40px; }
-
-.cards-container {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
-}
-
-.card {
-    background-color: var(--beige);
-    border-radius: 20px;
-    padding: 20px;
-    width: 450px;
-    display: flex;
-    align-items: center;
-    box-shadow: 5px 5px 15px rgba(0,0,0,0.08);
-}
-
-.image-circle {
-    width: 120px; height: 120px;
-    border-radius: 50%;
-    border: 3px solid var(--vert-clair);
-    overflow: hidden;
-    margin-right: 20px;
-    flex-shrink: 0;
-}
-.image-circle img { width: 100%; height: 100%; object-fit: cover; }
-
-.card-text { text-align: left; }
-.card-text h3 { color: var(--vert-clair); margin: 0; }
-.subtext { font-weight: bold; color: #aaa; font-size: 0.8rem; }
-
-/* FOOTER AVEC HERBE */
-.footer-grass {
-    background-color: var(--vert-fonce);
-    position: relative;
-    padding: 100px 50px 50px;
-    margin-top: 100px;
-    color: white;
-}
-
-/* L'HERBE : Utilisation d'un masque SVG répété */
-.grass-border {
-    position: absolute;
-    top: -45px; /* On remonte l'herbe sur le blanc */
-    left: 0;
-    width: 100%;
-    height: 50px;
-    background-color: var(--vert-fonce);
-    /* Voici le code pour dessiner l'herbe en CSS */
-    clip-path: polygon(0% 100%, 3% 60%, 6% 100%, 10% 40%, 13% 100%, 16% 55%, 20% 100%, 23% 30%, 26% 100%, 30% 65%, 33% 100%, 36% 45%, 40% 100%, 43% 20%, 46% 100%, 50% 60%, 53% 100%, 56% 40%, 60% 100%, 63% 50%, 66% 100%, 70% 30%, 73% 100%, 76% 55%, 80% 100%, 83% 40%, 86% 100%, 90% 60%, 93% 100%, 96% 35%, 100% 100%);
-}
-
-.footer-content {
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-    align-items: flex-start;
-}
-
-.fake-map {
-    width: 350px; height: 250px;
-    background: #c9e2b3;
-    border-radius: 15px;
-    display: flex; align-items: center; justify-content: center;
-    color: #5d8233; font-weight: bold;
-}
-
-.footer-logo { display: flex; align-items: center; margin-bottom: 20px;}
-.footer-logo img { width: 60px; filter: brightness(0) invert(1); margin-right: 15px; }
+.footer-inner { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
+.map img { width: 320px; border-radius: 15px; }
+.infos { text-align: left; }
+.footer-head { display: flex; align-items: center; gap: 10px; margin-bottom: 15px; }
+.mini-logo { height: 40px; filter: brightness(0) invert(1); }
+.icon { height: 20px; vertical-align: middle; margin-right: 8px; }
+.item { margin-bottom: 10px; }
+.ventes { margin-left: 28px; font-size: 0.9rem; }
