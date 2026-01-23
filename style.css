@@ -1,5 +1,58 @@
+/* --- RESET DE BASE --- */
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Évite les glissements bizarres sur mobile */
+}
+
+/* --- HEADER RESPONSIVE --- */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-container img {
+    width: 70px;
+    height: auto;
+}
+
+.logo-text {
+    font-family: 'Fraunces', serif; /* TA POLICE POUR LE LOGO */
+    color: #669933;
+    font-size: 1.5rem;
+    line-height: 1.1;
+    margin: 0;
+}
+
+/* --- MENU EN MONTSERRAT --- */
+.nav-links {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    font-family: 'Montserrat Alternates', sans-serif; /* TA POLICE POUR LE MENU */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #669933;
+    font-weight: 500;
+}
+
+.barre {
+    color: #669933;
+}
+
+/* --- BANNIÈRE & TEXTE SUPERPOSÉ --- */
 .banner {
-    position: relative; /* Indispensable : l'image devient le cadre du texte */
+    position: relative; /* Bloque le texte à l'intérieur de l'image */
     width: 100%;
 }
 
@@ -10,20 +63,38 @@
 }
 
 .texte-superpose {
-    position: absolute; /* Le texte flotte */
-    top: 50%;           /* Il descend à 50% du haut de l'image */
-    left: 50%;          /* Il va à 50% de la gauche de l'image */
-    transform: translate(-50%, -50%); /* Il se recale pile au centre mathématique */
-    color: #ffffff;
-    font-size: 3.5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centre parfaitement */
+    color: white;
     text-align: center;
     width: 90%;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+    font-family: 'Fraunces', serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
 }
 
-/* RESPONSIVE : Pour que le texte ne soit pas trop gros sur téléphone */
-@media (max-width: 768px) {
+/* --- LE RESPONSIVE (MOBILE) --- */
+@media (max-width: 850px) {
+    .site-header {
+        flex-direction: column; /* Le menu passe sous le logo sur mobile */
+        gap: 20px;
+        text-align: center;
+    }
+
+    .nav-links {
+        font-size: 0.9rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .barre {
+        display: none; /* Cache les barres pour gagner de la place */
+    }
+
     .texte-superpose {
-        font-size: 1.8rem;
+        font-size: 1.5rem; /* Texte plus petit sur smartphone */
     }
 }
