@@ -1,195 +1,79 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap');
+/* 1. IMPORTATION ET FORCE DE LA TYPO SUR TOUT LE SITE */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+html, body, div, span, h1, h2, h3, p, a, button {
+    font-family: 'Quicksand', sans-serif !important;
 }
 
-body {
-    font-family: 'Quicksand', sans-serif;
-    color: #5d8233;
-    background-color: white;
-}
-
-/* HEADER & NAV */
-header .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 5%;
-}
-
-.logo-container {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.logo-container img {
-    height: 65px;
-}
-
+/* 2. HEADER - TEXTE LOGO ET MENU */
 .logo-text {
-    font-size: 26px;
-    font-weight: 700;
-    line-height: 1.1;
-    color: #5d8233;
-}
-
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 30px;
+    font-size: 28px !important;
+    color: #5d8233 !important;
+    font-weight: 700 !important;
 }
 
 .nav-links a {
-    text-decoration: none;
-    color: #5d8233;
-    font-weight: 700;
-    font-size: 18px;
+    font-size: 18px !important;
+    color: #5d8233 !important;
+    text-decoration: none !important;
 }
 
-/* BANNIÈRE HERO */
+/* 3. HERO - SUPPRESSION DU TRAIT GRIS ET TAILLE TITRE */
 .hero {
     height: 450px;
-    background: url('header.png') center/cover no-repeat;
+    background: url('header.png') center/cover no-repeat !important;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: relative;
+    margin-bottom: -1px; /* Colle la section suivante pour tuer le trait gris */
 }
 
 .hero h1 {
-    color: white;
-    font-size: 48px;
-    text-align: center;
-    font-weight: 700;
-    text-shadow: 3px 3px 12px rgba(0,0,0,0.7);
-    z-index: 2;
+    color: white !important;
+    font-size: 48px !important;
+    text-shadow: 3px 3px 15px rgba(0,0,0,0.8) !important;
 }
 
-/* BLOC INTRODUCTION BEIGE */
-.intro {
-    background-color: #f4f1e6;
-    padding: 80px 20%;
-    text-align: center;
-}
-
-.intro p {
-    font-size: 20px;
-    line-height: 1.6;
-    color: #666;
-    margin-bottom: 40px;
-}
-
-.btn-orange {
-    background-color: #f2c478;
-    color: white;
-    font-size: 22px;
-    font-weight: 700;
-    padding: 20px 50px;
-    border-radius: 15px;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-
-/* SECTION CARTES PRODUITS */
-.stars-section {
-    padding: 80px 5%;
-    text-align: center;
-}
-
-.stars-section h2 {
-    font-size: 34px;
-    margin-bottom: 50px;
-}
-
-.cards-container {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-}
-
+/* 4. CARTES - OMBRE NOIRE ET DURCIE */
 .product-card {
-    background-color: #f4f1e6;
-    border-radius: 30px;
-    padding: 30px;
-    width: 520px;
+    background-color: #f4f1e6 !important;
+    border-radius: 30px !important;
+    padding: 30px !important;
+    /* Ombre très sombre (0.6 d'opacité) et bien décalée */
+    box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.6) !important; 
     display: flex;
     align-items: center;
-    /* OMBRE SOMBRE ET DENSE */
-    box-shadow: 12px 12px 20px rgba(0, 0, 0, 0.4);
+    margin: 20px;
 }
 
 .image-circle {
+    border: 5px solid #8bb956 !important;
     width: 140px;
     height: 140px;
-    border-radius: 50%;
-    border: 5px solid #8bb956;
-    overflow: hidden;
-    flex-shrink: 0;
-    margin-right: 25px;
 }
 
-.image-circle img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.card-content { text-align: left; }
-.card-content h3 { font-size: 24px; color: #8bb956; margin-bottom: 10px; }
-
-/* FOOTER VERT (COULEUR DE L'HERBE) */
+/* 5. FOOTER - VERT UNIQUE (#8bb956) ET HERBE GEANTE */
 footer {
-    background-color: #8bb956;
-    color: white;
-    padding: 100px 5% 50px;
+    background-color: #8bb956 !important; /* Le vert de ton herbe */
+    color: white !important;
+    margin-top: 150px !important;
+    padding: 120px 5% 60px !important;
     position: relative;
-    margin-top: 120px;
 }
 
-/* HERBE GROSSE */
+/* HERBE : ON LA FAIT SORTIR DU CADRE */
 footer::before {
     content: "";
     position: absolute;
-    top: -69px;
+    top: -95px; /* Plus haut */
     left: 0;
     width: 100%;
-    height: 70px;
-    background: url('herbe.png') repeat-x bottom/contain;
+    height: 100px; /* Herbe géante */
+    background: url('herbe.png') repeat-x bottom/contain !important;
 }
 
-.footer-content {
-    display: flex;
-    justify-content: center;
-    gap: 60px;
-    align-items: flex-start;
-}
-
-.footer-map img {
-    border: 5px solid white;
-    border-radius: 20px;
-    width: 380px;
-}
-
-/* LOGO BLANC AUTOMATIQUE */
-.footer-logo-box {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 25px;
-}
-
+/* FORCE LE LOGO EN BLANC DANS LE FOOTER */
 .footer-logo-box img {
-    height: 85px;
-    filter: brightness(0) invert(1);
-}
-
-.footer-logo-text {
-    font-size: 28px;
-    font-weight: 700;
+    height: 90px !important;
+    filter: brightness(0) invert(1) !important; /* Transforme n'importe quelle couleur en blanc */
 }
