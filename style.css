@@ -77,49 +77,50 @@
     text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
 }
 /* --- biographie --- */
-.section-vague {
+/* Importation de la police arrondie pour correspondre à ton image */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+
+.section-ferme {
   width: 100%;
-  /* On utilise ton SVG ici */
-  background-image: url('fondbeige.svg'); 
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover; /* Le SVG va couvrir toute la zone */
+  /* Utilisation de ton image PNG comme fond */
+  background: url('fondbeige.png') no-repeat center center;
+  background-size: contain; /* Garde la forme exacte de la vague */
   
-  /* Centrage parfait du texte et du bouton */
+  /* Centrage absolu du texte et du bouton */
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   
-  /* Ajuste la hauteur selon la forme de ton SVG */
-  padding: 100px 20px; 
+  /* Hauteur minimale pour laisser l'image s'afficher */
+  min-height: 600px; 
+  padding: 40px;
 }
 
-.contenu-interieur {
+.contenu-vague {
   text-align: center;
-  max-width: 800px;
+  max-width: 850px;
 }
 
-.contenu-interieur p {
-  color: #6d6d6d; /* Ton gris d'écriture */
-  font-family: 'Quicksand', sans-serif; /* Police arrondie si tu l'as */
+.texte-description {
+  color: #a3a3a2; /* Le gris exact de ton modèle */
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.2rem;
   line-height: 1.6;
   margin-bottom: 40px;
 }
 
-.btn-produits {
+.btn-bouton {
   display: inline-block;
-  background-color: #f2c06d; /* La couleur jaune/orange du bouton */
+  background-color: #f2c06d; /* Le orange/jaune du bouton */
   color: white;
   text-decoration: none;
-  padding: 18px 45px;
-  border-radius: 15px;
+  padding: 18px 50px;
+  border-radius: 18px; /* Coins très arrondis comme sur l'image */
+  font-family: 'Quicksand', sans-serif;
   font-weight: bold;
-  transition: transform 0.2s;
-}
-
-.btn-produits:hover {
-  transform: scale(1.05); /* Petit effet au survol */
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05); /* Légère ombre pour le relief */
 }
 
 
