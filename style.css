@@ -1,3 +1,4 @@
+/* POLICES */
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat+Alternates:wght@400;700&display=swap');
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -6,14 +7,27 @@ body {
     font-family: 'Montserrat Alternates', sans-serif !important;
     color: #5d8233;
     background-color: white;
+    overflow-x: hidden;
 }
 
-h1, h2, h3, .logo-text, .footer-logo-text {
+h1, h2, h3, .logo-text {
     font-family: 'Fraunces', serif !important;
-    font-weight: 700 !important;
 }
 
-/* HERO AVEC VAGUE */
+/* HEADER */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+}
+.logo-container { display: flex; align-items: center; gap: 15px; }
+.logo-container img { height: 70px; }
+.logo-text { font-size: 26px; line-height: 1.1; color: #5d8233; }
+.nav-links { display: flex; list-style: none; gap: 30px; }
+.nav-links a { text-decoration: none; color: #5d8233; font-weight: 700; }
+
+/* HERO ET VAGUE */
 .hero {
     height: 500px;
     background: url('header.png') center/cover no-repeat;
@@ -22,81 +36,87 @@ h1, h2, h3, .logo-text, .footer-logo-text {
     justify-content: center;
     align-items: center;
 }
-
-.wave-to-beige {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    fill: #f4f1e6;
+.hero h1 {
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    text-shadow: 3px 3px 15px rgba(0,0,0,0.8);
+    z-index: 5;
 }
+.wave-divider {
+    position: absolute;
+    bottom: -1px;
+    width: 100%;
+}
+.wave-divider svg { fill: #f4f1e6; width: 100%; height: 80px; }
 
-/* INTRO AVEC VAGUE */
+/* INTRO BEIGE AVEC VAGUE */
 .intro {
     background-color: #f4f1e6;
-    padding: 60px 20% 120px;
+    padding: 80px 20% 120px;
     text-align: center;
     position: relative;
 }
-
+.btn-orange {
+    background-color: #f2c478;
+    color: white;
+    border: none;
+    padding: 18px 45px;
+    border-radius: 15px;
+    font-weight: 700;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
 .wave-to-white {
     position: absolute;
     bottom: -1px;
-    left: 0;
     width: 100%;
-    fill: white;
 }
+.wave-to-white svg { fill: #ffffff; width: 100%; height: 80px; }
 
-/* CARTES PRODUITS (NOS STARS) */
+/* NOS STARS (CERCLE LARGE ET UNIQUE) */
 .stars-section { padding: 80px 5%; text-align: center; }
+.cards-container { display: flex; justify-content: center; gap: 50px; flex-wrap: wrap; }
 
 .product-card {
     background-color: #f4f1e6;
     border-radius: 35px;
-    padding: 30px;
-    width: 550px;
+    padding: 35px;
+    width: 520px;
     display: flex;
     align-items: center;
     box-shadow: 18px 18px 35px rgba(0, 0, 0, 0.5);
-    margin: 30px auto;
 }
-
 .image-circle {
-    width: 180px;
+    width: 180px; /* Taille augmentée */
     height: 180px;
     border-radius: 50% !important;
-    border: 7px solid #8bb956 !important;
+    border: 7px solid #8bb956 !important; /* Bordure unique épaisse */
     overflow: hidden;
     flex-shrink: 0;
+    margin-right: 25px;
 }
-
 .image-circle img { width: 100%; height: 100%; object-fit: cover; }
 
-/* FOOTER DÉLIMITÉ PAR L'HERBE (SANS VAGUE) */
+/* FOOTER AVEC HERBE XXL (DÉLIMITATION FRANCHE) */
 footer {
     background-color: #5d8233 !important;
-    margin-top: 250px;
+    color: white !important;
+    margin-top: 200px;
     padding: 120px 5% 60px;
     position: relative;
-    color: white;
 }
-
 footer::before {
     content: "";
     position: absolute;
-    top: -160px;
+    top: -155px;
     left: 0;
     width: 100%;
-    height: 180px;
+    height: 170px;
     background: url('herbe.png') repeat-x bottom/contain !important;
     z-index: 10;
 }
-
-.footer-map {
-    border: 8px solid white;
-    border-radius: 25px;
-    width: 450px;
-    height: 320px;
-    overflow: hidden;
-}
-
+.footer-map { border: 8px solid white; border-radius: 25px; width: 450px; height: 320px; overflow: hidden; }
 .footer-map img { width: 100%; height: 100%; object-fit: cover; }
+.footer-logo-box img { height: 90px; filter: none !important; }
