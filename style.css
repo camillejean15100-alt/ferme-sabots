@@ -1,4 +1,4 @@
-/* 1. IMPORTATION DES DEUX TYPOS */
+/* IMPORTATION DES DEUX POLICES SPÉCIFIQUES */
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat+Alternates:wght@400;700&display=swap');
 
 * {
@@ -8,19 +8,19 @@
 }
 
 body {
-    /* CONTENU EN MONTSERRAT ALTERNATES */
+    /* TYPO CONTENU : Montserrat Alternates */
     font-family: 'Montserrat Alternates', sans-serif !important;
     color: #5d8233;
     background-color: white;
 }
 
-/* 2. TITRES ET LOGO EN FRAUNCES */
+/* TITRES ET LOGO : Fraunces */
 h1, h2, h3, .logo-text, .footer-logo-text {
     font-family: 'Fraunces', serif !important;
     font-weight: 700 !important;
 }
 
-/* 3. HEADER (Logo Original) */
+/* HEADER */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -34,6 +34,12 @@ h1, h2, h3, .logo-text, .footer-logo-text {
     line-height: 1.1;
 }
 
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
 .nav-links a {
     text-decoration: none;
     color: #5d8233;
@@ -41,7 +47,7 @@ h1, h2, h3, .logo-text, .footer-logo-text {
     font-size: 18px;
 }
 
-/* 4. HERO SECTION */
+/* BANNIÈRE HERO */
 .hero {
     height: 450px;
     background: url('header.png') center/cover no-repeat !important;
@@ -54,12 +60,25 @@ h1, h2, h3, .logo-text, .footer-logo-text {
     color: white !important;
     font-size: 52px !important;
     text-shadow: 3px 3px 15px rgba(0,0,0,0.8) !important;
+    text-align: center;
 }
 
-/* 5. CARTES PRODUITS (Cercle unique et Ombre noire) */
+/* CARTES PRODUITS */
+.stars-section {
+    padding: 80px 5%;
+    text-align: center;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
 .product-card {
     background-color: #f4f1e6 !important;
     border-radius: 30px !important;
+    /* OMBRE NOIRE ET NETTE */
     box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.6) !important; 
     padding: 30px !important;
     display: flex;
@@ -67,11 +86,12 @@ h1, h2, h3, .logo-text, .footer-logo-text {
     width: 520px;
 }
 
+/* LE CERCLE UNIQUE VERT */
 .image-circle {
     width: 140px;
     height: 140px;
     border-radius: 50% !important;
-    border: 5px solid #8bb956 !important; /* UN SEUL CERCLE VERT */
+    border: 5px solid #8bb956 !important;
     overflow: hidden;
     flex-shrink: 0;
     margin-right: 25px;
@@ -83,7 +103,7 @@ h1, h2, h3, .logo-text, .footer-logo-text {
     object-fit: cover;
 }
 
-/* 6. FOOTER (Logo original, pas de blanc) */
+/* FOOTER VERT CLAIR */
 footer {
     background-color: #8bb956 !important;
     color: white !important;
@@ -92,26 +112,33 @@ footer {
     position: relative;
 }
 
-/* HERBE XXL */
+/* HERBE GÉANTE QUI DÉPASSE */
 footer::before {
     content: "";
     position: absolute;
-    top: -145px;
+    top: -148px; /* Monte très haut sur le blanc */
     left: 0;
     width: 100%;
-    height: 150px;
+    height: 150px; /* Taille massive */
     background: url('herbe.png') repeat-x bottom !important;
     background-size: contain !important;
     z-index: 10;
 }
 
-/* LOGO IDENTIQUE AU HEADER (Filtre supprimé) */
+/* LOGO FOOTER : COULEUR ORIGINALE */
+.footer-logo-box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
 .footer-logo-box img {
     height: 90px !important;
-    filter: none !important; 
+    filter: none !important; /* Pas de blanc, garde le vert/beige */
 }
 
 .footer-logo-text {
     font-size: 28px !important;
-    color: white !important; /* Le texte reste blanc pour contraster sur le vert */
+    color: white !important;
 }
