@@ -34,6 +34,7 @@ body {
 
 /* Style du Menu */
 .nav-links {
+    font-family: 'Montserrat Alternates', serif;
     display: flex;
     align-items: center;
     gap: 12px;
