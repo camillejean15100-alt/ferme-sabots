@@ -3,45 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat+Alternates:wght@500&display=swap" rel="stylesheet">
+    <title>La Ferme - Bio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header class="site-header">
         <div class="logo-container">
-            <img src="logofermeauxsabotsfendus.png" alt="Logo">
-            <h1 class="logo-text">La Ferme aux<br>Sabots Fendus</h1>
+            <div class="logo-placeholder"></div>
+            <h1 class="logo-text">NOM DE<br>LA FERME</h1>
         </div>
 
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="burger-icon"><span></span></label>
+
         <nav class="nav-links">
-            <a href="#">Accueil</a>
+            <a href="#">ACCUEIL</a>
             <span class="barre">|</span>
-            <a href="#">L'Élevage</a>
+            <a href="#">LA FERME</a>
             <span class="barre">|</span>
-            <a href="#">Boutique</a>
+            <a href="#">PRODUITS</a>
             <span class="barre">|</span>
-            <a href="#">Nous Contacter</a>
+            <a href="#">CONTACT</a>
         </nav>
     </header>
 
-   <div class="banner">
-    <img src="header.png" alt="Bannière">
-    <div class="texte-superpose">
-        "Bienvenue à la<br>Ferme aux Sabots Fendus !"
-    </div>
-</div>
+    <section class="banner">
+        <div class="texte-superpose">NOS PRODUITS</div>
+    </section>
 
-<section class="ferme-presentation">
-  <p class="description">
-    Nous élevons avec passion un troupeau de chèvres ainsi<br>
-    qu'un troupeau de brebis BMC conduit en agriculture biologique.<br>
-    Deux élevages complémentaires unis par une même exigence :<br>
-    la qualité et la saveur de nos produits.
-  </p>
-  
-  <a href="#" class="btn-produits">DÉCOUVRIR NOS PRODUITS</a>
-</section>
-    
+    <section class="ferme-presentation">
+        <div class="container">
+            <p class="description">
+                Nous élevons avec passion un troupeau de chèvres ainsi<br class="hide-mobile">
+                qu'un troupeau de brebis BMC conduit en agriculture biologique.<br class="hide-mobile">
+                Deux élevages complémentaires unis par une même exigence :<br class="hide-mobile">
+                la qualité et la saveur de nos produits.
+            </p>
+            <a href="#" class="btn-produits">DÉCOUVRIR NOS PRODUITS</a>
+        </div>
+    </section>
+
 </body>
 </html>
