@@ -121,79 +121,66 @@ body {
     background-color: #e5b15a;
 }
 
-/* Style global de la section */
-.stars-section {
-    text-align: center;
-    padding: 40px 10%;
-    background-color: #ffffff;
-}
-
+/* Centrage du titre principal */
 .main-title {
-    color: #4c6b30;
-    font-family: 'Serif', Georgia, serif; /* Pour l'aspect élégant */
-    font-size: 32px;
+    text-align: center;
+    color: #4a6b2f;
+    font-family: serif;
+    font-size: 2.5rem;
     margin-bottom: 40px;
 }
 
-/* Alignement des deux cartes côte à côte */
+/* Alignement horizontal des deux cartes */
 .stars-container {
     display: flex;
     justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap; /* Permet de passer l'un sous l'autre sur mobile */
+    gap: 30px; /* Espace entre les deux cartes */
+    padding: 20px;
 }
 
 /* Style de la carte beige */
 .product-card {
-    background-color: #fcfaf1; /* Couleur fondbeige.png */
-    border-radius: 35px;
+    background-color: #f9f7ef;
+    border-radius: 40px;
     display: flex;
     align-items: center;
-    padding: 25px;
-    width: 480px;
-    box-shadow: 4px 8px 15px rgba(0,0,0,0.05);
+    padding: 30px;
+    width: 500px;
+    box-shadow: 8px 8px 20px rgba(0,0,0,0.1);
 }
 
-/* Le cercle vert autour de l'animal */
-.image-circle {
-    width: 160px;
-    height: 160px;
+/* Image circulaire avec bordure verte */
+.circle-img {
+    width: 170px;
+    height: 170px;
     border-radius: 50%;
-    border: 4px solid #8cae43;
+    border: 5px solid #8cb342;
     overflow: hidden;
-    flex-shrink: 0; /* Empêche le cercle de s'écraser */
+    flex-shrink: 0;
 }
 
-.image-circle img {
+.circle-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-/* Texte à droite de l'image */
-.product-info {
-    text-align: left;
+/* Texte à l'intérieur de la carte */
+.card-content {
     margin-left: 20px;
-    color: #666;
-    font-family: 'Arial', sans-serif;
+    text-align: center;
+    color: #888;
 }
 
-.product-info h3 {
-    color: #8cae43;
-    margin: 0 0 10px 0;
-    font-size: 1.2rem;
-    letter-spacing: 1px;
+.card-content h3 {
+    color: #8cb342;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
 }
 
-.product-info p {
-    margin: 5px 0;
-    font-size: 0.95rem;
-    line-height: 1.4;
-}
-
-.farm-tag {
-    margin-top: 15px !important;
-    font-weight: 500;
+.card-content .highlight {
+    font-weight: bold;
+    margin-top: 15px;
 }
 
 
