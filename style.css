@@ -76,6 +76,19 @@
     width: 80%;
     text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
 }
+/* --- biographie --- */
+
+.texte{
+    position: absolute;
+    text-align: center;
+    font-family: 'Montserrat Alternates', sans-serif; /* La police arrondie */
+}
+
+
+
+
+
+
 
 /* --- RESPONSIVE --- */
 @media (max-width: 1024px) {
