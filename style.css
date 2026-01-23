@@ -156,8 +156,8 @@ body {
     padding: 30px;
     width: 550px;
     /* L'ombre portée : décalée à droite et en bas */
-    box-shadow: 12px 12px 25px rgba(0, 0, 0, 0.18);}
-
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.3);
+    
 /* Cercle avec bordure verte */
 .circle-img {
     width: 200px;
