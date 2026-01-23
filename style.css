@@ -98,34 +98,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500;700&display=swap');
 
 .section-bio-vague {
-    background-color: #f2ede0; /* Beige du fond */
-    padding: 120px 20px;
+    background-color: #f2ede0; /* Couleur beige identique à ton design */
+    padding: 80px 20px 150px 20px; /* Plus d'espace en bas pour laisser respirer la vague */
     text-align: center;
     font-family: 'Montserrat Alternates', sans-serif;
     
-    /* C'est ce clip-path qui crée l'effet de vague haut/bas identique à l'image */
-    clip-path: ellipse(150% 100% at 50% 50%);
-    
-    /* Pour supprimer tout espace blanc avec ta bannière du dessus */
-    margin-top: -60px; 
+    /* Supprime l'espace vide sous la bannière pour un collage parfait */
+    margin-top: -5px; 
     position: relative;
     z-index: 10;
+
+    /* LE HAUT EST PLAT (at 50% 0%) ET LE BAS EST ARRONDIE (ellipse) */
+    clip-path: ellipse(150% 100% at 50% 0%);
 }
 
 .contenu-centre p {
-    color: #A7A79D; /* Couleur de texte exacte */
+    color: #A7A79D; /* Ta couleur exacte */
     font-size: 21px;
     line-height: 1.6;
     margin-bottom: 45px;
+    font-weight: 500;
 }
 
 .btn-boutique {
     display: inline-block;
-    background-color: #f4c471; /* Couleur du bouton */
+    background-color: #f4c471; /* Orange exact de tes images */
     color: #ffffff !important;
     padding: 18px 45px;
     text-decoration: none;
-    border-radius: 15px;
+    border-radius: 12px; /* Coins arrondis comme sur le modèle */
     font-weight: 700;
     text-transform: uppercase;
     font-size: 18px;
