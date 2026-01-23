@@ -95,41 +95,58 @@
     }
 }
 
-.farm-intro {
-    background-color: #f2ede0; /* Fond crème identique à l'image */
-    padding: 60px 20px;
+/* Import de la police Montserrat Alternates */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500;600&display=swap');
+
+.section-ferme {
+    background-color: #f2ede0; /* Beige de l'image */
+    padding: 80px 20px;
     text-align: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* À adapter selon votre thème */
 }
 
-.farm-intro .container {
-    max-width: 800px;
+.container-ferme {
+    max-width: 1000px;
     margin: 0 auto;
 }
 
-.intro-text {
-    color: #9e9a8d; /* Couleur de texte gris-brun doux */
-    font-size: 1.2rem;
+.texte-presentation {
+    font-family: 'Montserrat Alternates', sans-serif;
+    color: #A7A79D; /* Code couleur demandé */
+    font-size: 22px;
     line-height: 1.6;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     font-weight: 500;
 }
 
-.btn-discover {
+.btn-boutique {
     display: inline-block;
-    background-color: #f3c470; /* Jaune/Orange pastel du bouton */
-    color: white;
-    padding: 15px 35px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    background-color: #f4c471; /* Orange pastel */
+    color: #FFFFFF;
+    padding: 18px 45px;
     text-decoration: none;
-    border-radius: 10px;
-    font-weight: bold;
+    border-radius: 12px; /* Coins arrondis */
+    font-weight: 600;
+    font-size: 18px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: all 0.3s ease;
 }
 
-/* Effet au survol pour plus d'interactivité */
-.btn-discover:hover {
-    background-color: #e6b35a;
+/* Effet au survol */
+.btn-boutique:hover {
+    background-color: #eab459;
     transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Adaptabilité mobile */
+@media (max-width: 768px) {
+    .texte-presentation {
+        font-size: 18px;
+    }
+    .btn-boutique {
+        width: 80%;
+        padding: 15px 20px;
+    }
 }
