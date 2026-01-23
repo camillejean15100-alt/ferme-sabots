@@ -78,7 +78,7 @@
 }
 /* --- biographie --- */
 
-.description{
+.content-container{
     position: absolute;
     text-align: center;
     font-family: 'Montserrat Alternates', sans-serif; /* La police arrondie */
