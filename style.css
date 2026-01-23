@@ -1,190 +1,102 @@
-/* IMPORTATION DES POLICES EXACTES */
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat+Alternates:wght@400;700&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-    /* CORPS DE TEXTE : Montserrat Alternates */
     font-family: 'Montserrat Alternates', sans-serif !important;
     color: #5d8233;
     background-color: white;
-    overflow-x: hidden;
 }
 
-/* TITRES ET LOGO : Fraunces */
 h1, h2, h3, .logo-text, .footer-logo-text {
     font-family: 'Fraunces', serif !important;
     font-weight: 700 !important;
 }
 
-/* HEADER */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 5%;
-}
-
-.logo-container {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.logo-container img {
-    height: 70px;
-}
-
-.logo-text {
-    font-size: 26px;
-    line-height: 1.1;
-    color: #5d8233;
-}
-
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 30px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #5d8233;
-    font-weight: 700;
-}
-
-/* BANNIÈRE HERO */
+/* HERO AVEC VAGUE */
 .hero {
     height: 500px;
     background: url('header.png') center/cover no-repeat;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.hero h1 {
-    color: white;
-    font-size: 52px;
-    text-align: center;
-    text-shadow: 3px 3px 15px rgba(0,0,0,0.8);
+.wave-to-beige {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    fill: #f4f1e6;
 }
 
-/* INTRO BEIGE */
+/* INTRO AVEC VAGUE */
 .intro {
     background-color: #f4f1e6;
-    padding: 80px 20%;
+    padding: 60px 20% 120px;
     text-align: center;
+    position: relative;
 }
 
-.btn-orange {
-    background-color: #f2c478;
-    color: white;
-    font-family: 'Montserrat Alternates', sans-serif;
-    font-weight: 700;
-    font-size: 20px;
-    padding: 18px 45px;
-    border-radius: 15px;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
-    margin-top: 30px;
+.wave-to-white {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    fill: white;
 }
 
-/* CARTES PRODUITS */
-.stars-section {
-    padding: 80px 5%;
-    text-align: center;
-}
-
-.cards-container {
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-    flex-wrap: wrap;
-}
+/* CARTES PRODUITS (NOS STARS) */
+.stars-section { padding: 80px 5%; text-align: center; }
 
 .product-card {
     background-color: #f4f1e6;
     border-radius: 35px;
-    padding: 35px;
-    width: 520px;
+    padding: 30px;
+    width: 550px;
     display: flex;
     align-items: center;
-    /* OMBRE NOIRE DENSE */
-    box-shadow: 18px 18px 35px rgba(0, 0, 0, 0.5); 
+    box-shadow: 18px 18px 35px rgba(0, 0, 0, 0.5);
+    margin: 30px auto;
 }
 
-/* CERCLE UNIQUE VERT */
 .image-circle {
-    width: 155px;
-    height: 155px;
-    border-radius: 50%;
-    border: 6px solid #8bb956;
+    width: 180px;
+    height: 180px;
+    border-radius: 50% !important;
+    border: 7px solid #8bb956 !important;
     overflow: hidden;
-    margin-right: 25px;
     flex-shrink: 0;
 }
 
-.image-circle img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+.image-circle img { width: 100%; height: 100%; object-fit: cover; }
 
-.card-content {
-    text-align: left;
-}
-
-.card-content h3 {
-    color: #8bb956;
-    font-size: 26px;
-    margin-bottom: 10px;
-}
-
-/* FOOTER AVEC HERBE XXL */
+/* FOOTER DÉLIMITÉ PAR L'HERBE (SANS VAGUE) */
 footer {
-    background-color: #8bb956;
-    color: white;
-    margin-top: 180px;
+    background-color: #5d8233 !important;
+    margin-top: 250px;
     padding: 120px 5% 60px;
     position: relative;
+    color: white;
 }
 
-/* L'HERBE GÉANTE */
 footer::before {
     content: "";
     position: absolute;
-    top: -125px;
+    top: -160px;
     left: 0;
     width: 100%;
-    height: 130px;
-    background: url('herbe.png') repeat-x bottom/contain;
+    height: 180px;
+    background: url('herbe.png') repeat-x bottom/contain !important;
+    z-index: 10;
 }
 
-.footer-content {
-    display: flex;
-    justify-content: center;
-    gap: 80px;
-}
-
-.footer-map img {
+.footer-map {
     border: 8px solid white;
     border-radius: 25px;
-    width: 420px;
+    width: 450px;
+    height: 320px;
+    overflow: hidden;
 }
 
-.footer-logo-box {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 30px;
-}
-
-.footer-logo-box img {
-    height: 90px;
-    filter: none; /* LOGO ORIGINAL */
-}
+.footer-map img { width: 100%; height: 100%; object-fit: cover; }
