@@ -1,86 +1,74 @@
-/* Reset propre pour éviter les marges par défaut des navigateurs */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Header principal */
 .site-header {
     width: 100%;
     background-color: #ffffff;
-    padding: 20px 5%;
-}
-
-.header-wrap {
-    max-width: 1200px;
-    margin: 0 auto;
+    /* On réduit le padding latéral à 2% pour que le logo soit bien à gauche */
+    padding: 15px 2%; 
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Pousse le logo à gauche et le menu à droite */
     align-items: center;
 }
 
-/* Style du Logo et du Titre (Police Fraunces) */
-.header-logo {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.header-logo img {
-    height: 60px; /* Taille ajustable selon ton logo original */
-    width: auto;
-}
-
-.header-title {
-    font-family: 'Fraunces', serif;
-    color: #669933;
-    font-size: 1.1rem;
-    line-height: 1.2;
-    font-weight: 700;
-}
-
-/* Style de la Navigation (Police Montserrat Alternates) */
-.header-nav ul {
-    list-style: none;
+/* Bloc Logo + Titre */
+.logo-group {
     display: flex;
     align-items: center;
     gap: 12px;
 }
 
-.header-nav ul li a {
+.logo-group img {
+    height: 55px; /* Taille fidèle à ton image */
+    width: auto;
+}
+
+.brand-title {
+    font-family: 'Fraunces', serif;
+    color: #669933;
+    font-size: 1rem;
+    line-height: 1.1;
+    font-weight: 700;
+}
+
+/* Bloc Menu */
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-menu a {
     font-family: 'Montserrat Alternates', sans-serif;
     color: #669933;
     text-decoration: none;
     font-weight: 500;
-    font-size: 1rem;
+    font-size: 0.95rem;
 }
 
-.nav-sep {
+.nav-menu span {
     color: #669933;
     font-weight: bold;
+    font-size: 0.9rem;
 }
 
-/* Responsive : Adaptation pour les petits écrans (Tablettes / Mobiles) */
-@media (max-width: 850px) {
-    .header-wrap {
+/* Version Mobile : on empile si l'écran est trop petit */
+@media (max-width: 768px) {
+    .site-header {
         flex-direction: column;
-        gap: 20px;
+        gap: 15px;
         text-align: center;
     }
     
-    .header-logo {
-        flex-direction: column;
-        gap: 8px;
-    }
-    
-    .header-nav ul {
+    .nav-menu {
         flex-wrap: wrap;
         justify-content: center;
-        gap: 8px;
     }
-    
-    .nav-sep {
-        display: none; /* On retire les barres de séparation sur mobile pour la lisibilité */
+
+    .nav-menu span {
+        display: none; /* Cache les barres sur mobile pour éviter le désordre */
     }
 }
