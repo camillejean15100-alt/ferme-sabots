@@ -12,7 +12,7 @@
 body {
     /* La typo Quicksand est appliquée partout pour l'unité du design */
     font-family: 'Quicksand', sans-serif;
-    color: #5d8233; /* Vert sombre principal pour le texte */
+    color: #5d8233; /* Vert sombre principal */
     overflow-x: hidden;
 }
 
@@ -34,7 +34,7 @@ header .navbar {
 }
 
 .logo-text {
-    /* Typo titre appliquée au logo */
+    /* Typo titre appliquée au logo et agrandie */
     font-size: 28px;
     font-weight: 700;
     line-height: 1.1;
@@ -49,12 +49,12 @@ header .navbar {
 .nav-links a {
     text-decoration: none;
     color: #5d8233;
-    font-size: 18px; /* Taille agrandie pour la lisibilité */
+    font-size: 18px; /* Taille agrandie */
     font-weight: 700;
 }
 
 /* ============================================================
-   3. SECTION HERO (BANNIÈRE ET TITRE BIENVENUE)
+   3. SECTION HERO (BANNIÈRE ET TITRE)
    ============================================================ */
 .hero {
     position: relative;
@@ -77,19 +77,14 @@ header .navbar {
     z-index: 2;
 }
 
-.wave-top svg {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
 /* ============================================================
    4. INTRODUCTION (BLOC BEIGE ET BOUTON)
    ============================================================ */
 .intro {
     background-color: #f4f1e6;
-    padding: 80px 20%; /* On resserre pour que le texte ne soit pas trop long */
+    padding: 80px 20%; /* On resserre le texte */
     text-align: center;
+    position: relative;
 }
 
 .intro p {
@@ -102,7 +97,7 @@ header .navbar {
 .btn-orange {
     background-color: #f2c478;
     color: white;
-    font-size: 22px; /* Bouton bien visible */
+    font-size: 22px;
     font-weight: 700;
     padding: 20px 50px;
     border-radius: 15px;
@@ -139,7 +134,7 @@ header .navbar {
     width: 520px;
     display: flex;
     align-items: center;
-    /* Ombre portée plus sombre et moins diffuse (effet maquette) */
+    /* Ombre portée plus sombre et marquée */
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.35); 
 }
 
@@ -160,7 +155,7 @@ header .navbar {
 }
 
 .card-content h3 {
-    font-size: 24px; /* Noms de produits plus grands */
+    font-size: 24px; /* Noms de produits agrandis */
     color: #8bb956;
     margin-bottom: 10px;
 }
@@ -169,7 +164,7 @@ header .navbar {
    6. FOOTER (VERT HERBE, HERBE GROSSE ET LOGO BLANC)
    ============================================================ */
 footer {
-    /* Harmonisation : on utilise le vert clair de l'herbe pour le fond */
+    /* On utilise le vert de l'herbe pour tout le fond */
     background-color: #8bb956; 
     color: white;
     padding: 100px 5% 50px;
@@ -177,46 +172,22 @@ footer {
     margin-top: 120px;
 }
 
-/* L'herbe agrandie et bien positionnée */
+/* L'herbe agrandie */
 footer::before {
     content: "";
     position: absolute;
-    top: -68px; /* On monte plus haut car l'herbe est plus grosse */
+    top: -68px; /* On monte plus haut */
     left: 0;
     width: 100%;
-    height: 70px; /* Herbe plus grosse comme demandé */
+    height: 70px; /* Plus grosse herbe */
     background-image: url('herbe.png');
     background-repeat: repeat-x;
     background-size: contain;
 }
 
-.footer-content {
-    display: flex;
-    justify-content: center;
-    gap: 60px;
-    flex-wrap: wrap;
-    align-items: flex-start;
-}
-
-/* Carte avec cadre blanc */
-.footer-map img {
-    border: 5px solid white;
-    border-radius: 20px;
-    width: 380px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
-
-/* Logo blanc dans le footer */
-.footer-logo-box {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 25px;
-}
-
 .footer-logo-box img {
     height: 80px;
-    /* Ce filtre force le logo en blanc pur si votre fichier est vert/noir */
+    /* Force le logo en blanc pur */
     filter: brightness(0) invert(1); 
 }
 
@@ -226,10 +197,14 @@ footer::before {
     color: white;
 }
 
-.contact-info p {
-    font-size: 18px;
-    margin: 12px 0;
-    display: flex;
-    align-items: center;
-    font-weight: 500;
+.footer-map img {
+    border: 5px solid white; /* Cadre blanc */
+    border-radius: 20px;
+    width: 380px;
+}
+
+.icon {
+    width: 20px;
+    margin-right: 10px;
+    vertical-align: middle;
 }
