@@ -1,10 +1,12 @@
-/* Application globale de la police Fraunces */
+/* Application globale */
 body {
     margin: 0;
+    padding: 0;
     background-color: #fff;
+    font-family: 'Fraunces', serif;
 }
 
-/* Header flexible et responsive */
+/* Header flexible */
 .site-header {
     display: flex;
     justify-content: space-between;
@@ -13,20 +15,18 @@ body {
 }
 
 .logo-container {
-   
     display: flex;
     align-items: center;
     gap: 20px;
 }
 
 .logo-container img {
-    width: 80px; /* Taille du logo basée sur tes captures */
+    width: 80px;
     height: auto;
 }
 
 .logo-text {
-    font-family: 'fraunces';
-    color: #669933; /* Le vert demandé */
+    color: #669933;
     font-size: 1.6rem;
     line-height: 1.1;
     font-weight: 700;
@@ -42,7 +42,7 @@ body {
 
 .nav-links a {
     text-decoration: none;
-    color: #669933; /* Même vert que le logo */
+    color: #669933;
     font-size: 1.2rem;
     font-weight: 400;
 }
@@ -51,78 +51,69 @@ body {
     color: #669933;
 }
 
-/* Bannière */
+/* --- LA BANNIÈRE RESPONSIVE --- */
+.banner {
+    position: relative; /* INDISPENSABLE pour que le texte reste SUR l'image */
+    width: 100%;
+}
+
 .banner img {
     width: 100%;
     height: auto;
     display: block;
 }
 
-/* --- RESPONSIVE : Mobile et Tablette --- */
-@media (max-width: 900px) {
-    .site-header {
-        flex-direction: column;
-        text-align: center;
-        gap: 20px;
-    }
-
-    .logo-container {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .barre {
-        display: none; /* Cache les barres verticales sur petit écran */
-    }
-}
-
-/* Style de base pour ordinateur */
 .texte-superpose {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); /* Centre le texte parfaitement */
     color: #ffffff;
-    font-family: 'Fraunces', serif; /* Utilisation de Fraunces */
     font-weight: 700;
-    font-size: 3.5rem; /* Taille généreuse sur grand écran */
+    font-size: 3.5rem;
     text-align: center;
-    width: 90%; /* On laisse une marge de sécurité */
+    width: 90%;
     line-height: 1.1;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); /* Ombre pour la lisibilité */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+    pointer-events: none; /* Évite que le texte gêne le clic */
 }
 
-/* --- ADAPTATION RESPONSIVE --- */
+/* --- RESPONSIVE : Tablettes et Mobiles --- */
 
-/* Pour les tablettes (écran moins de 1024px) */
+/* Pour les écrans moyens */
 @media (max-width: 1024px) {
     .texte-superpose {
         font-size: 2.5rem;
     }
 }
 
-/* Pour les mobiles (écran moins de 768px) */
+/* Pour les mobiles (Moins de 768px) */
 @media (max-width: 768px) {
+    .site-header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        font-size: 0.9rem;
+        gap: 8px;
+    }
+
+    .barre {
+        display: none; /* On cache les barres sur mobile pour gagner de la place */
+    }
+
     .texte-superpose {
         font-size: 1.8rem;
-        line-height: 1.2;
-    }
-    
-    /* On réduit un peu l'espace du saut de ligne sur mobile */
-    .texte-superpose span {
-        margin-top: 5px;
     }
 }
 
-/* Pour les très petits mobiles (écran moins de 480px) */
+/* Pour les tout petits téléphones */
 @media (max-width: 480px) {
     .texte-superpose {
         font-size: 1.2rem;
-        width: 95%;
+    }
+    .logo-text {
+        font-size: 1.2rem;
     }
 }
