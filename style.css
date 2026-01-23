@@ -122,8 +122,6 @@
   letter-spacing: 0.5px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.05); /* Légère ombre pour le relief */
 }
-
-
 /* --- RESPONSIVE --- */
 @media (max-width: 1024px) {
     .site-header {
