@@ -1,82 +1,62 @@
-/* RESET ET MENU (TON CODE EXACT) */
-* { margin: 0; padding: 0; box-sizing: border-box; }
+/* Configuration générale */
+body {
+    margin: 0;
+    font-family: 'Fraunces', serif;
+}
 
 .site-header {
-    width: 100%;
-    padding: 10px 5px; 
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #fff;
+    padding: 20px 50px;
+    background-color: #ffffff;
 }
 
-.logo-group { display: flex; align-items: center; gap: 12px; }
-.logo-group img { height: 60px; width: auto; }
-.brand-title {
-    font-family: 'Fraunces', serif;
-    color: #669933;
-    font-size: 1.1rem;
-    line-height: 1.1;
-    font-weight: 700;
-}
-
-.nav-menu a, .nav-menu span {
-    font-family: 'Montserrat Alternates', sans-serif;
-    color: #669933;
-    text-decoration: none;
-    font-weight: 500;
-}
-
-/* SECTION BANNIÈRE RESPONSIVE AVEC VAGUE */
-.hero-section {
-    position: relative;
-    width: 100%;
-    height: 500px; /* Ajuste la hauteur ici */
-    margin-top: 10px;
-}
-
-.wave-container {
+/* Section Logo (Image + Texte) */
+.logo-area {
     display: flex;
-    width: 100%;
-    height: 100%;
-    gap: 15px; /* ESPACE BLANC ENTRE LES DEUX PHOTOS */
-    background-color: white;
-    /* VAGUE ARRONDIE PRÉCISE (Clip-path courbe) */
-    clip-path: ellipse(120% 100% at 50% 0%);
+    align-items: center;
+    gap: 15px;
 }
 
-.img-box {
-    width: 50%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
+.logo-img {
+    height: 80px; /* À ajuster selon la taille de ton image */
+    width: auto;
 }
 
-.header { background-image: url('header.png'); }
-
-
-/* TEXTE BLANC SUR L'IMAGE */
-.hero-text {
-    position: absolute;
-    top: 45%; 
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    text-align: center;
-    z-index: 10;
-}
-
-.hero-text h2 {
-    font-family: 'Fraunces', serif;
-    color: #ffffff !important;
-    font-size: clamp(1.8rem, 5vw, 3.5rem); /* Taille responsive */
+.logo-text {
+    color: #669933;
+    font-size: 1.8rem;
+    line-height: 1.1;
+    margin: 0;
     font-weight: 700;
-    line-height: 1.2;
-    text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.4);
 }
 
-/* RESPONSIVE SMARTPHONE */
-@media (max-width: 768px) {
-    .hero-section { height: 350px; }
-    .wave-container { gap: 8px; }
+/* Section Menu de navigation */
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    align-items: center;
 }
+
+/* Ajout des barres verticales entre les liens comme sur l'image */
+.main-nav li:not(:last-child):after {
+    content: "|";
+    color: #669933;
+    margin-left: 20px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #669933;
+    font-weight: 400;
+    font-size: 1.2rem;
+    transition: opacity 0.3s;
+}
+
+.main-nav a:hover {
+    opacity: 0.7;
+}'
