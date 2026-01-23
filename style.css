@@ -1,71 +1,235 @@
-/* 1. POSITIONNEMENT DU FOOTER */
-footer {
-    background-color: #5d8233; /* Vert de la ferme */
-    color: white;
-    padding: 80px 5% 40px;
+/* ============================================================
+   1. POLICES ET RÉGLAGES GÉNÉRAUX
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* La typo Quicksand est appliquée partout pour l'unité du design */
+    font-family: 'Quicksand', sans-serif;
+    color: #5d8233; /* Vert sombre principal pour le texte */
+    overflow-x: hidden;
+}
+
+/* ============================================================
+   2. HEADER (LOGO ET NAVIGATION)
+   ============================================================ */
+header .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background: white;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-text {
+    /* Typo titre appliquée au logo */
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #5d8233;
+    font-size: 18px; /* Taille agrandie pour la lisibilité */
+    font-weight: 700;
+}
+
+/* ============================================================
+   3. SECTION HERO (BANNIÈRE ET TITRE BIENVENUE)
+   ============================================================ */
+.hero {
     position: relative;
-    margin-top: 100px;
+    height: 450px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: -2px; /* Supprime le trait gris parasite */
+}
+
+.hero h1 {
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 48px; /* Grand titre imposant */
+    font-weight: 700;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.6);
+    z-index: 2;
+}
+
+.wave-top svg {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* ============================================================
+   4. INTRODUCTION (BLOC BEIGE ET BOUTON)
+   ============================================================ */
+.intro {
+    background-color: #f4f1e6;
+    padding: 80px 20%; /* On resserre pour que le texte ne soit pas trop long */
+    text-align: center;
+}
+
+.intro p {
+    font-size: 20px;
+    line-height: 1.6;
+    color: #777;
+    margin-bottom: 40px;
+}
+
+.btn-orange {
+    background-color: #f2c478;
+    color: white;
+    font-size: 22px; /* Bouton bien visible */
+    font-weight: 700;
+    padding: 20px 50px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* ============================================================
+   5. SECTION STARS (NOS STARS DU GOÛT)
+   ============================================================ */
+.stars-section {
+    padding: 80px 5%;
+    text-align: center;
+}
+
+.stars-section h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+
+.cards-container {
     display: flex;
     justify-content: center;
-    gap: 50px;
+    gap: 40px;
     flex-wrap: wrap;
 }
 
-/* 2. L'HERBE (Fine et répétée sans être étirée) */
+.product-card {
+    background-color: #f4f1e6;
+    border-radius: 30px;
+    padding: 30px;
+    width: 520px;
+    display: flex;
+    align-items: center;
+    /* Ombre portée plus sombre et moins diffuse (effet maquette) */
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.35); 
+}
+
+.image-circle {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 4px solid #8bb956;
+    overflow: hidden;
+    flex-shrink: 0;
+    margin-right: 25px;
+}
+
+.image-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-content h3 {
+    font-size: 24px; /* Noms de produits plus grands */
+    color: #8bb956;
+    margin-bottom: 10px;
+}
+
+/* ============================================================
+   6. FOOTER (VERT HERBE, HERBE GROSSE ET LOGO BLANC)
+   ============================================================ */
+footer {
+    /* Harmonisation : on utilise le vert clair de l'herbe pour le fond */
+    background-color: #8bb956; 
+    color: white;
+    padding: 100px 5% 50px;
+    position: relative;
+    margin-top: 120px;
+}
+
+/* L'herbe agrandie et bien positionnée */
 footer::before {
     content: "";
     position: absolute;
-    top: -40px; /* Ajuste pour qu'elle dépasse sur le blanc */
+    top: -68px; /* On monte plus haut car l'herbe est plus grosse */
     left: 0;
     width: 100%;
-    height: 45px; /* Hauteur fixe pour éviter l'effet "moche" étiré */
+    height: 70px; /* Herbe plus grosse comme demandé */
     background-image: url('herbe.png');
-    background-repeat: repeat-x; /* Répète l'herbe sur toute la largeur */
-    background-size: contain; /* Garde les proportions de tes brins d'herbe */
-    z-index: 10;
+    background-repeat: repeat-x;
+    background-size: contain;
 }
 
-/* 3. RETOUR DU LOGO (Visibilité) */
+.footer-content {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+/* Carte avec cadre blanc */
+.footer-map img {
+    border: 5px solid white;
+    border-radius: 20px;
+    width: 380px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Logo blanc dans le footer */
 .footer-logo-box {
     display: flex;
     align-items: center;
     gap: 15px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
-/* On s'assure que l'image du logo est bien blanche pour ressortir sur le vert */
 .footer-logo-box img {
-    height: 60px;
-    width: auto;
-    filter: brightness(0) invert(1); /* Force le logo en blanc s'il est sombre */
-    display: block;
+    height: 80px;
+    /* Ce filtre force le logo en blanc pur si votre fichier est vert/noir */
+    filter: brightness(0) invert(1); 
 }
 
-/* 4. CARTE ET INFOS */
-.map-container img {
-    width: 350px;
-    border-radius: 20px;
-    border: 5px solid white; /* Cadre blanc de la maquette */
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
-
-.contact-info {
-    text-align: left;
-}
-
-.contact-info h3 {
-    font-family: 'Quicksand', sans-serif;
-    font-size: 22px;
+.footer-logo-text {
+    font-size: 26px;
+    font-weight: 700;
+    color: white;
 }
 
 .contact-info p {
-    margin: 10px 0;
-    font-size: 16px;
+    font-size: 18px;
+    margin: 12px 0;
     display: flex;
     align-items: center;
-}
-
-.contact-info .icon {
-    width: 20px;
-    margin-right: 10px;
+    font-weight: 500;
 }
