@@ -1,4 +1,3 @@
-/* POLICES */
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat+Alternates:wght@400;700&display=swap');
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -10,113 +9,101 @@ body {
     overflow-x: hidden;
 }
 
-h1, h2, h3, .logo-text {
-    font-family: 'Fraunces', serif !important;
-}
+h1, h2, h3 { font-family: 'Fraunces', serif !important; font-weight: 700; }
 
-/* HEADER */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 5%;
-}
-.logo-container { display: flex; align-items: center; gap: 15px; }
-.logo-container img { height: 70px; }
-.logo-text { font-size: 26px; line-height: 1.1; color: #5d8233; }
-.nav-links { display: flex; list-style: none; gap: 30px; }
-.nav-links a { text-decoration: none; color: #5d8233; font-weight: 700; }
-
-/* HERO ET VAGUE */
+/* HERO & VAGUE */
 .hero {
-    height: 500px;
+    height: 550px;
     background: url('header.png') center/cover no-repeat;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .hero h1 {
     color: white;
-    font-size: 50px;
+    font-size: 45px;
     text-align: center;
-    text-shadow: 3px 3px 15px rgba(0,0,0,0.8);
-    z-index: 5;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
 }
+
 .wave-divider {
     position: absolute;
     bottom: -1px;
     width: 100%;
 }
-.wave-divider svg { fill: #f4f1e6; width: 100%; height: 80px; }
 
-/* INTRO BEIGE AVEC VAGUE */
+.wave-divider svg { fill: #f4f1e6; width: 100%; height: 100px; display: block; }
+
+/* INTRO BEIGE */
 .intro {
     background-color: #f4f1e6;
-    padding: 80px 20% 120px;
+    padding: 100px 15% 150px;
     text-align: center;
     position: relative;
 }
-.btn-orange {
-    background-color: #f2c478;
-    color: white;
-    border: none;
-    padding: 18px 45px;
-    border-radius: 15px;
-    font-weight: 700;
-    font-size: 20px;
-    cursor: pointer;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
-}
-.wave-to-white {
+
+.wave-bottom {
     position: absolute;
     bottom: -1px;
     width: 100%;
 }
-.wave-to-white svg { fill: #ffffff; width: 100%; height: 80px; }
 
-/* NOS STARS (CERCLE LARGE ET UNIQUE) */
+.wave-bottom svg { fill: white; width: 100%; height: 100px; display: block; }
+
+/* NOS STARS (PRODUITS) */
 .stars-section { padding: 80px 5%; text-align: center; }
-.cards-container { display: flex; justify-content: center; gap: 50px; flex-wrap: wrap; }
 
 .product-card {
     background-color: #f4f1e6;
     border-radius: 35px;
-    padding: 35px;
-    width: 520px;
+    padding: 30px;
+    width: 550px;
     display: flex;
     align-items: center;
-    box-shadow: 18px 18px 35px rgba(0, 0, 0, 0.5);
+    box-shadow: 18px 18px 35px rgba(0, 0, 0, 0.4);
+    margin: 30px auto;
 }
+
 .image-circle {
-    width: 180px; /* Taille augmentée */
+    width: 180px; /* Taille exacte demandée */
     height: 180px;
     border-radius: 50% !important;
-    border: 7px solid #8bb956 !important; /* Bordure unique épaisse */
+    border: 7px solid #8bb956 !important; /* Bordure unique et épaisse */
     overflow: hidden;
     flex-shrink: 0;
     margin-right: 25px;
 }
+
 .image-circle img { width: 100%; height: 100%; object-fit: cover; }
 
-/* FOOTER AVEC HERBE XXL (DÉLIMITATION FRANCHE) */
+/* FOOTER AVEC HERBE XXL (SANS VAGUE) */
 footer {
-    background-color: #5d8233 !important;
-    color: white !important;
+    background-color: #5d8233;
+    color: white;
     margin-top: 200px;
     padding: 120px 5% 60px;
     position: relative;
 }
+
 footer::before {
     content: "";
     position: absolute;
-    top: -155px;
+    top: -150px; /* Fait remonter l'herbe sur le blanc */
     left: 0;
     width: 100%;
-    height: 170px;
-    background: url('herbe.png') repeat-x bottom/contain !important;
+    height: 160px; /* Taille massive */
+    background: url('herbe.png') repeat-x bottom/contain;
     z-index: 10;
 }
-.footer-map { border: 8px solid white; border-radius: 25px; width: 450px; height: 320px; overflow: hidden; }
+
+.footer-map {
+    border: 8px solid white;
+    border-radius: 25px;
+    width: 450px;
+    height: 320px;
+    overflow: hidden;
+}
+
 .footer-map img { width: 100%; height: 100%; object-fit: cover; }
-.footer-logo-box img { height: 90px; filter: none !important; }
