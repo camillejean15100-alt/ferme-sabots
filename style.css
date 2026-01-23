@@ -1,4 +1,4 @@
-/* On s'assure qu'aucune marge parasite ne bloque les bords */
+/* --- TON CSS MENU INTÉGRÉ --- */
 * {
     margin: 0;
     padding: 0;
@@ -7,19 +7,18 @@
 
 body {
     width: 100%;
+    background-color: #ffffff;
 }
 
 .site-header {
     width: 100%;
     background-color: #ffffff;
-    /* On met un padding minimal (5px) pour que ce soit à l'extrême bord sans toucher le plastique de l'écran */
     padding: 10px 5px; 
     display: flex;
-    justify-content: space-between; /* Pousse les blocs à gauche et à droite à 100% */
+    justify-content: space-between;
     align-items: center;
 }
 
-/* Bloc Logo + Titre à l'extrême gauche */
 .logo-group {
     display: flex;
     align-items: center;
@@ -27,7 +26,7 @@ body {
 }
 
 .logo-group img {
-    height: 60px; /* Taille pour correspondre à ton image */
+    height: 60px;
     width: auto;
 }
 
@@ -39,12 +38,11 @@ body {
     font-weight: 700;
 }
 
-/* Bloc Menu à l'extrême droite */
 .nav-menu {
     display: flex;
     align-items: center;
     gap: 10px;
-    padding-right: 10px; /* Juste un petit écart pour la propreté */
+    padding-right: 10px;
 }
 
 .nav-menu a {
@@ -60,51 +58,63 @@ body {
     font-weight: bold;
 }
 
-/* 1. On verrouille le conteneur pour la superposition */
-.hero {
-    position: relative !important;
-    width: 100% !important;
-    display: block !important;
-    overflow: hidden !important;
+/* --- SECTION IMAGE ET VAGUES --- */
+
+.hero-container {
+    position: relative;
+    width: 100%;
+    height: 550px; /* Ajuste la hauteur souhaitée */
+    margin-top: 10px;
 }
 
-.hero img {
-    width: 100% !important;
-    height: auto !important;
-    display: block !important;
+.images-wave-wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    gap: 10px; /* L'espace blanc centré entre les photos */
+    background-color: white;
+    /* Découpe exacte des vagues du bas */
+    clip-path: polygon(0 0, 100% 0, 100% 88%, 80% 82%, 50% 95%, 20% 85%, 0 95%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 88%, 80% 82%, 50% 95%, 20% 85%, 0 95%);
 }
 
-/* 2. LE TEXTE : Placé SUR l'image et CENTRÉ */
-.hero-text-overlay, .hero-content, .hero-text-area {
-    position: absolute !important;
-    /* On le plaque au centre exact */
-    top: 50% !important;
-    left: 50% !important;
-    transform: translate(-50%, -50%) !important;
-    /* On s'assure qu'il prend toute la largeur pour le centrage */
-    width: 100% !important;
-    text-align: center !important;
-    z-index: 99 !important; /* Priorité maximale */
+.img-left, .img-right {
+    width: 50%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
 }
 
-.hero-title, .hero-text {
-    font-family: 'Fraunces', serif !important;
-    color: #ffffff !important; /* BLANC */
-    font-size: clamp(1.5rem, 5vw, 3.5rem) !important;
-    font-weight: 700 !important;
-    text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.7) !important;
-    margin: 0 !important;
+/* Remplace par tes vrais fichiers */
+.img-left { background-image: url('image_chevres.jpg'); }
+.img-right { background-image: url('image_moutons.jpg'); }
+
+/* --- LE TEXTE EN SEPARÉ --- */
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    z-index: 5; /* Passe devant l'image mais n'est pas coupé */
+    pointer-events: none; /* Laisse cliquer à travers */
 }
 
-/* 3. LA VAGUE : Ancrée en bas */
-.hero-vague, .hero-wave, .hero-wave-svg {
-    position: absolute !important;
-    bottom: -1px !important;
-    left: 0 !important;
-    width: 100% !important;
-    height: 12vw !important;
-    background-color: #fdfdf3 !important;
-    /* Courbe bas-haut-bas */
-    border-radius: 50% 50% 0 0 / 100% 30% 0 0 !important;
-    z-index: 10 !important;
+.hero-text h2 {
+    font-family: 'Fraunces', serif;
+    color: white;
+    font-size: clamp(1.8rem, 5vw, 3.2rem); /* Responsive total */
+    line-height: 1.2;
+    font-weight: 700;
+    text-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5); /* Ombre pour la lisibilité */
+}
+
+/* --- RESPONSIVE MOBILE --- */
+@media (max-width: 768px) {
+    .hero-container { height: 350px; }
+    .nav-menu { font-size: 0.8rem; gap: 5px; }
+    .brand-title { font-size: 0.9rem; }
+    .images-wave-wrapper { gap: 5px; } /* Espace blanc plus fin sur mobile */
 }
