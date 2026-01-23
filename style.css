@@ -94,3 +94,42 @@
         font-size: 1.8rem;
     }
 }
+
+.farm-intro {
+    background-color: #f2ede0; /* Fond crème identique à l'image */
+    padding: 60px 20px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* À adapter selon votre thème */
+}
+
+.farm-intro .container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.intro-text {
+    color: #9e9a8d; /* Couleur de texte gris-brun doux */
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+.btn-discover {
+    display: inline-block;
+    background-color: #f3c470; /* Jaune/Orange pastel du bouton */
+    color: white;
+    padding: 15px 35px;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Effet au survol pour plus d'interactivité */
+.btn-discover:hover {
+    background-color: #e6b35a;
+    transform: translateY(-2px);
+}
