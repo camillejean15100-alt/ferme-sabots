@@ -9,45 +9,48 @@
 <body>
 
     <header>
-        <div class="logo-container">
-            <img src="logofermeauxsabotsfendus.png" alt="Logo">
-            <div class="logo-text">La Ferme aux<br>Sabots Fendus</div>
+        <div class="header-inner">
+            <div class="logo-group">
+                <img src="logofermeauxsabotsfendus.png" alt="logo">
+                <div class="brand-name">La Ferme aux <br> Sabots Fendus</div>
+            </div>
+            <nav>
+                <a href="#">Accueil</a> | <a href="#">L'Élevage</a> | <a href="#">Boutique</a> | <a href="#">Nous Contacter</a>
+            </nav>
         </div>
-        <nav>
-            <a href="#">Accueil</a> | <a href="#">L'Élevage</a> | <a href="#">Boutique</a> | <a href="#">Nous Contacter</a>
-        </nav>
     </header>
 
-    <section class="hero">
-        <div class="hero-top">
-            <img src="header.png" alt="Biquettes et Brebis">
-            <h1>"Bienvenue à la <br> Ferme aux Sabots Fendus !"</h1>
+    <div class="hero">
+        <div class="hero-image-wrap">
+            <img src="header.png" alt="troupeau">
+            <div class="hero-overlay">
+                <h1>"Bienvenue à la <br> Ferme aux Sabots Fendus !"</h1>
+            </div>
         </div>
-        <div class="hero-wave"></div>
-        <div class="hero-description">
+        <div class="hero-curve"></div>
+    </div>
+
+    <section class="intro-section">
+        <div class="intro-content">
             <p>Nous élevons avec passion un troupeau de chèvres ainsi qu'un troupeau de brebis BMC conduit en agriculture biologique. Deux élevages complémentaires unis par une même exigence : la qualité et la saveur de nos produits.</p>
-            <button class="cta-button">DÉCOUVRIR NOS PRODUITS</button>
+            <a href="#" class="btn-orange">DÉCOUVRIR NOS PRODUITS</a>
         </div>
     </section>
 
     <section class="stars-section">
         <h2>Nos Stars du Goûts</h2>
-        <div class="cards">
+        <div class="cards-grid">
             <div class="card">
-                <div class="card-thumb">
-                    <img src="biquette.png" alt="Chèvre">
-                </div>
-                <div class="card-text">
+                <div class="card-img"><img src="biquette.png"></div>
+                <div class="card-txt">
                     <h3>YAOURTS & GLACES</h3>
                     <p>on vous prévient, nos produits vous rendront accros !</p>
-                    <span class="sub-text">100% lait de la ferme</span>
+                    <span class="sub">100% lait de la ferme</span>
                 </div>
             </div>
             <div class="card">
-                <div class="card-thumb">
-                    <img src="brebis.png" alt="Brebis">
-                </div>
-                <div class="card-text">
+                <div class="card-img"><img src="brebis.png"></div>
+                <div class="card-txt">
                     <h3>NOS CAISSETTES</h3>
                     <p>Acheter notre viande <strong>BIO</strong>, c'est savourer une viande de qualité produite à la ferme</p>
                 </div>
@@ -55,25 +58,21 @@
         </div>
     </section>
 
-    <footer class="footer">
-        <div class="grass-border">
-            <img src="herbe.png" alt="herbe">
-        </div>
-        <div class="footer-content">
-            <div class="map">
-                <img src="maps.png" alt="Carte">
-            </div>
-            <div class="infos">
-                <div class="footer-header">
-                    <img src="logofermeauxsabotsfendus.png" class="logo-footer" alt="Logo">
-                    <h3>La Ferme aux <br> Sabots Fendus</h3>
+    <footer>
+        <div class="grass-divider"><img src="herbe.png"></div>
+        <div class="footer-wrap">
+            <img src="maps.png" class="footer-map">
+            <div class="footer-right">
+                <div class="footer-brand">
+                    <img src="logofermeauxsabotsfendus.png">
+                    <span>La Ferme aux <br> Sabots Fendus</span>
                 </div>
-                <div class="details">
+                <div class="footer-details">
                     <h4>Infos pratique</h4>
                     <p><img src="adresse.png" class="icon"> <strong>Adresse :</strong> ...</p>
-                    <p><img src="telephone.png" class="icon"> <strong>Tel :</strong> 06 XX XX XX XX</p>
+                    <p><img src="telephone.png" class="icon"> <strong>Tel : 06 XX XX XX XX</strong></p>
                     <p><img src="horaire.png" class="icon"> <strong>Horaires :</strong></p>
-                    <p class="shift">Vente à la ferme :<br>le mardi et le jeudi</p>
+                    <p class="horaire-indent">Vente à la ferme : <br> le mardi et le jeudi</p>
                 </div>
             </div>
         </div>
