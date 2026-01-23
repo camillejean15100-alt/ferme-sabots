@@ -1,6 +1,3 @@
-/* ============================================================
-   1. POLICES ET RÉGLAGES GÉNÉRAUX
-   ============================================================ */
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap');
 
 * {
@@ -10,21 +7,17 @@
 }
 
 body {
-    /* La typo Quicksand est appliquée partout pour l'unité du design */
     font-family: 'Quicksand', sans-serif;
-    color: #5d8233; /* Vert sombre principal */
-    overflow-x: hidden;
+    color: #5d8233;
+    background-color: white;
 }
 
-/* ============================================================
-   2. HEADER (LOGO ET NAVIGATION)
-   ============================================================ */
+/* HEADER & NAV */
 header .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 5%;
-    background: white;
 }
 
 .logo-container {
@@ -33,11 +26,15 @@ header .navbar {
     gap: 15px;
 }
 
+.logo-container img {
+    height: 65px;
+}
+
 .logo-text {
-    /* Typo titre appliquée au logo et agrandie */
-    font-size: 28px;
+    font-size: 26px;
     font-weight: 700;
     line-height: 1.1;
+    color: #5d8233;
 }
 
 .nav-links {
@@ -49,48 +46,41 @@ header .navbar {
 .nav-links a {
     text-decoration: none;
     color: #5d8233;
-    font-size: 18px; /* Taille agrandie */
     font-weight: 700;
+    font-size: 18px;
 }
 
-/* ============================================================
-   3. SECTION HERO (BANNIÈRE ET TITRE)
-   ============================================================ */
+/* BANNIÈRE HERO */
 .hero {
-    position: relative;
     height: 450px;
-    overflow: hidden;
-    background-size: cover;
-    background-position: center;
-    margin-bottom: -2px; /* Supprime le trait gris parasite */
+    background: url('header.png') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
 .hero h1 {
-    position: absolute;
-    top: 40%;
-    width: 100%;
-    text-align: center;
     color: white;
-    font-size: 48px; /* Grand titre imposant */
+    font-size: 48px;
+    text-align: center;
     font-weight: 700;
-    text-shadow: 2px 2px 10px rgba(0,0,0,0.6);
+    text-shadow: 3px 3px 12px rgba(0,0,0,0.7);
     z-index: 2;
 }
 
-/* ============================================================
-   4. INTRODUCTION (BLOC BEIGE ET BOUTON)
-   ============================================================ */
+/* BLOC INTRODUCTION BEIGE */
 .intro {
     background-color: #f4f1e6;
-    padding: 80px 20%; /* On resserre le texte */
+    padding: 80px 20%;
     text-align: center;
-    position: relative;
 }
 
 .intro p {
     font-size: 20px;
     line-height: 1.6;
-    color: #777;
+    color: #666;
     margin-bottom: 40px;
 }
 
@@ -103,20 +93,17 @@ header .navbar {
     border-radius: 15px;
     border: none;
     cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-/* ============================================================
-   5. SECTION STARS (NOS STARS DU GOÛT)
-   ============================================================ */
+/* SECTION CARTES PRODUITS */
 .stars-section {
     padding: 80px 5%;
     text-align: center;
 }
 
 .stars-section h2 {
-    font-size: 32px;
-    font-weight: 700;
+    font-size: 34px;
     margin-bottom: 50px;
 }
 
@@ -124,7 +111,6 @@ header .navbar {
     display: flex;
     justify-content: center;
     gap: 40px;
-    flex-wrap: wrap;
 }
 
 .product-card {
@@ -134,15 +120,15 @@ header .navbar {
     width: 520px;
     display: flex;
     align-items: center;
-    /* Ombre portée plus sombre et marquée */
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.35); 
+    /* OMBRE SOMBRE ET DENSE */
+    box-shadow: 12px 12px 20px rgba(0, 0, 0, 0.4);
 }
 
 .image-circle {
     width: 140px;
     height: 140px;
     border-radius: 50%;
-    border: 4px solid #8bb956;
+    border: 5px solid #8bb956;
     overflow: hidden;
     flex-shrink: 0;
     margin-right: 25px;
@@ -154,57 +140,56 @@ header .navbar {
     object-fit: cover;
 }
 
-.card-content h3 {
-    font-size: 24px; /* Noms de produits agrandis */
-    color: #8bb956;
-    margin-bottom: 10px;
-}
+.card-content { text-align: left; }
+.card-content h3 { font-size: 24px; color: #8bb956; margin-bottom: 10px; }
 
-/* ============================================================
-   6. FOOTER (VERT HERBE, HERBE GROSSE ET LOGO BLANC)
-   ============================================================ */
+/* FOOTER VERT (COULEUR DE L'HERBE) */
 footer {
-    /* On utilise le vert de l'herbe pour tout le fond */
-    background-color: #8bb956; 
+    background-color: #8bb956;
     color: white;
     padding: 100px 5% 50px;
     position: relative;
     margin-top: 120px;
 }
 
-/* L'herbe agrandie */
+/* HERBE GROSSE */
 footer::before {
     content: "";
     position: absolute;
-    top: -68px; /* On monte plus haut */
+    top: -69px;
     left: 0;
     width: 100%;
-    height: 70px; /* Plus grosse herbe */
-    background-image: url('herbe.png');
-    background-repeat: repeat-x;
-    background-size: contain;
+    height: 70px;
+    background: url('herbe.png') repeat-x bottom/contain;
 }
 
-.footer-logo-box img {
-    height: 80px;
-    /* Force le logo en blanc pur */
-    filter: brightness(0) invert(1); 
-}
-
-.footer-logo-text {
-    font-size: 26px;
-    font-weight: 700;
-    color: white;
+.footer-content {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    align-items: flex-start;
 }
 
 .footer-map img {
-    border: 5px solid white; /* Cadre blanc */
+    border: 5px solid white;
     border-radius: 20px;
     width: 380px;
 }
 
-.icon {
-    width: 20px;
-    margin-right: 10px;
-    vertical-align: middle;
+/* LOGO BLANC AUTOMATIQUE */
+.footer-logo-box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.footer-logo-box img {
+    height: 85px;
+    filter: brightness(0) invert(1);
+}
+
+.footer-logo-text {
+    font-size: 28px;
+    font-weight: 700;
 }
