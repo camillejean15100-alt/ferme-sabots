@@ -130,31 +130,41 @@ body {
     margin-bottom: 40px;
 }
 
-/* Alignement horizontal des deux cartes */
+/* Titre vert centré */
+.main-title {
+    text-align: center;
+    color: #4c6b2f;
+    font-family: serif;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+/* Force l'alignement horizontal des deux cartes */
 .stars-container {
     display: flex;
     justify-content: center;
-    gap: 30px; /* Espace entre les deux cartes */
+    gap: 30px;
     padding: 20px;
 }
 
-/* Style de la carte beige */
+/* La carte avec l'ombre portée (box-shadow) */
 .product-card {
-    background-color: #f9f7ef;
-    border-radius: 40px;
-    display: flex;
+    background-color: #f9f7ef; /* Couleur crème selon image */
+    border-radius: 40px;       /* Coins arrondis */
+    display: flex;             /* Alignement interne image/texte */
     align-items: center;
     padding: 30px;
-    width: 500px;
-    box-shadow: 8px 8px 20px rgba(0,0,0,0.1);
+    width: 550px;
+    /* L'ombre portée : décalée à droite et en bas */
+    box-shadow: 12px 12px 25px rgba(0, 0, 0, 0.2); 
 }
 
-/* Image circulaire avec bordure verte */
+/* Cercle avec bordure verte */
 .circle-img {
-    width: 170px;
-    height: 170px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
-    border: 5px solid #8cb342;
+    border: 6px solid #8cb342;
     overflow: hidden;
     flex-shrink: 0;
 }
@@ -165,7 +175,7 @@ body {
     object-fit: cover;
 }
 
-/* Texte à l'intérieur de la carte */
+/* Texte à l'intérieur */
 .card-content {
     margin-left: 20px;
     text-align: center;
@@ -174,15 +184,13 @@ body {
 
 .card-content h3 {
     color: #8cb342;
-    font-size: 1.3rem;
     margin-bottom: 10px;
 }
 
-.card-content .highlight {
+.highlight {
     font-weight: bold;
     margin-top: 15px;
 }
-
 
 /* --- RESPONSIVE --- */
 @media (max-width: 1024px) {
