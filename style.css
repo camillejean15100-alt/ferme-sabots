@@ -60,53 +60,48 @@ body {
     font-weight: bold;
 }
 
+/* 1. On verrouille le Hero pour que l'absolute fonctionne */
 .hero {
     position: relative;
     width: 100%;
-    background-color: #fdfdf3; /* Fond crème qui prend le relais sous la vague */
     overflow: hidden;
+    line-height: 0; /* Élimine l'espace sous l'image */
 }
 
-.hero-container {
-    position: relative;
-    width: 100%;
-    line-height: 0;
-}
-
-.hero-img {
+.hero img {
     width: 100%;
     height: auto;
     display: block;
 }
 
-/* CENTRAGE DU TEXTE : Fraunces, Blanc, Centré */
-.hero-text-overlay {
+/* 2. LE TEXTE : On le force PAR-DESSUS l'image */
+/* Utilise la classe que tu as dans ton HTML pour le texte (overlay ou content) */
+.hero-text-overlay, .hero-content, .hero-text-area {
     position: absolute;
-    top: 45%; /* On le place au milieu de la zone image */
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 50%; /* Centre vertical */
+    left: 50%; /* Centre horizontal */
+    transform: translate(-50%, -50%); /* Calage parfait au milieu */
     width: 100%;
     text-align: center;
-    z-index: 20; /* Passe au dessus de la vague */
+    z-index: 20; /* Passe devant l'image et la vague */
 }
 
-.hero-title {
+.hero-title, .hero-text {
     font-family: 'Fraunces', serif !important;
-    color: #ffffff !important;
+    color: #ffffff !important; /* BLANC PUR */
     font-size: clamp(1.5rem, 5vw, 3.5rem);
     font-weight: 700;
     line-height: 1.2;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+    text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.7); /* Pour lire sur les moutons clairs */
     margin: 0;
-    padding: 0 5%;
 }
 
-/* LA VAGUE SVG : Mouvement bas-haut-bas */
-.hero-wave-svg {
+/* 3. LA VAGUE : Ancrée en bas de l'image */
+.hero-vague, .hero-wave, .hero-wave-svg {
     position: absolute;
-    bottom: -1px; /* Colle au bas */
+    bottom: -1px;
     left: 0;
     width: 100%;
-    height: 12vw; /* La hauteur de la vague suit la largeur de l'écran */
+    height: 12vw; /* Hauteur proportionnelle à la largeur */
     z-index: 10;
 }
