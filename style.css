@@ -77,6 +77,52 @@
     text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
 }
 
+/*HERO*/
+/* Import d'une police arrondie similaire à l'image */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Comfortaa', cursive, sans-serif;
+    background-color: #ffffff;
+}
+
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.container {
+    max-width: 900px;
+}
+
+.description {
+    color: #a5a5a5; /* Gris moyen/clair */
+    font-size: 1.5rem;
+    line-height: 1.4;
+    margin-bottom: 40px;
+}
+
+.btn-discover {
+    display: inline-block;
+    background-color: #f1c06d; /* Couleur jaune/orangé de l'image */
+    color: white;
+    text-decoration: none;
+    padding: 18px 45px;
+    border-radius: 15px; /* Coins très arrondis */
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+}
+
+.btn-discover:hover {
+    background-color: #e5b15a;
+}
 /* --- RESPONSIVE --- */
 @media (max-width: 1024px) {
     .site-header {
