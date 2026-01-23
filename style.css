@@ -1,20 +1,25 @@
+/* On s'assure qu'aucune marge parasite ne bloque les bords */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+body {
+    width: 100%;
+}
+
 .site-header {
     width: 100%;
     background-color: #ffffff;
-    /* On réduit le padding latéral à 2% pour que le logo soit bien à gauche */
-    padding: 15px 2%; 
+    /* On met un padding minimal (5px) pour que ce soit à l'extrême bord sans toucher le plastique de l'écran */
+    padding: 10px 5px; 
     display: flex;
-    justify-content: space-between; /* Pousse le logo à gauche et le menu à droite */
+    justify-content: space-between; /* Pousse les blocs à gauche et à droite à 100% */
     align-items: center;
 }
 
-/* Bloc Logo + Titre */
+/* Bloc Logo + Titre à l'extrême gauche */
 .logo-group {
     display: flex;
     align-items: center;
@@ -22,23 +27,24 @@
 }
 
 .logo-group img {
-    height: 55px; /* Taille fidèle à ton image */
+    height: 60px; /* Taille pour correspondre à ton image */
     width: auto;
 }
 
 .brand-title {
     font-family: 'Fraunces', serif;
     color: #669933;
-    font-size: 1rem;
+    font-size: 1.1rem;
     line-height: 1.1;
     font-weight: 700;
 }
 
-/* Bloc Menu */
+/* Bloc Menu à l'extrême droite */
 .nav-menu {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
+    padding-right: 10px; /* Juste un petit écart pour la propreté */
 }
 
 .nav-menu a {
@@ -46,29 +52,10 @@
     color: #669933;
     text-decoration: none;
     font-weight: 500;
-    font-size: 0.95rem;
+    font-size: 1rem;
 }
 
 .nav-menu span {
     color: #669933;
     font-weight: bold;
-    font-size: 0.9rem;
-}
-
-/* Version Mobile : on empile si l'écran est trop petit */
-@media (max-width: 768px) {
-    .site-header {
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
-    }
-    
-    .nav-menu {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .nav-menu span {
-        display: none; /* Cache les barres sur mobile pour éviter le désordre */
-    }
 }
