@@ -1,79 +1,117 @@
-/* 1. IMPORTATION ET FORCE DE LA TYPO SUR TOUT LE SITE */
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
+/* 1. IMPORTATION DES DEUX TYPOS */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat+Alternates:wght@400;700&display=swap');
 
-html, body, div, span, h1, h2, h3, p, a, button {
-    font-family: 'Quicksand', sans-serif !important;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* 2. HEADER - TEXTE LOGO ET MENU */
-.logo-text {
-    font-size: 28px !important;
-    color: #5d8233 !important;
+body {
+    /* CONTENU EN MONTSERRAT ALTERNATES */
+    font-family: 'Montserrat Alternates', sans-serif !important;
+    color: #5d8233;
+    background-color: white;
+}
+
+/* 2. TITRES ET LOGO EN FRAUNCES */
+h1, h2, h3, .logo-text, .footer-logo-text {
+    font-family: 'Fraunces', serif !important;
     font-weight: 700 !important;
 }
 
-.nav-links a {
-    font-size: 18px !important;
-    color: #5d8233 !important;
-    text-decoration: none !important;
+/* 3. HEADER (Logo Original) */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
 }
 
-/* 3. HERO - SUPPRESSION DU TRAIT GRIS ET TAILLE TITRE */
+.logo-text {
+    font-size: 28px !important;
+    color: #5d8233 !important;
+    line-height: 1.1;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #5d8233;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+/* 4. HERO SECTION */
 .hero {
     height: 450px;
     background: url('header.png') center/cover no-repeat !important;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: -1px; /* Colle la section suivante pour tuer le trait gris */
 }
 
 .hero h1 {
     color: white !important;
-    font-size: 48px !important;
+    font-size: 52px !important;
     text-shadow: 3px 3px 15px rgba(0,0,0,0.8) !important;
 }
 
-/* 4. CARTES - OMBRE NOIRE ET DURCIE */
+/* 5. CARTES PRODUITS (Cercle unique et Ombre noire) */
 .product-card {
     background-color: #f4f1e6 !important;
     border-radius: 30px !important;
-    padding: 30px !important;
-    /* Ombre très sombre (0.6 d'opacité) et bien décalée */
     box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.6) !important; 
+    padding: 30px !important;
     display: flex;
     align-items: center;
-    margin: 20px;
+    width: 520px;
 }
 
 .image-circle {
-    border: 5px solid #8bb956 !important;
     width: 140px;
     height: 140px;
+    border-radius: 50% !important;
+    border: 5px solid #8bb956 !important; /* UN SEUL CERCLE VERT */
+    overflow: hidden;
+    flex-shrink: 0;
+    margin-right: 25px;
 }
 
-/* 5. FOOTER - VERT UNIQUE (#8bb956) ET HERBE GEANTE */
+.image-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 6. FOOTER (Logo original, pas de blanc) */
 footer {
-    background-color: #8bb956 !important; /* Le vert de ton herbe */
+    background-color: #8bb956 !important;
     color: white !important;
-    margin-top: 150px !important;
-    padding: 120px 5% 60px !important;
+    margin-top: 200px !important;
+    padding: 100px 5% 60px !important;
     position: relative;
 }
 
-/* HERBE : ON LA FAIT SORTIR DU CADRE */
+/* HERBE XXL */
 footer::before {
     content: "";
     position: absolute;
-    top: -95px; /* Plus haut */
+    top: -145px;
     left: 0;
     width: 100%;
-    height: 100px; /* Herbe géante */
-    background: url('herbe.png') repeat-x bottom/contain !important;
+    height: 150px;
+    background: url('herbe.png') repeat-x bottom !important;
+    background-size: contain !important;
+    z-index: 10;
 }
 
-/* FORCE LE LOGO EN BLANC DANS LE FOOTER */
+/* LOGO IDENTIQUE AU HEADER (Filtre supprimé) */
 .footer-logo-box img {
     height: 90px !important;
-    filter: brightness(0) invert(1) !important; /* Transforme n'importe quelle couleur en blanc */
+    filter: none !important; 
+}
+
+.footer-logo-text {
+    font-size: 28px !important;
+    color: white !important; /* Le texte reste blanc pour contraster sur le vert */
 }
