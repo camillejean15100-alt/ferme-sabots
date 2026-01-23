@@ -77,54 +77,14 @@
     text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
 }
 /* --- biographie --- */
-/* On s'assure que le wrapper est un bloc compact */
-.wrapper-ferme {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    /* Supprime l'espace éventuel avec le header.png au-dessus */
-    margin-top: -2px; 
-}
 
-.vague-png {
-    width: 100%;
-    display: block; /* Supprime l'interligne forcé sous les images */
-    height: auto;
-}
 
-.contenu-beige p {
-    font-family: 'Montserrat Alternates', sans-serif;
-    font-size: clamp(1rem, 1.5vw, 1.2rem); /* Responsive : s'adapte à l'écran */
-    line-height: 1.6;
-    max-width: 850px;
-    margin-bottom: 30px;
-}
 
-.btn-produits {
-    display: inline-block;
-    background-color: #f2c06d;
-    color: white;
-    text-decoration: none;
-    padding: 15px 45px;
-    border-radius: 15px;
-    font-family: 'Montserrat Alternates', sans-serif;
-    font-weight: bold;
-    text-transform: uppercase;
-    /* Garde le bouton à sa taille sans l'étirer */
-    width: fit-content;
-    transition: 0.3s;
-}
 
-.btn-produits:hover {
-    filter: brightness(1.05);
-}
 
-/* Pour le mobile */
-@media (max-width: 600px) {
-  .bloc-beige-central {
-    padding: 10px 20px;
-  }
-}
+
+
+
 /* --- RESPONSIVE --- */
 @media (max-width: 1024px) {
     .site-header {
