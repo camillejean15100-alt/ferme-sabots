@@ -1,59 +1,5 @@
-/* Application globale */
-body {
-    margin: 0;
-    padding: 0;
-    background-color: #fff;
-    font-family: 'Fraunces', serif;
-}
-
-/* Header flexible */
-.site-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 4%;
-}
-
-.logo-container {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.logo-container img {
-    width: 80px;
-    height: auto;
-}
-
-.logo-text {
-    color: #669933;
-    font-size: 1.6rem;
-    line-height: 1.1;
-    font-weight: 700;
-    margin: 0;
-}
-
-/* Style du Menu */
-.nav-links {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #669933;
-    font-size: 1.2rem;
-    font-weight: 400;
-}
-
-.barre {
-    color: #669933;
-}
-
-/* --- LA BANNIÈRE RESPONSIVE --- */
 .banner {
-    position: relative; /* INDISPENSABLE pour que le texte reste SUR l'image */
+    position: relative; /* Indispensable : l'image devient le cadre du texte */
     width: 100%;
 }
 
@@ -64,56 +10,20 @@ body {
 }
 
 .texte-superpose {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Centre le texte parfaitement */
+    position: absolute; /* Le texte flotte */
+    top: 50%;           /* Il descend à 50% du haut de l'image */
+    left: 50%;          /* Il va à 50% de la gauche de l'image */
+    transform: translate(-50%, -50%); /* Il se recale pile au centre mathématique */
     color: #ffffff;
-    font-weight: 700;
     font-size: 3.5rem;
     text-align: center;
     width: 90%;
-    line-height: 1.1;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
-    pointer-events: none; /* Évite que le texte gêne le clic */
 }
 
-/* --- RESPONSIVE : Tablettes et Mobiles --- */
-
-/* Pour les écrans moyens */
-@media (max-width: 1024px) {
-    .texte-superpose {
-        font-size: 2.5rem;
-    }
-}
-
-/* Pour les mobiles (Moins de 768px) */
+/* RESPONSIVE : Pour que le texte ne soit pas trop gros sur téléphone */
 @media (max-width: 768px) {
-    .site-header {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .nav-links {
-        font-size: 0.9rem;
-        gap: 8px;
-    }
-
-    .barre {
-        display: none; /* On cache les barres sur mobile pour gagner de la place */
-    }
-
     .texte-superpose {
         font-size: 1.8rem;
-    }
-}
-
-/* Pour les tout petits téléphones */
-@media (max-width: 480px) {
-    .texte-superpose {
-        font-size: 1.2rem;
-    }
-    .logo-text {
-        font-size: 1.2rem;
     }
 }
