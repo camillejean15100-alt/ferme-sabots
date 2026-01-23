@@ -233,17 +233,70 @@
     white-space: nowrap; /* Empêche le texte du bouton de se couper */
 }
 
+/* Import de la typo exacte du design */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500;700&display=swap');
+
+.section-bio {
+    background-color: #f2ede0; /* Beige exact */
+    padding: 80px 20px 180px 20px; 
+    text-align: center;
+    font-family: 'Montserrat Alternates', sans-serif;
+    margin-top: -5px; /* Soudure avec l'image du haut */
+    position: relative;
+    z-index: 10;
+    
+    /* Vague uniquement en bas */
+    clip-path: ellipse(150% 100% at 50% 0%);
+}
+
+.contenu-centre {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre le texte et le bouton */
+    width: 100%;
+}
+
+.contenu-centre p {
+    color: #A7A79D; /* Gris/Beige exact */
+    font-size: 21px;
+    line-height: 1.6;
+    margin-bottom: 45px;
+    font-weight: 500;
+    max-width: 850px;
+}
+
+.wrapper-btn {
+    display: flex;
+    justify-content: center; /* Centre le bouton horizontalement */
+    width: 100%;
+}
+
+.btn-boutique {
+    display: inline-block;
+    background-color: #f4c471; /* Orange exact */
+    color: #ffffff !important;
+    padding: 18px 45px;
+    text-decoration: none;
+    border-radius: 12px; /* Coins arrondis du bouton */
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 18px;
+    border: none;
+    transition: 0.3s ease;
+}
+
 /* --- RESPONSIVE --- */
 @media (max-width: 768px) {
     .section-bio {
-        padding: 40px 15px 120px 15px;
-        clip-path: ellipse(200% 100% at 50% 0%);
+        padding: 50px 15px 120px 15px;
+        clip-path: ellipse(200% 100% at 50% 0%); /* Vague adaptée au mobile */
     }
     .contenu-centre p {
         font-size: 17px;
+        br { display: none; } /* Enlève les sauts de ligne sur petit écran */
     }
     .btn-boutique {
-        padding: 15px 25px;
-        font-size: 15px;
+        padding: 15px 30px;
+        font-size: 16px;
     }
 }
