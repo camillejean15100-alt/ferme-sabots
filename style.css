@@ -1,65 +1,81 @@
-* { box-sizing: border-box; }
-body { margin: 0; font-family: 'Montserrat Alternates', sans-serif; }
+/* Application globale de la police Fraunces */
+body {
+    margin: 0;
+    font-family: 'Fraunces', serif;
+    background-color: #fff;
+}
 
-/* Alignement Header */
-.top-bar {
+/* Header flexible et responsive */
+.site-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 40px;
-    background: white;
+    padding: 20px 4%;
 }
 
-.logo-side {
+.logo-container {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 20px;
 }
 
-.logo-side img { width: 70px; height: auto; }
+.logo-container img {
+    width: 80px; /* Taille du logo basée sur tes captures */
+    height: auto;
+}
 
-.brand-text {
-    color: #669933;
-    font-weight: 700;
-    font-size: 1.4rem;
+.logo-text {
+    color: #669933; /* Le vert demandé */
+    font-size: 1.6rem;
     line-height: 1.1;
+    font-weight: 700;
+    margin: 0;
 }
 
-/* Style Menu */
-.menu {
+/* Style du Menu */
+.nav-links {
     display: flex;
-    gap: 10px;
     align-items: center;
+    gap: 12px;
 }
 
-.menu a {
+.nav-links a {
     text-decoration: none;
-    color: #669933;
+    color: #669933; /* Même vert que le logo */
+    font-size: 1.2rem;
     font-weight: 400;
 }
 
-.pipe { color: #669933; }
+.barre {
+    color: #669933;
+}
 
 /* Bannière */
-.hero img {
+.banner img {
     width: 100%;
     height: auto;
     display: block;
 }
 
-/* RESPONSIVE : Pour tablette et téléphone */
-@media (max-width: 850px) {
-    .top-bar {
+/* --- RESPONSIVE : Mobile et Tablette --- */
+@media (max-width: 900px) {
+    .site-header {
         flex-direction: column;
-        padding: 20px;
+        text-align: center;
         gap: 20px;
     }
-    
-    .menu {
-        font-size: 0.9rem;
+
+    .logo-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-links {
         flex-wrap: wrap;
         justify-content: center;
     }
 
-    .pipe { display: none; } /* On cache les barres sur mobile pour l'espace */
+    .barre {
+        display: none; /* Cache les barres verticales sur petit écran */
+    }
 }
