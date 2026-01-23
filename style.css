@@ -59,51 +59,58 @@ body {
     color: #669933;
     font-weight: bold;
 }
-
-/* 1. Le conteneur doit être le référentiel */
+/* 1. On verrouille le conteneur pour que tout ce qui est dedans reste relatif à l'image */
 .hero {
-    position: relative; /* Indispensable pour que l'absolute fonctionne dedans */
+    position: relative;
     width: 100%;
     overflow: hidden;
+    line-height: 0;
 }
 
-/* 2. L'image occupe tout l'espace */
 .hero img {
     width: 100%;
     height: auto;
     display: block;
 }
 
-/* 3. Le calque de texte : on le force PAR-DESSUS l'image */
+/* 2. Le calque de texte : prend toute la place de l'image pour pouvoir centrer dedans */
 .hero-overlay, .hero-content, .hero-text-area {
-    position: absolute; /* Sort du flux pour monter sur l'image */
-    top: 50%; /* Positionne le haut à la moitié de l'image */
-    left: 50%; /* Positionne la gauche à la moitié de l'image */
-    transform: translate(-50%, -50%); /* Recentre exactement le bloc */
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    text-align: center;
-    z-index: 10; /* Assure qu'il passe devant l'image */
+    height: 100%; /* Important pour que le texte soit centré verticalement sur toute la photo */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centre verticalement */
+    align-items: center;     /* Centre horizontalement */
+    z-index: 20;
+    padding-bottom: 5vw; /* Un petit décalage vers le haut pour compenser la vague en bas */
 }
 
-/* 4. Le titre : Blanc pur et Fraunces */
+/* 3. Le texte en Fraunces Blanc */
 .hero-title, .hero-text {
     font-family: 'Fraunces', serif !important;
-    color: #ffffff !important; /* BLANC pur */
-    font-size: clamp(1.2rem, 5vw, 3rem); /* Taille s'adaptant à l'écran */
+    color: #ffffff !important;
+    /* font-size responsive : s'adapte à la largeur de l'écran */
+    font-size: clamp(1.4rem, 4.5vw, 3.5rem); 
     font-weight: 700;
-    line-height: 1.2;
-    text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.6); /* Ombre pour lire sur l'image */
+    line-height: 1.3;
+    text-align: center;
+    /* Ombre portée pour détacher le blanc de la photo */
+    text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.6);
     margin: 0;
+    max-width: 80%; /* Évite que le texte touche les bords */
 }
 
-/* 5. La vague : Ancrée en bas */
+/* 4. La Vague (on ne change pas la forme, juste on s'assure qu'elle reste derrière le texte) */
 .hero-vague, .hero-wave, .wave-shape {
     position: absolute;
     bottom: -1px;
-    left: -10%;
-    width: 120%;
-    height: 10vw;
+    left: -5%;
+    width: 110%;
+    height: 12vw;
     background-color: #fdfdf3;
     border-radius: 50% 50% 0 0;
-    z-index: 5;
+    z-index: 10;
 }
