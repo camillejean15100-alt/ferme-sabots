@@ -78,18 +78,43 @@
 }
 /* --- biographie --- */
 
-.content-container{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    font-size: 1rem;
-    text-align: center;
-    font-family: 'Montserrat Alternates', sans-serif; /* La police arrondie */
-    color: #709241;;
+/* Importation d'une police arrondie similaire */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+
+.ferme-hero {
+  text-align: center;
+  padding: 50px 20px;
+  font-family: 'Quicksand', sans-serif;
+  background-color: #ffffff; /* Fond blanc comme sur l'image */
 }
 
+.description {
+  color: #a3a3a3; /* Gris moyen/clair */
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto 40px auto;
+  font-weight: 500;
+}
 
+.btn-produits {
+  display: inline-block;
+  background-color: #f2c06d; /* Couleur orangée/miel du bouton */
+  color: white;
+  text-decoration: none;
+  padding: 18px 45px;
+  border-radius: 15px; /* Coins très arrondis */
+  font-size: 1.1rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
 
+/* Effet au survol pour plus d'interactivité */
+.btn-produits:hover {
+  background-color: #e5b05a;
+  transform: translateY(-2px);
+}
 
 
 
