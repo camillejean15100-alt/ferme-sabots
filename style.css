@@ -161,10 +161,9 @@ body {
 
 /* Cercle avec bordure verte */
 .circle-img {
-    width: 180px;
-    height: 180px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
-    border: 6px solid #8cb342;
     overflow: hidden;
     flex-shrink: 0;
 }
