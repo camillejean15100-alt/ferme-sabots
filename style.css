@@ -121,82 +121,81 @@ body {
     background-color: #e5b15a;
 }
 
-/* Configuration de la section */
-.stars-du-gout {
+/* Style global de la section */
+.stars-section {
     text-align: center;
-    padding: 50px 20px;
-    font-family: 'Arial', sans-serif; /* À remplacer par votre police spécifique si besoin */
+    padding: 40px 10%;
+    background-color: #ffffff;
 }
 
-.stars-du-gout h2 {
-    color: #4A7c2c; /* Vert sombre pour le titre */
-    font-size: 2.5rem;
+.main-title {
+    color: #4c6b30;
+    font-family: 'Serif', Georgia, serif; /* Pour l'aspect élégant */
+    font-size: 32px;
     margin-bottom: 40px;
 }
 
-.container {
+/* Alignement des deux cartes côte à côte */
+.stars-container {
     display: flex;
     justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
+    gap: 40px;
+    flex-wrap: wrap; /* Permet de passer l'un sous l'autre sur mobile */
 }
 
-/* Style des cartes */
-.card {
-    background-color: #f9f7f0; /* Couleur crème du fond */
-    border-radius: 40px;
-    padding: 30px;
+/* Style de la carte beige */
+.product-card {
+    background-color: #fcfaf1; /* Couleur fondbeige.png */
+    border-radius: 35px;
     display: flex;
     align-items: center;
-    width: 500px;
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1); /* Ombre douce */
-    position: relative;
+    padding: 25px;
+    width: 480px;
+    box-shadow: 4px 8px 15px rgba(0,0,0,0.05);
 }
 
-/* Conteneur d'image circulaire */
-.image-container {
-    width: 180px;
-    height: 180px;
+/* Le cercle vert autour de l'animal */
+.image-circle {
+    width: 160px;
+    height: 160px;
     border-radius: 50%;
-    border: 5px solid #7cb342; /* Bordure verte */
+    border: 4px solid #8cae43;
     overflow: hidden;
-    flex-shrink: 0;
+    flex-shrink: 0; /* Empêche le cercle de s'écraser */
 }
 
-.image-container img {
+.image-circle img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-/* Style du texte à l'intérieur des cartes */
-.content {
-    padding-left: 25px;
-    text-align: center;
-    color: #888; /* Gris pour le texte secondaire */
+/* Texte à droite de l'image */
+.product-info {
+    text-align: left;
+    margin-left: 20px;
+    color: #666;
+    font-family: 'Arial', sans-serif;
 }
 
-.content h3 {
-    color: #74BC22; /* Vert clair pour les titres de cartes */
-    font-size: 1.4rem;
-    margin-bottom: 10px;
-    text-transform: uppercase;
+.product-info h3 {
+    color: #8cae43;
+    margin: 0 0 10px 0;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
 }
 
-.content p {
-    font-size: 1.1rem;
-    line-height: 1.4;
+.product-info p {
     margin: 5px 0;
+    font-size: 0.95rem;
+    line-height: 1.4;
 }
 
-.content .highlight {
-    font-weight: bold;
-    margin-top: 15px;
+.farm-tag {
+    margin-top: 15px !important;
+    font-weight: 500;
 }
 
-.content strong {
-    color: #4A7c2c;
-}
 
 /* --- RESPONSIVE --- */
 @media (max-width: 1024px) {
