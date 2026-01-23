@@ -233,47 +233,38 @@
     white-space: nowrap; /* Empêche le texte du bouton de se couper */
 }
 
-/* Import de la typo */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500;700&display=swap');
 
 .section-bio {
-    /* Suppression du background-color et du clip-path */
-    background: transparent; 
-    padding: 60px 20px; /* Padding réduit car plus de vague à gérer */
+    display: flex;
+    flex-direction: column; /* Aligne les éléments en colonne */
+    align-items: center;    /* Centre horizontalement tout le contenu */
+    justify-content: center; /* Centre verticalement si une hauteur est définie */
+    width: 100%;
+    padding: 80px 20px;
+    background-color: transparent; /* Fond beige enlevé */
     text-align: center;
-    font-family: 'Montserrat Alternates', sans-serif;
-    position: relative;
-    z-index: 10;
-    margin-top: 0; /* Plus besoin de margin négatif sans fond à souder */
+    font-family: 'Montserrat Alternates', sans-serif; /* Police arrondie */
 }
 
 .contenu-centre {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centre parfaitement le texte et le bouton */
-    width: 100%;
+    align-items: center; /* Double sécurité pour le centrage du bouton */
+    max-width: 900px;
 }
 
 .contenu-centre p {
-    color: #A7A79D; /* Gris exact conservé */
+    color: #A7A79D; /* Couleur de texte grise/beige */
     font-size: 21px;
     line-height: 1.6;
     margin-bottom: 45px;
     font-weight: 500;
-    max-width: 850px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.wrapper-btn {
-    display: flex;
-    justify-content: center; /* Force le centrage horizontal du bouton */
-    width: 100%;
 }
 
 .btn-boutique {
     display: inline-block;
-    background-color: #f4c471; /* Orange exact conservé */
+    background-color: #f4c471; /* Orange exact du bouton */
     color: #ffffff !important;
     padding: 18px 45px;
     text-decoration: none;
@@ -281,26 +272,30 @@
     font-weight: 700;
     text-transform: uppercase;
     font-size: 18px;
-    border: none;
     transition: 0.3s ease;
-    white-space: nowrap;
+    border: none;
+    cursor: pointer;
 }
 
-/* --- RESPONSIVE --- */
+/* --- ADAPTATION RESPONSIVE --- */
 @media (max-width: 768px) {
     .section-bio {
-        padding: 40px 15px;
+        padding: 50px 15px;
     }
+
     .contenu-centre p {
-        font-size: 17px;
+        font-size: 18px;
     }
-    /* Masquer les retours à la ligne forcés pour un meilleur rendu mobile */
-    .contenu-centre p br { 
-        display: none; 
-    } 
+
+    /* Supprime les retours à la ligne forcés sur mobile pour la lisibilité */
+    .contenu-centre p br {
+        display: none;
+    }
+
     .btn-boutique {
         padding: 15px 30px;
         font-size: 16px;
+        width: auto; /* Garde le bouton à la taille du texte */
     }
 }
 
