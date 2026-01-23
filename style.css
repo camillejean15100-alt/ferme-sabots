@@ -97,31 +97,34 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500;700&display=swap');
 
-.bloc-bio-vague {
-    background-color: #f2ede0;
-    /* C'est ce clip-path qui crée la forme de vague exacte de ton image */
-    clip-path: ellipse(140% 100% at 50% 50%);
-    padding: 120px 20px;
-    margin: -60px 0; /* Pour l'emboîter parfaitement avec la banner */
+.bloc-beige-vague {
+    background-color: #f2ede0; /* Ton beige */
+    padding: 60px 20px 120px 20px; /* Plus de padding en bas pour la vague */
     text-align: center;
-    display: flex;
-    justify-content: center;
+    width: 100%;
+    
+    /* Le haut est droit, le bas est arrondi (vague) */
+    clip-path: ellipse(150% 100% at 50% 0%);
+    
+    /* Pour s'assurer qu'il n'y a pas d'espace blanc avec la bannière */
+    margin-top: -1px; 
 }
 
-.inner-bio {
+.contenu {
     max-width: 900px;
+    margin: 0 auto;
     font-family: 'Montserrat Alternates', sans-serif;
 }
 
-.inner-bio p {
-    color: #A7A79D;
-    font-size: 22px;
-    line-height: 1.5;
+.contenu p {
+    color: #A7A79D; /* Ton code couleur */
+    font-size: 21px;
+    line-height: 1.6;
     margin-bottom: 40px;
     font-weight: 500;
 }
 
-.btn-bio {
+.bouton-orange {
     display: inline-block;
     background-color: #f4c471;
     color: #ffffff !important;
@@ -129,11 +132,11 @@
     text-decoration: none;
     border-radius: 12px;
     font-weight: 700;
-    font-size: 18px;
     text-transform: uppercase;
     transition: 0.3s;
 }
 
-.btn-bio:hover {
+.bouton-orange:hover {
     background-color: #eab459;
+    transform: translateY(2px);
 }
