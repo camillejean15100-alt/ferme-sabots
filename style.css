@@ -92,26 +92,7 @@
     height: auto;
 }
 
-/* On retourne l'image du bas pour fermer la forme beige */
-.vague-bas {
-    transform: rotate(180deg);
-}
-
-.contenu-beige {
-    /* HEX de ton image pour une fusion invisible */
-    background-color: #f2eee3; 
-    text-align: center;
-    padding: 20px 5%;
-    /* On fait mordre le beige de 1px sur les vagues pour éviter les lignes blanches */
-    margin: -1px 0; 
-    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 .contenu-beige p {
-    color: #a3a3a2;
     font-family: 'Montserrat Alternates', sans-serif;
     font-size: clamp(1rem, 1.5vw, 1.2rem); /* Responsive : s'adapte à l'écran */
     line-height: 1.6;
