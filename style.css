@@ -60,48 +60,53 @@ body {
     font-weight: bold;
 }
 
-/* 1. Le conteneur du Hero */
+/* 1. On prépare le terrain */
 .hero {
     position: relative;
     width: 100%;
-    background-color: #fdfdf3; /* La couleur crème de la suite du site */
+    background-color: #fdfdf3; /* Ton fond crème */
     overflow: hidden;
 }
 
-/* 2. L'image découpée en vague */
+/* L'image prend toute la largeur */
 .hero img {
     width: 100%;
     height: auto;
     display: block;
-    /* Cette ligne crée la vague directement sur l'image */
-    /* Elle dessine une courbe qui remonte vers le milieu */
-    clip-path: ellipse(100% 100% at 50% 0%);
-    margin-bottom: -1px; /* Évite les fuites de pixels */
 }
 
-/* 3. Centrage du texte PAR-DESSUS l'image */
+/* 2. LE TEXTE : Centré, Blanc, Fraunces */
 .hero-overlay, .hero-content, .hero-text-area {
     position: absolute;
-    /* On cible le milieu de la zone encore visible de l'image */
-    top: 40%; 
+    top: 45%; /* Légèrement au-dessus du centre pour compenser la vague */
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 90%;
+    width: 100%;
     text-align: center;
-    z-index: 10;
+    z-index: 20;
 }
 
 .hero-title, .hero-text {
     font-family: 'Fraunces', serif !important;
     color: #ffffff !important;
-    font-size: clamp(1.5rem, 5vw, 3.5rem); /* Responsive : s'adapte à la largeur */
+    font-size: clamp(1.5rem, 5vw, 3.5rem);
     font-weight: 700;
-    line-height: 1.2;
-    text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.7); /* Ombre pour la lisibilité */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
     margin: 0;
 }
 
-/* On supprime les anciennes classes de vagues qui faisaient des blocs crèmes */
+/* 3. LA VAGUE : On utilise un masque SVG pour la forme complexe */
 .hero-vague, .hero-wave, .wave-shape {
-    display: none;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 100px; /* Hauteur de la vague */
+    background-color: #fdfdf3;
+    /* Ce code crée la forme de vague asymétrique de ton image */
+    clip-path: url(#wave-mask); 
+    -webkit-clip-path: polygon(0% 100%, 100% 100%, 100% 30%, 80% 15%, 50% 50%, 20% 15%, 0% 40%);
+    /* Version simplifiée par border-radius si le polygone est trop raide */
+    border-radius: 80% 20% 0 0 / 100% 100% 0 0;
+    z-index: 10;
 }
