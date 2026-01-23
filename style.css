@@ -95,25 +95,22 @@
     }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500;700&display=swap');
-
 .section-bio-vague {
-    background-color: #f2ede0; /* Couleur beige identique à ton design */
-    padding: 80px 20px 150px 20px; /* Plus d'espace en bas pour laisser respirer la vague */
+    background-color: #f2ede0; /* Beige exact du design */
+    padding: 100px 20px 140px 20px;
     text-align: center;
     font-family: 'Montserrat Alternates', sans-serif;
     
-    /* Supprime l'espace vide sous la bannière pour un collage parfait */
-    margin-top: -5px; 
-    position: relative;
-    z-index: 10;
-
-    /* LE HAUT EST PLAT (at 50% 0%) ET LE BAS EST ARRONDIE (ellipse) */
-    clip-path: ellipse(150% 100% at 50% 0%);
+    /* Supprime TOUT espace blanc entre l'image et le bloc */
+    margin-top: -2px; 
+    
+    /* REGLAGE LENTILLE : Crée la courbe du haut et du bas */
+    /* On utilise 50% 50% pour que les deux courbes soient présentes */
+    clip-path: ellipse(150% 100% at 50% 50%);
 }
 
 .contenu-centre p {
-    color: #A7A79D; /* Ta couleur exacte */
+    color: #A7A79D; /* Couleur de texte exacte */
     font-size: 21px;
     line-height: 1.6;
     margin-bottom: 45px;
@@ -122,18 +119,13 @@
 
 .btn-boutique {
     display: inline-block;
-    background-color: #f4c471; /* Orange exact de tes images */
+    background-color: #f4c471; /* Orange exact du bouton */
     color: #ffffff !important;
     padding: 18px 45px;
     text-decoration: none;
-    border-radius: 12px; /* Coins arrondis comme sur le modèle */
+    border-radius: 12px;
     font-weight: 700;
     text-transform: uppercase;
     font-size: 18px;
-    transition: 0.3s ease;
     border: none;
-}
-
-.btn-boutique:hover {
-    background-color: #eab459;
 }
