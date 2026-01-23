@@ -1,4 +1,4 @@
-/* --- RESET ET MENU (TON CODE) --- */
+/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -7,29 +7,20 @@
 
 body {
     width: 100%;
-    overflow-x: hidden;
+    background-color: #ffffff;
 }
 
+/* TON MENU (VÉRIFIÉ ET INTÉGRÉ) */
 .site-header {
     width: 100%;
-    background-color: #ffffff;
     padding: 10px 5px; 
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.logo-group {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.logo-group img {
-    height: 60px;
-    width: auto;
-}
-
+.logo-group { display: flex; align-items: center; gap: 12px; }
+.logo-group img { height: 60px; width: auto; }
 .brand-title {
     font-family: 'Fraunces', serif;
     color: #669933;
@@ -38,85 +29,70 @@ body {
     font-weight: 700;
 }
 
-.nav-menu {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding-right: 10px;
-}
-
+.nav-menu { display: flex; align-items: center; gap: 10px; padding-right: 10px; }
 .nav-menu a {
     font-family: 'Montserrat Alternates', sans-serif;
     color: #669933;
     text-decoration: none;
     font-weight: 500;
 }
+.nav-menu span { color: #669933; font-weight: bold; }
 
-.nav-menu span {
-    color: #669933;
-    font-weight: bold;
-}
-
-/* --- LE BLOC HERO (IMAGES + TEXTE) --- */
+/* --- SECTION HERO : VAGUES ET TEXTE --- */
 
 .hero-container {
-    position: relative; /* Indispensable pour que le texte se place dessus */
+    position: relative; /* Indispensable pour la superposition */
     width: 100%;
     height: 500px;
-    margin-top: 5px;
+    margin-top: 10px;
 }
 
-.wave-images {
+.wave-wrapper {
     display: flex;
     width: 100%;
     height: 100%;
-    gap: 8px; /* L'espace blanc entre biquette et brebis */
+    gap: 10px; /* L'espace blanc central entre biquette et brebis */
     background-color: white;
-    /* La forme de vague précise en bas */
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 80% 90%, 50% 82%, 20% 95%, 0 88%);
+    /* La vague exacte du modèle : montante au centre, descendante sur les bords */
+    clip-path: polygon(0 0, 100% 0, 100% 88%, 80% 82%, 50% 95%, 20% 85%, 0 95%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 88%, 80% 82%, 50% 95%, 20% 85%, 0 95%);
 }
 
-.img-left {
+.split-img {
     width: 50%;
     height: 100%;
-    background-image: url('biquette.png');
     background-size: cover;
     background-position: center;
 }
 
-.img-right {
-    width: 50%;
-    height: 100%;
-    background-image: url('brebis.png');
-    background-size: cover;
-    background-position: center;
-}
+/* Tes noms de fichiers exacts */
+.biquette { background-image: url('biquette.png'); }
+.brebis { background-image: url('brebis.png'); }
 
-/* --- LE TEXTE SUPERPOSÉ --- */
-
-.hero-overlay-text {
+/* LE TEXTE : BLANC, CENTRÉ, RESPONSIVE */
+.hero-text {
     position: absolute;
-    top: 45%; /* Centre verticalement */
-    left: 50%;
-    transform: translate(-50%, -50%); /* Centrage parfait */
+    top: 50%; /* Centre vertical */
+    left: 50%; /* Centre horizontal */
+    transform: translate(-50%, -50%); /* Centrage absolu */
     width: 100%;
     text-align: center;
-    z-index: 10; /* Force le passage devant les images */
+    z-index: 10;
     pointer-events: none;
 }
 
-.fraunces-white {
+.hero-text h2 {
     font-family: 'Fraunces', serif;
-    color: #ffffff;
-    font-size: clamp(1.8rem, 5vw, 3.5rem); /* Responsive */
+    color: #ffffff !important; /* Blanc Fraunces */
+    font-size: clamp(1.8rem, 5vw, 3.5rem); /* Taille adaptative selon l'écran */
     font-weight: 700;
     line-height: 1.1;
-    /* Ombre pour détacher le blanc des images claires */
-    text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.5);
+    /* Ombre portée pour détacher le texte blanc des photos */
+    text-shadow: 0px 4px 15px rgba(0, 0, 0, 0.6);
 }
 
-/* MOBILE */
+/* RESPONSIVE MOBILE */
 @media (max-width: 768px) {
     .hero-container { height: 350px; }
-    .nav-menu { gap: 5px; font-size: 0.8rem; }
+    .wave-wrapper { gap: 5px; } /* Espace blanc réduit sur mobile */
 }
