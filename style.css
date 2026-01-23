@@ -1,4 +1,4 @@
-/* --- TON CSS MENU INTÉGRÉ --- */
+/* --- RESET ET MENU (TON CODE) --- */
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +7,7 @@
 
 body {
     width: 100%;
-    background-color: #ffffff;
+    overflow-x: hidden;
 }
 
 .site-header {
@@ -50,7 +50,6 @@ body {
     color: #669933;
     text-decoration: none;
     font-weight: 500;
-    font-size: 1rem;
 }
 
 .nav-menu span {
@@ -58,63 +57,66 @@ body {
     font-weight: bold;
 }
 
-/* --- SECTION IMAGE ET VAGUES --- */
+/* --- LE BLOC HERO (IMAGES + TEXTE) --- */
 
 .hero-container {
-    position: relative;
+    position: relative; /* Indispensable pour que le texte se place dessus */
     width: 100%;
-    height: 550px; /* Ajuste la hauteur souhaitée */
-    margin-top: 10px;
+    height: 500px;
+    margin-top: 5px;
 }
 
-.images-wave-wrapper {
+.wave-images {
     display: flex;
     width: 100%;
     height: 100%;
-    gap: 10px; /* L'espace blanc centré entre les photos */
+    gap: 8px; /* L'espace blanc entre biquette et brebis */
     background-color: white;
-    /* Découpe exacte des vagues du bas */
-    clip-path: polygon(0 0, 100% 0, 100% 88%, 80% 82%, 50% 95%, 20% 85%, 0 95%);
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 88%, 80% 82%, 50% 95%, 20% 85%, 0 95%);
+    /* La forme de vague précise en bas */
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 80% 90%, 50% 82%, 20% 95%, 0 88%);
 }
 
-.img-left, .img-right {
+.img-left {
     width: 50%;
     height: 100%;
+    background-image: url('biquette.png');
     background-size: cover;
     background-position: center;
 }
 
-/* Remplace par tes vrais fichiers */
-.img-left { background-image: url('image_chevres.jpg'); }
-.img-right { background-image: url('image_moutons.jpg'); }
+.img-right {
+    width: 50%;
+    height: 100%;
+    background-image: url('brebis.png');
+    background-size: cover;
+    background-position: center;
+}
 
-/* --- LE TEXTE EN SEPARÉ --- */
+/* --- LE TEXTE SUPERPOSÉ --- */
 
-.hero-text {
+.hero-overlay-text {
     position: absolute;
-    top: 50%;
+    top: 45%; /* Centre verticalement */
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); /* Centrage parfait */
     width: 100%;
     text-align: center;
-    z-index: 5; /* Passe devant l'image mais n'est pas coupé */
-    pointer-events: none; /* Laisse cliquer à travers */
+    z-index: 10; /* Force le passage devant les images */
+    pointer-events: none;
 }
 
-.hero-text h2 {
+.fraunces-white {
     font-family: 'Fraunces', serif;
-    color: white;
-    font-size: clamp(1.8rem, 5vw, 3.2rem); /* Responsive total */
-    line-height: 1.2;
+    color: #ffffff;
+    font-size: clamp(1.8rem, 5vw, 3.5rem); /* Responsive */
     font-weight: 700;
-    text-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5); /* Ombre pour la lisibilité */
+    line-height: 1.1;
+    /* Ombre pour détacher le blanc des images claires */
+    text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.5);
 }
 
-/* --- RESPONSIVE MOBILE --- */
+/* MOBILE */
 @media (max-width: 768px) {
     .hero-container { height: 350px; }
-    .nav-menu { font-size: 0.8rem; gap: 5px; }
-    .brand-title { font-size: 0.9rem; }
-    .images-wave-wrapper { gap: 5px; } /* Espace blanc plus fin sur mobile */
+    .nav-menu { gap: 5px; font-size: 0.8rem; }
 }
