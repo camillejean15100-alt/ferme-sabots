@@ -186,25 +186,64 @@
     transition: 0.3s ease;
 }
 
-/* --- ADAPTATION MOBILE (RESPONSIVE) --- */
+.section-bio {
+    background-color: #f2ede0; /* Beige exact */
+    padding: 60px 20px 180px 20px; 
+    text-align: center;
+    font-family: 'Montserrat Alternates', sans-serif;
+    margin-top: -5px; /* Colle à l'image du haut */
+    position: relative;
+    z-index: 10;
+    /* Coupe en haut plat et bas vague */
+    clip-path: ellipse(150% 100% at 50% 0%);
+}
+
+.contenu-centre {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* CENTRE TOUT HORIZONTALEMENT */
+    width: 100%;
+}
+
+.contenu-centre p {
+    color: #A7A79D; /* Gris exact */
+    font-size: 21px;
+    line-height: 1.6;
+    margin-bottom: 45px;
+    font-weight: 500;
+    max-width: 800px;
+}
+
+.wrapper-btn {
+    display: flex;
+    justify-content: center; /* Force le bouton au milieu */
+    width: 100%;
+}
+
+.btn-boutique {
+    display: inline-block;
+    background-color: #f4c471; /* Orange exact */
+    color: #ffffff !important;
+    padding: 18px 45px;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 18px;
+    white-space: nowrap; /* Empêche le texte du bouton de se couper */
+}
+
+/* --- RESPONSIVE --- */
 @media (max-width: 768px) {
     .section-bio {
-        /* On réduit les marges pour que ça reste lisible sur petit écran */
         padding: 40px 15px 120px 15px;
-        margin-top: -2px;
-        /* On ajuste la courbe pour qu'elle ne soit pas trop pointue sur mobile */
         clip-path: ellipse(200% 100% at 50% 0%);
     }
-
     .contenu-centre p {
-        font-size: 17px; /* Texte plus petit sur mobile */
-        /* On enlève les retours à la ligne forcés (<br>) pour le mobile */
-        br { display: none; } 
+        font-size: 17px;
     }
-
     .btn-boutique {
-        padding: 15px 30px;
-        font-size: 16px;
-        width: 90%; /* Bouton plus large sur mobile pour faciliter le clic */
+        padding: 15px 25px;
+        font-size: 15px;
     }
 }
