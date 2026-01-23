@@ -8,75 +8,73 @@
 </head>
 <body>
 
-    <header class="navbar">
+    <header>
         <div class="logo-container">
             <img src="logofermeauxsabotsfendus.png" alt="Logo">
             <div class="logo-text">La Ferme aux<br>Sabots Fendus</div>
         </div>
         <nav>
-            <ul class="nav-links">
-                <li><a href="#">Accueil</a></li>
-                <li><a href="#">L'Élevage</a></li>
-                <li><a href="#">Boutique</a></li>
-                <li><a href="#">Nous Contacter</a></li>
-            </ul>
+            <a href="#">Accueil</a> | <a href="#">L'Élevage</a> | <a href="#">Boutique</a> | <a href="#">Nous Contacter</a>
         </nav>
     </header>
 
     <section class="hero">
-        <h1>"Bienvenue à la <br> Ferme aux Sabots Fendus !"</h1>
-        <div class="wave-divider">
-            <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
-                <path d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64V120H0Z"></path>
-            </svg>
+        <div class="hero-top">
+            <img src="header.png" alt="Biquettes et Brebis">
+            <h1>"Bienvenue à la <br> Ferme aux Sabots Fendus !"</h1>
         </div>
-    </section>
-
-    <section class="intro">
-        <p>Nous élevons avec passion un troupeau de chèvres ainsi qu'un troupeau de brebis BMC conduit en agriculture biologique. Deux élevages complémentaires unis par une même exigence : la qualité et la saveur de nos produits.</p>
-        <button class="btn-orange">DÉCOUVRIR NOS PRODUITS</button>
-        <div class="wave-bottom">
-            <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
-                <path d="M0,32L80,42.7C160,53,320,75,480,74.7C640,75,800,53,960,42.7C1120,32,1280,32,1360,32L1440,32V120H0Z"></path>
-            </svg>
+        <div class="hero-wave"></div>
+        <div class="hero-description">
+            <p>Nous élevons avec passion un troupeau de chèvres ainsi qu'un troupeau de brebis BMC conduit en agriculture biologique. Deux élevages complémentaires unis par une même exigence : la qualité et la saveur de nos produits.</p>
+            <button class="cta-button">DÉCOUVRIR NOS PRODUITS</button>
         </div>
     </section>
 
     <section class="stars-section">
-        <h2>Nos Stars du Goût</h2>
-        <div class="cards-container">
-            <div class="product-card">
-                <div class="image-circle"><img src="biquette.png" alt="Yaourts"></div>
-                <div class="card-content">
+        <h2>Nos Stars du Goûts</h2>
+        <div class="cards">
+            <div class="card">
+                <div class="card-thumb">
+                    <img src="biquette.png" alt="Chèvre">
+                </div>
+                <div class="card-text">
                     <h3>YAOURTS & GLACES</h3>
                     <p>on vous prévient, nos produits vous rendront accros !</p>
-                    <span class="highlight">100% lait de la ferme</span>
+                    <span class="sub-text">100% lait de la ferme</span>
                 </div>
             </div>
-            <div class="product-card">
-                <div class="image-circle"><img src="brebis.png" alt="Caissettes"></div>
-                <div class="card-content">
+            <div class="card">
+                <div class="card-thumb">
+                    <img src="brebis.png" alt="Brebis">
+                </div>
+                <div class="card-text">
                     <h3>NOS CAISSETTES</h3>
-                    <p>Acheter notre viande <strong>BIO</strong>, c'est savourer une viande de qualité produite à la ferme.</p>
+                    <p>Acheter notre viande <strong>BIO</strong>, c'est savourer une viande de qualité produite à la ferme</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer>
+    <footer class="footer">
+        <div class="grass-border">
+            <img src="herbe.png" alt="herbe">
+        </div>
         <div class="footer-content">
-            <div class="footer-map">
-                <img src="maps.png" alt="Plan">
+            <div class="map">
+                <img src="maps.png" alt="Carte">
             </div>
-            <div class="footer-info">
-                <div class="footer-logo">
-                    <img src="logofermeauxsabotsfendus.png" alt="Logo Footer">
-                    <div class="footer-title">La Ferme aux<br>Sabots Fendus</div>
+            <div class="infos">
+                <div class="footer-header">
+                    <img src="logofermeauxsabotsfendus.png" class="logo-footer" alt="Logo">
+                    <h3>La Ferme aux <br> Sabots Fendus</h3>
                 </div>
-                <p><strong>Infos pratiques</strong></p>
-                <p>📍 Adresse : Votre adresse ici</p>
-                <p>📞 Tel : 06 XX XX XX XX</p>
-                <p>🕒 Vente à la ferme : le mardi et le jeudi</p>
+                <div class="details">
+                    <h4>Infos pratique</h4>
+                    <p><img src="adresse.png" class="icon"> <strong>Adresse :</strong> ...</p>
+                    <p><img src="telephone.png" class="icon"> <strong>Tel :</strong> 06 XX XX XX XX</p>
+                    <p><img src="horaire.png" class="icon"> <strong>Horaires :</strong></p>
+                    <p class="shift">Vente à la ferme :<br>le mardi et le jeudi</p>
+                </div>
             </div>
         </div>
     </footer>
