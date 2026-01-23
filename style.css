@@ -13,7 +13,79 @@ body {
     padding: 10px 40px;
 }
 
-/* Aligne l'image et le texte du logo côte à côte */
+/* Aligne l'image et le texte du logo côte à côte *//* Style de base */
+body {
+    font-family: 'Montserrat Alternates', sans-serif; /* Nouvelle police */
+    margin: 0;
+    padding: 0;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: #ffffff;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-img {
+    width: 80px;
+    height: auto;
+}
+
+.logo-title {
+    color: #669933; /* Ton vert */
+    font-size: 1.4rem;
+    line-height: 1.1;
+    margin: 0;
+    font-weight: 700;
+}
+
+.navigation {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #669933;
+    font-weight: 400;
+}
+
+.sep {
+    color: #669933;
+}
+
+/* --- PARTIE RESPONSIVE --- */
+
+@media (max-width: 768px) {
+    .main-header {
+        flex-direction: column; /* On empile Logo et Menu */
+        text-align: center;
+        gap: 20px;
+    }
+
+    .logo-container {
+        flex-direction: column; /* Image au-dessus du texte sur petit écran */
+        gap: 5px;
+    }
+
+    .navigation {
+        flex-wrap: wrap; /* Les liens passent à la ligne si besoin */
+        justify-content: center;
+    }
+
+    .sep {
+        display: none; /* On enlève les barres | sur mobile pour plus de place */
+    }
+}
 .logo-container {
     display: flex;
     align-items: center;
