@@ -233,70 +233,74 @@
     white-space: nowrap; /* Empêche le texte du bouton de se couper */
 }
 
-/* Import de la typo exacte du design */
+/* Import de la typo */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500;700&display=swap');
 
 .section-bio {
-    background-color: #f2ede0; /* Beige exact */
-    padding: 80px 20px 180px 20px; 
+    /* Suppression du background-color et du clip-path */
+    background: transparent; 
+    padding: 60px 20px; /* Padding réduit car plus de vague à gérer */
     text-align: center;
     font-family: 'Montserrat Alternates', sans-serif;
-    margin-top: -5px; /* Soudure avec l'image du haut */
     position: relative;
     z-index: 10;
-    
-    /* Vague uniquement en bas */
-    clip-path: ellipse(150% 100% at 50% 0%);
+    margin-top: 0; /* Plus besoin de margin négatif sans fond à souder */
 }
 
 .contenu-centre {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centre le texte et le bouton */
+    align-items: center; /* Centre parfaitement le texte et le bouton */
     width: 100%;
 }
 
 .contenu-centre p {
-    color: #A7A79D; /* Gris/Beige exact */
+    color: #A7A79D; /* Gris exact conservé */
     font-size: 21px;
     line-height: 1.6;
     margin-bottom: 45px;
     font-weight: 500;
     max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .wrapper-btn {
     display: flex;
-    justify-content: center; /* Centre le bouton horizontalement */
+    justify-content: center; /* Force le centrage horizontal du bouton */
     width: 100%;
 }
 
 .btn-boutique {
     display: inline-block;
-    background-color: #f4c471; /* Orange exact */
+    background-color: #f4c471; /* Orange exact conservé */
     color: #ffffff !important;
     padding: 18px 45px;
     text-decoration: none;
-    border-radius: 12px; /* Coins arrondis du bouton */
+    border-radius: 12px; /* Coins arrondis */
     font-weight: 700;
     text-transform: uppercase;
     font-size: 18px;
     border: none;
     transition: 0.3s ease;
+    white-space: nowrap;
 }
 
 /* --- RESPONSIVE --- */
 @media (max-width: 768px) {
     .section-bio {
-        padding: 50px 15px 120px 15px;
-        clip-path: ellipse(200% 100% at 50% 0%); /* Vague adaptée au mobile */
+        padding: 40px 15px;
     }
     .contenu-centre p {
         font-size: 17px;
-        br { display: none; } /* Enlève les sauts de ligne sur petit écran */
     }
+    /* Masquer les retours à la ligne forcés pour un meilleur rendu mobile */
+    .contenu-centre p br { 
+        display: none; 
+    } 
     .btn-boutique {
         padding: 15px 30px;
         font-size: 16px;
     }
 }
+
