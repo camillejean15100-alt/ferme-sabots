@@ -95,22 +95,30 @@
     }
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500;700&display=swap');
+
 .section-bio-vague {
-    background-color: #f2ede0; /* Beige exact du design */
-    padding: 100px 20px 140px 20px;
+    /* Couleur beige exacte du fond */
+    background-color: #f2ede0; 
+    
+    /* Padding : réduit en haut pour l'image, grand en bas pour la vague */
+    padding: 50px 20px 160px 20px; 
+    
     text-align: center;
     font-family: 'Montserrat Alternates', sans-serif;
     
-    /* Supprime TOUT espace blanc entre l'image et le bloc */
-    margin-top: -2px; 
-    
-    /* REGLAGE LENTILLE : Crée la courbe du haut et du bas */
-    /* On utilise 50% 50% pour que les deux courbes soient présentes */
-    clip-path: ellipse(150% 100% at 50% 50%);
+    /* Colle le bloc à l'image du dessus sans laisser de blanc */
+    margin-top: -5px; 
+    position: relative;
+    z-index: 10;
+
+    /* LA DÉCOUPE : Haut plat (0%) et Bas en vague (ellipse) */
+    clip-path: ellipse(150% 100% at 50% 0%);
 }
 
 .contenu-centre p {
-    color: #A7A79D; /* Couleur de texte exacte */
+    /* Couleur de texte grise/beige précise */
+    color: #A7A79D; 
     font-size: 21px;
     line-height: 1.6;
     margin-bottom: 45px;
@@ -119,7 +127,8 @@
 
 .btn-boutique {
     display: inline-block;
-    background-color: #f4c471; /* Orange exact du bouton */
+    /* Orange exact du bouton */
+    background-color: #f4c471; 
     color: #ffffff !important;
     padding: 18px 45px;
     text-decoration: none;
@@ -128,4 +137,9 @@
     text-transform: uppercase;
     font-size: 18px;
     border: none;
+    transition: 0.3s ease;
+}
+
+.btn-boutique:hover {
+    background-color: #eab459;
 }
