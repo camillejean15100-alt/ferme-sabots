@@ -98,55 +98,49 @@
 /* Import de la police Montserrat Alternates */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500;600&display=swap');
 
-.section-ferme {
-    background-color: #f2ede0; /* Beige de l'image */
-    padding: 80px 20px;
+.section-produits {
+    background-color: #F2EDE0; /* Fond beige de l'image */
+    padding: 100px 20px;
     text-align: center;
+    width: 100%;
 }
 
-.container-ferme {
-    max-width: 1000px;
+.content-container {
+    max-width: 950px;
     margin: 0 auto;
 }
 
-.texte-presentation {
+.description-elevage {
     font-family: 'Montserrat Alternates', sans-serif;
-    color: #A7A79D; /* Code couleur demandé */
-    font-size: 22px;
+    color: #A7A79D; /* Code couleur exact demandé */
+    font-size: 20px;
     line-height: 1.6;
     margin-bottom: 40px;
     font-weight: 500;
 }
 
-.btn-boutique {
+.btn-decouvrir {
     display: inline-block;
     font-family: 'Montserrat Alternates', sans-serif;
-    background-color: #f4c471; /* Orange pastel */
-    color: #FFFFFF;
+    background-color: #F4C471; /* Orange du bouton */
+    color: #FFFFFF !important;
     padding: 18px 45px;
     text-decoration: none;
-    border-radius: 12px; /* Coins arrondis */
+    border-radius: 12px;
     font-weight: 600;
     font-size: 18px;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease;
+    border: none;
 }
 
-/* Effet au survol */
-.btn-boutique:hover {
-    background-color: #eab459;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+.btn-decouvrir:hover {
+    background-color: #E8B55F;
 }
 
-/* Adaptabilité mobile */
+/* Version Mobile */
 @media (max-width: 768px) {
-    .texte-presentation {
+    .description-elevage {
         font-size: 18px;
-    }
-    .btn-boutique {
-        width: 80%;
-        padding: 15px 20px;
     }
 }
