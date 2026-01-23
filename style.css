@@ -1,4 +1,4 @@
-/* IMPORTATION DES DEUX POLICES SPÉCIFIQUES */
+/* 1. IMPORTATION DES POLICES EXACTES */
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat+Alternates:wght@400;700&display=swap');
 
 * {
@@ -8,19 +8,20 @@
 }
 
 body {
-    /* TYPO CONTENU : Montserrat Alternates */
+    /* CORPS DE TEXTE : Montserrat Alternates */
     font-family: 'Montserrat Alternates', sans-serif !important;
     color: #5d8233;
     background-color: white;
+    overflow-x: hidden;
 }
 
-/* TITRES ET LOGO : Fraunces */
+/* 2. TITRES ET LOGO : Fraunces */
 h1, h2, h3, .logo-text, .footer-logo-text {
     font-family: 'Fraunces', serif !important;
     font-weight: 700 !important;
 }
 
-/* HEADER */
+/* 3. HEADER */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -28,10 +29,20 @@ h1, h2, h3, .logo-text, .footer-logo-text {
     padding: 20px 5%;
 }
 
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-container img {
+    height: 70px;
+}
+
 .logo-text {
-    font-size: 28px !important;
-    color: #5d8233 !important;
+    font-size: 26px;
     line-height: 1.1;
+    color: #5d8233;
 }
 
 .nav-links {
@@ -44,57 +55,88 @@ h1, h2, h3, .logo-text, .footer-logo-text {
     text-decoration: none;
     color: #5d8233;
     font-weight: 700;
-    font-size: 18px;
 }
 
-/* BANNIÈRE HERO */
+/* 4. SECTION HERO */
 .hero {
-    height: 450px;
-    background: url('header.png') center/cover no-repeat !important;
+    height: 500px;
+    background: url('header.png') center/cover no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .hero h1 {
-    color: white !important;
-    font-size: 52px !important;
-    text-shadow: 3px 3px 15px rgba(0,0,0,0.8) !important;
+    color: white;
+    font-size: 52px;
+    text-align: center;
+    text-shadow: 3px 3px 15px rgba(0,0,0,0.8);
+}
+
+/* 5. INTRODUCTION BEIGE */
+.intro {
+    background-color: #f4f1e6;
+    padding: 80px 20%;
     text-align: center;
 }
 
-/* CARTES PRODUITS */
+.intro p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.btn-orange {
+    background-color: #f2c478;
+    color: white;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    padding: 18px 45px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+/* 6. SECTION NOS STARS DU GOÛT */
 .stars-section {
     padding: 80px 5%;
     text-align: center;
 }
 
+.stars-section h2 {
+    font-size: 40px;
+    margin-bottom: 60px;
+}
+
 .cards-container {
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 50px;
+    flex-wrap: wrap;
 }
 
 .product-card {
-    background-color: #f4f1e6 !important;
-    border-radius: 30px !important;
-    /* OMBRE NOIRE ET NETTE */
-    box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.6) !important; 
-    padding: 30px !important;
+    background-color: #f4f1e6;
+    border-radius: 35px;
+    padding: 35px;
+    width: 520px;
     display: flex;
     align-items: center;
-    width: 520px;
+    /* OMBRE NOIRE DENSE */
+    box-shadow: 18px 18px 35px rgba(0, 0, 0, 0.5); 
 }
 
-/* LE CERCLE UNIQUE VERT */
+/* CERCLE UNIQUE VERT SANS DÉCALAGE */
 .image-circle {
-    width: 140px;
-    height: 140px;
-    border-radius: 50% !important;
-    border: 5px solid #8bb956 !important;
+    width: 155px;
+    height: 155px;
+    border-radius: 50%;
+    border: 6px solid #8bb956;
     overflow: hidden;
-    flex-shrink: 0;
     margin-right: 25px;
+    flex-shrink: 0;
 }
 
 .image-circle img {
@@ -103,42 +145,68 @@ h1, h2, h3, .logo-text, .footer-logo-text {
     object-fit: cover;
 }
 
-/* FOOTER VERT CLAIR */
+.card-content {
+    text-align: left;
+}
+
+.card-content h3 {
+    color: #8bb956;
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+/* 7. FOOTER VERT AVEC HERBE XXL */
 footer {
-    background-color: #8bb956 !important;
-    color: white !important;
-    margin-top: 200px !important;
-    padding: 100px 5% 60px !important;
+    background-color: #8bb956;
+    color: white;
+    margin-top: 180px;
+    padding: 120px 5% 60px;
     position: relative;
 }
 
-/* HERBE GÉANTE QUI DÉPASSE */
+/* L'HERBE GÉANTE */
 footer::before {
     content: "";
     position: absolute;
-    top: -148px; /* Monte très haut sur le blanc */
+    top: -125px; /* Elle dépasse généreusement sur le blanc */
     left: 0;
     width: 100%;
-    height: 150px; /* Taille massive */
-    background: url('herbe.png') repeat-x bottom !important;
-    background-size: contain !important;
-    z-index: 10;
+    height: 130px;
+    background: url('herbe.png') repeat-x bottom/contain;
 }
 
-/* LOGO FOOTER : COULEUR ORIGINALE */
+.footer-content {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    align-items: flex-start;
+}
+
+.footer-map img {
+    border: 8px solid white;
+    border-radius: 25px;
+    width: 420px;
+}
+
 .footer-logo-box {
     display: flex;
     align-items: center;
     gap: 15px;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 }
 
 .footer-logo-box img {
-    height: 90px !important;
-    filter: none !important; /* Pas de blanc, garde le vert/beige */
+    height: 90px;
+    filter: none; /* LOGO ORIGINAL EN COULEUR */
 }
 
 .footer-logo-text {
-    font-size: 28px !important;
-    color: white !important;
+    font-size: 28px;
+    color: white;
+}
+
+.contact-details p {
+    font-size: 19px;
+    margin-bottom: 12px;
+    line-height: 1.5;
 }
