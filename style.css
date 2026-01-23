@@ -14,7 +14,7 @@ body {
 }
 
 .logo-container {
-    font-family: 'fraunce';
+   
     display: flex;
     align-items: center;
     gap: 20px;
@@ -26,6 +26,7 @@ body {
 }
 
 .logo-text {
+    font-family: 'fraunce';
     color: #669933; /* Le vert demandé */
     font-size: 1.6rem;
     line-height: 1.1;
