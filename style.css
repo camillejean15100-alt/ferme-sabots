@@ -77,7 +77,54 @@
     text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
 }
 /* --- biographie --- */
+.wrapper-ferme {
+    position: relative;
+    width: 100%;
+    /* Colle à la bannière du haut */
+    margin-top: -2px; 
+    line-height: 0;
+}
 
+.fond-responsive {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.contenu-fixe {
+    position: absolute;
+    /* Centrage parfait sur l'image */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    width: 90%;
+    text-align: center;
+    line-height: normal; /* Réinitialise le line-height pour le texte */
+}
+
+.contenu-fixe p {
+    color: #a3a3a2;
+    font-family: 'Montserrat Alternates', sans-serif;
+    /* Le texte rétrécit avec l'image */
+    font-size: clamp(0.7rem, 1.4vw, 1.2rem);
+    margin-bottom: 3%;
+}
+
+.btn-orange {
+    display: inline-block;
+    background-color: #f2c06d;
+    color: white;
+    text-decoration: none;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    
+    /* Taille du bouton proportionnelle */
+    padding: 1% 4%;
+    border-radius: 10px;
+    font-size: clamp(0.6rem, 1.1vw, 1rem);
+}
 
 
 
