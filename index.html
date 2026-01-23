@@ -2,31 +2,94 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css"> </head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Ferme aux Sabots Fendus</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 <body>
+
     <header>
         <div class="navbar">
             <div class="logo-container">
-                <img src="logofermeauxsabotsfendus.png">
-                <div class="logo-text">La Ferme aux<br>Sabots Fendus</div>
+                <img src="logofermeauxsabotsfendus.png" alt="Logo">
+                <div class="logo-text">
+                    La Ferme aux<br>Sabots Fendus
+                </div>
             </div>
-            <ul class="nav-links">
-                <li><a href="#">Accueil</a></li>
-                <li><a href="#">L'Élevage</a></li>
-                <li><a href="#">Boutique</a></li>
-                <li><a href="#">Nous Contacter</a></li>
-            </ul>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="#">L'Élevage</a></li>
+                    <li><a href="#">Boutique</a></li>
+                    <li><a href="#">Nous Contacter</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <div class="hero">
+    <section class="hero">
         <h1>"Bienvenue à la <br> Ferme aux Sabots Fendus !"</h1>
-    </div>
+    </section>
+
+    <section class="intro">
+        <p>
+            Nous élevons avec passion un troupeau de chèvres ainsi qu'un troupeau de brebis BMC 
+            conduit en agriculture biologique. Deux élevages complémentaires unis par une même 
+            exigence : la qualité et la saveur de nos produits.
+        </p>
+        <button class="btn-orange">DÉCOUVRIR NOS PRODUITS</button>
+    </section>
+
+    <section class="stars-section">
+        <h2>Nos Stars du Goût</h2>
+        
+        <div class="cards-container">
+            <div class="product-card">
+                <div class="image-circle">
+                    <img src="biquette.png" alt="Chèvres">
+                </div>
+                <div class="card-content">
+                    <h3>YAOURTS & GLACES</h3>
+                    <p>on vous prévient, nos produits vous rendront accros !</p>
+                    <strong>100% lait de la ferme</strong>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="image-circle">
+                    <img src="brebis.png" alt="Brebis">
+                </div>
+                <div class="card-content">
+                    <h3>NOS CAISSETTES</h3>
+                    <p>Acheter notre viande <strong>BIO</strong>, c'est savourer une viande de qualité produite à la ferme</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <footer>
-        <div class="footer-logo-box">
-            <img src="logofermeauxsabotsfendus.png"> <div class="logo-text" style="color:white !important;">La Ferme aux Sabots Fendus</div>
+        <div class="footer-content">
+            <div class="footer-map">
+                <img src="maps.png" alt="Plan d'accès">
+            </div>
+
+            <div class="footer-info">
+                <div class="footer-logo-box">
+                    <img src="logofermeauxsabotsfendus.png" alt="Logo">
+                    <div class="footer-logo-text">La Ferme aux Sabots Fendus</div>
+                </div>
+                
+                <div class="contact-details">
+                    <p><strong>Infos pratiques</strong></p>
+                    <p>📍 Adresse : Votre adresse ici</p>
+                    <p>📞 Tel : 06 XX XX XX XX</p>
+                    <p>🕒 Horaires : <br>
+                       Vente à la ferme le mardi et le jeudi
+                    </p>
+                </div>
+            </div>
         </div>
     </footer>
+
 </body>
 </html>
