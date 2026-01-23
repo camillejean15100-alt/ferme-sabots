@@ -77,53 +77,65 @@
     text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
 }
 /* --- biographie --- */
+/* On s'assure que le wrapper est un bloc compact */
 .wrapper-ferme {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* Supprime l'espace éventuel avec le header.png au-dessus */
+    margin-top: -2px; 
 }
 
-.vague-img {
-  width: 100%;
-  display: block; /* Supprime l'espace de 3px sous les images */
-  height: auto;
+.vague-png {
+    width: 100%;
+    display: block; /* Supprime l'interligne forcé sous les images */
+    height: auto;
 }
 
+/* On retourne l'image du bas pour fermer la forme beige */
 .vague-bas {
-  transform: rotate(180deg);
+    transform: rotate(180deg);
 }
 
-.bloc-beige-central {
-  /* La couleur doit être identique au milieu de ton PNG */
-  background-color: #f2eee3; 
-  text-align: center;
-  padding: 20px 5%;
-  margin: -1px 0; /* "Mange" 1px pour fusionner les images et le fond */
-  
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.contenu-beige {
+    /* HEX de ton image pour une fusion invisible */
+    background-color: #f2eee3; 
+    text-align: center;
+    padding: 20px 5%;
+    /* On fait mordre le beige de 1px sur les vagues pour éviter les lignes blanches */
+    margin: -1px 0; 
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.bloc-beige-central p {
-  color: #a3a3a2;
-  font-family: sans-serif;
-  font-size: clamp(1rem, 2vw, 1.2rem); /* Taille de texte responsive */
-  line-height: 1.6;
-  max-width: 800px;
-  margin-bottom: 30px;
+.contenu-beige p {
+    color: #a3a3a2;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: clamp(1rem, 1.5vw, 1.2rem); /* Responsive : s'adapte à l'écran */
+    line-height: 1.6;
+    max-width: 850px;
+    margin-bottom: 30px;
 }
 
-.btn-orange {
-  background-color: #f2c06d;
-  color: white;
-  text-decoration: none;
-  padding: 15px 40px;
-  border-radius: 15px;
-  font-weight: bold;
-  white-space: nowrap; /* Empêche le bouton de se casser en deux */
+.btn-produits {
+    display: inline-block;
+    background-color: #f2c06d;
+    color: white;
+    text-decoration: none;
+    padding: 15px 45px;
+    border-radius: 15px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    /* Garde le bouton à sa taille sans l'étirer */
+    width: fit-content;
+    transition: 0.3s;
+}
+
+.btn-produits:hover {
+    filter: brightness(1.05);
 }
 
 /* Pour le mobile */
