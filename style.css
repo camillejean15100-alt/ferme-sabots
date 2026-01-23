@@ -1,99 +1,86 @@
-/* Reset de base */
+/* Reset propre pour éviter les marges par défaut des navigateurs */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    background-color: #ffffff;
-}
-
-/* Header Container */
-.main-header {
+/* Header principal */
+.site-header {
     width: 100%;
     background-color: #ffffff;
-    padding: 15px 5%;
-    display: flex;
-    justify-content: center;
+    padding: 20px 5%;
 }
 
-.header-container {
-    width: 100%;
+.header-wrap {
     max-width: 1200px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap; /* Permet de passer à la ligne sur mobile */
 }
 
-/* Logo et Nom de la Ferme */
-.logo-area {
+/* Style du Logo et du Titre (Police Fraunces) */
+.header-logo {
     display: flex;
     align-items: center;
     gap: 15px;
 }
 
-.logo-img {
-    height: 60px; /* Ajustable selon ton image d'origine */
+.header-logo img {
+    height: 60px; /* Taille ajustable selon ton logo original */
     width: auto;
 }
 
-.brand-name {
+.header-title {
     font-family: 'Fraunces', serif;
     color: #669933;
     font-size: 1.1rem;
-    line-height: 1.1;
-    text-transform: none;
+    line-height: 1.2;
+    font-weight: 700;
 }
 
-/* Navigation */
-.main-nav ul {
+/* Style de la Navigation (Police Montserrat Alternates) */
+.header-nav ul {
     list-style: none;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
 }
 
-.main-nav ul li a {
+.header-nav ul li a {
     font-family: 'Montserrat Alternates', sans-serif;
     color: #669933;
     text-decoration: none;
     font-weight: 500;
-    font-size: 0.95rem;
-    transition: opacity 0.3s;
+    font-size: 1rem;
 }
 
-.main-nav ul li a:hover {
-    opacity: 0.7;
-}
-
-.separator {
+.nav-sep {
     color: #669933;
-    font-family: 'Montserrat Alternates', sans-serif;
     font-weight: bold;
 }
 
-/* Adaptabilité (Mobile) */
-@media (max-width: 768px) {
-    .header-container {
+/* Responsive : Adaptation pour les petits écrans (Tablettes / Mobiles) */
+@media (max-width: 850px) {
+    .header-wrap {
         flex-direction: column;
         gap: 20px;
         text-align: center;
     }
     
-    .logo-area {
+    .header-logo {
         flex-direction: column;
-        gap: 5px;
+        gap: 8px;
     }
     
-    .main-nav ul {
+    .header-nav ul {
         flex-wrap: wrap;
         justify-content: center;
-        gap: 5px;
+        gap: 8px;
     }
-
-    .separator {
-        display: none; /* On cache les barres sur mobile pour gagner de la place */
+    
+    .nav-sep {
+        display: none; /* On retire les barres de séparation sur mobile pour la lisibilité */
     }
 }
