@@ -1,62 +1,50 @@
-/* Configuration générale */
+/* Utilise Fraunces partout */
 body {
-    margin: 0;
     font-family: 'Fraunces', serif;
+    margin: 0;
+    padding: 0;
 }
 
-.site-header {
+/* Aligne le bloc Logo et le Menu sur la même ligne */
+.main-header {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 50px;
-    background-color: #ffffff;
+    justify-content: space-between; /* Écarte le logo à gauche et le menu à droite */
+    align-items: center;            /* Aligne verticalement au centre */
+    padding: 10px 40px;
 }
 
-/* Section Logo (Image + Texte) */
-.logo-area {
+/* Aligne l'image et le texte du logo côte à côte */
+.logo-container {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 15px; /* Espace entre l'image et le texte */
 }
 
 .logo-img {
-    height: 80px; /* À ajuster selon la taille de ton image */
-    width: auto;
+    width: 100px; /* Ajuste la taille de ton logo ici */
+    height: auto;
 }
 
-.logo-text {
+.logo-title {
     color: #669933;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     line-height: 1.1;
     margin: 0;
-    font-weight: 700;
+    text-transform: none;
 }
 
-/* Section Menu de navigation */
-.main-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 20px;
-    align-items: center;
-}
-
-/* Ajout des barres verticales entre les liens comme sur l'image */
-.main-nav li:not(:last-child):after {
-    content: "|";
+/* Style du menu */
+.navigation {
     color: #669933;
-    margin-left: 20px;
+    font-size: 1.1rem;
 }
 
-.main-nav a {
+.navigation a {
     text-decoration: none;
     color: #669933;
-    font-weight: 400;
-    font-size: 1.2rem;
-    transition: opacity 0.3s;
+    margin: 0 5px;
 }
 
-.main-nav a:hover {
-    opacity: 0.7;
-}'
+.navigation a:hover {
+    text-decoration: underline;
+}
