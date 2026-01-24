@@ -224,98 +224,100 @@ body {
 /*footer*/
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat+Alternates:wght@400;700&display=swap');
 
-/* Reset de sécurité */
-.farm-footer * { box-sizing: border-box; margin: 0; padding: 0; }
+/* Reset */
+.ferme-footer * { box-sizing: border-box; margin: 0; padding: 0; }
 
-.farm-footer { width: 100%; }
+.ferme-footer { width: 100%; }
 
-.grass-divider {
+/* Jonction herbe/vert */
+.border-grass {
     width: 100%;
     display: block;
-    margin-bottom: -1px; /* Supprime le liseré blanc entre l'image et le bloc vert */
+    margin-bottom: -1px;
 }
 
-.footer-green-zone {
+/* Bloc vert parent */
+.green-block {
     background-color: #87CC37;
     padding: 40px 5%;
     color: white;
     font-family: 'Montserrat Alternates', sans-serif;
 }
 
-.footer-layout {
-    max-width: 1100px;
+/* Conteneur Flexbox pour le responsive */
+.content-wrapper {
+    max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    flex-wrap: wrap; /* Déclenche le responsive exactement quand il n'y a plus de place */
+    flex-wrap: wrap; /* Bascule sur mobile automatiquement */
     justify-content: center;
     align-items: center;
     gap: 40px;
 }
 
-/* EXACTITUDE DU BLOC CARTE */
-.map-container {
-    flex: 1 1 400px; /* S'étire, se réduit, mais vise 400px */
+/* Colonne Carte */
+.side-map {
+    flex: 1 1 350px;
     display: flex;
     justify-content: center;
 }
 
 .map-img {
-    max-width: 450px;
-    width: 100%;
+    max-width: 100%;
+    height: auto;
     border-radius: 20px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
-/* EXACTITUDE DU BLOC INFOS */
-.info-container {
-    flex: 1 1 400px;
-    min-width: 320px;
+/* Colonne Infos */
+.side-info {
+    flex: 1 1 350px;
 }
 
-.brand-header {
+.header-brand {
     display: flex;
     align-items: center;
     gap: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
-.logo-img { width: 85px; height: auto; }
+.footer-logo {
+    width: 85px;
+}
 
-.farm-name {
+.title-ferme {
     font-family: 'Fraunces', serif;
-    color: #5A662F; /* Vert foncé exact */
-    font-size: 2.1rem;
+    color: #5A662F; /* Vert foncé spécifique */
+    font-size: 2.2rem;
     line-height: 1.1;
 }
 
-.info-title {
+.label-info {
     font-size: 1.8rem;
     margin-bottom: 20px;
     font-weight: 400;
 }
 
-.detail-row {
+.info-row {
     display: flex;
     align-items: center;
     gap: 15px;
     margin-bottom: 12px;
 }
 
-.detail-row.start { align-items: flex-start; }
+.info-row.start { align-items: flex-start; }
 
-.icon { width: 25px; height: auto; }
+.footer-icon { width: 25px; }
 
-/* RESPONSIVE : Bascule mathématique */
-@media (max-width: 880px) {
-    .footer-layout {
+/* Responsive Mobile */
+@media (max-width: 850px) {
+    .content-wrapper {
         flex-direction: column;
         text-align: center;
     }
-    .brand-header, .detail-row {
+    .header-brand, .info-row {
         justify-content: center;
         text-align: left;
     }
-    .info-container { margin-top: 20px; }
 }
 /* --- RESPONSIVE --- */
 @media (max-width: 1024px) {
