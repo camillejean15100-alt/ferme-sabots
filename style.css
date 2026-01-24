@@ -255,83 +255,117 @@ body {
 }
 
 /* Placement de la carte vers le milieu */
-.footer-map {
-    flex: 1; 
+/* Import des polices exactes de ta maquette */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat+Alternates:wght@400;700&display=swap');
+
+.footer-farm {
+    width: 100%;
+}
+
+/* Raccord parfait entre l'image d'herbe et le fond vert */
+.grass-divider {
+    width: 100%;
+    display: block;
+    margin-bottom: -1px; 
+}
+
+/* Bloc vert principal (#87CC37) */
+.footer-inner {
+    background-color: #87CC37;
+    padding: 40px 20px 60px 20px;
+    color: #FFFFFF;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.footer-flex-container {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
-    justify-content: center; /* Centre la carte horizontalement dans sa moitié */
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+/* Centrage de la carte dans son espace */
+.map-box {
+    flex: 1;
+    display: flex;
+    justify-content: center; 
     min-width: 320px;
 }
 
 .map-img {
-    max-width: 450px;
+    max-width: 480px;
     width: 100%;
-    border-radius: 20px; /* Coins arrondis du design */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-radius: 20px; /* Coins arrondis comme sur l'image */
 }
 
-/* Infos et Logo */
-.footer-info {
+/* Zone de texte à droite */
+.info-box {
     flex: 1;
-    min-width: 320px;
+    min-width: 350px;
 }
 
-.brand-line {
+.brand-header {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 20px;
     margin-bottom: 25px;
 }
 
-.footer-logo {
+.logo-footer {
     width: 90px;
     height: auto;
 }
 
-.farm-name {
+/* Titre en Fraunces et vert foncé (#5A662F) */
+.farm-title {
     font-family: 'Fraunces', serif;
-    color: #5A662F; /* Couleur spécifique */
+    color: #5A662F;
     font-size: 2.2rem;
     line-height: 1.1;
     margin: 0;
 }
 
-.section-subtitle {
+.info-label {
     font-size: 1.8rem;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     font-weight: 400;
 }
 
-.detail-row {
+.info-item {
     display: flex;
     align-items: center;
     gap: 15px;
     margin-bottom: 15px;
+    font-size: 1.2rem;
 }
 
-.detail-row.start {
+.info-item.align-start {
     align-items: flex-start;
 }
 
-.footer-icon {
+.icon {
     width: 28px;
     height: auto;
 }
 
-.hours p {
+.schedule p {
     margin: 0;
 }
 
-/* Responsive */
+/* Responsive pour mobiles et tablettes */
 @media (max-width: 850px) {
-    .footer-wrapper {
+    .footer-flex-container {
         flex-direction: column;
         text-align: center;
     }
-    .brand-line, .detail-row {
+    .brand-header, .info-item {
         justify-content: center;
+        text-align: left;
     }
-
-    
+}
 
 /* RESPONSIVE : Mobile et Tablettes */
 @media (max-width: 768px) {
