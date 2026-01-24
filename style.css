@@ -224,135 +224,110 @@ body {
 /*footer*/
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat+Alternates:wght@400;700&display=swap');
 
-.main-footer {
-    width: 100%;
-    position: relative;
-}
-
-/* Bordure herbe.png */
-.footer-grass-border {
-    width: 100%;
-    display: block;
-    margin-bottom: -2px; /* Fusion parfaite avec le bloc vert */
-}
-
-/* Bloc vert principal */
-.footer-green-bg {
-    background-color: #87CC37; /* Vert herbe exact */
-    padding: 40px 5%;
-    color: white;
-    font-family: 'Montserrat Alternates', sans-serif; /* Typo blanche */
-}
-
-.footer-wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* Équilibre carte et texte */
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-/* Placement de la carte vers le milieu */
-/* Import des polices exactes de ta maquette */
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat+Alternates:wght@400;700&display=swap');
+/* Reset de base pour éviter les marges invisibles */
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
 .footer-farm {
+    position: relative;
     width: 100%;
+    margin-top: 60px; /* Laisse l'herbe dépasser */
 }
 
-/* Raccord parfait entre l'image d'herbe et le fond vert */
-.grass-divider {
+/* L'herbe du haut qui fait la découpe */
+.grass-top {
     width: 100%;
-    display: block;
-    margin-bottom: -1px; 
+    height: 60px;
+    background: url('herbe.png') repeat-x bottom;
+    background-size: contain;
+    position: absolute;
+    top: -59px;
+    z-index: 5;
 }
 
-/* Bloc vert principal (#87CC37) */
-.footer-inner {
+/* Le bloc vert principal qui englobe TOUT */
+.footer-green-zone {
     background-color: #87CC37;
-    padding: 40px 20px 60px 20px;
-    color: #FFFFFF;
+    padding: 50px 5%;
+    color: white;
     font-family: 'Montserrat Alternates', sans-serif;
 }
 
-.footer-flex-container {
+.footer-container {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 50px;
-    flex-wrap: wrap;
+    gap: 40px;
+    flex-wrap: wrap; /* Gère le passage à la ligne sur mobile */
 }
 
-/* Centrage de la carte dans son espace */
-.map-box {
+/* CARTE RESPONSIVE */
+.map-wrapper {
     flex: 1;
+    min-width: 300px; /* Se réduit avant de passer en dessous */
     display: flex;
-    justify-content: center; 
+    justify-content: center;
+}
+
+.responsive-map {
+    max-width: 100%; /* Ne dépasse jamais du bloc vert */
+    height: auto;
+    border-radius: 20px;
+}
+
+/* INFOS RESPONSIVES */
+.info-wrapper {
+    flex: 1;
     min-width: 320px;
 }
 
-.map-img {
-    max-width: 480px;
-    width: 100%;
-    border-radius: 20px; /* Coins arrondis comme sur l'image */
-}
-
-/* Zone de texte à droite */
-.info-box {
-    flex: 1;
-    min-width: 350px;
-}
-
-.brand-header {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    margin-bottom: 25px;
-}
-
-.logo-footer {
-    width: 90px;
-    height: auto;
-}
-
-/* Titre en Fraunces et vert foncé (#5A662F) */
-.farm-title {
-    font-family: 'Fraunces', serif;
-    color: #5A662F;
-    font-size: 2.2rem;
-    line-height: 1.1;
-    margin: 0;
-}
-
-.info-label {
-    font-size: 1.8rem;
-    margin-bottom: 25px;
-    font-weight: 400;
-}
-
-.info-item {
+.brand-row {
     display: flex;
     align-items: center;
     gap: 15px;
-    margin-bottom: 15px;
-    font-size: 1.2rem;
+    margin-bottom: 25px;
 }
 
-.info-item.align-start {
-    align-items: flex-start;
+.logo-img {
+    width: clamp(60px, 10vw, 90px); /* Taille fluide selon l'écran */
 }
 
-.icon {
-    width: 28px;
-    height: auto;
+.farm-title {
+    font-family: 'Fraunces', serif;
+    color: #5A662F;
+    font-size: clamp(1.4rem, 4vw, 2.2rem);
+    line-height: 1.1;
 }
 
-.schedule p {
-    margin: 0;
+.info-heading {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.contact-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+}
+
+.contact-row.align-top { align-items: flex-start; }
+
+.icon { width: 25px; height: auto; }
+
+/* AJUSTEMENT MOBILE : Quand l'écran est petit */
+@media (max-width: 850px) {
+    .footer-container {
+        flex-direction: column; /* On empile la carte et le texte */
+        text-align: center;
+    }
+    .brand-row, .contact-row {
+        justify-content: center;
+        text-align: left;
+    }
 }
 
 /* Responsive pour mobiles et tablettes */
