@@ -222,135 +222,14 @@ body {
 
 
 /*footer*/
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat+Alternates:wght@400;700&display=swap');
-
-.footer-farm {
-    position: relative;
-    width: 100%;
-    margin-top: 60px; /* Espace pour la bordure d'herbe */
+.footer{
+    float:left;
+    width:100%;
+    line-height: 60px;
+    bottom:0;
+    height:120px;
+    background-color:#222222;
 }
-
-/* Bordure haute découpée */
-.grass-top {
-    width: 100%;
-    height: 55px;
-    background: url('herbe.png') repeat-x bottom;
-    background-size: contain;
-    position: absolute;
-    top: -53px;
-    left: 0;
-    z-index: 10;
-}
-
-/* Corps du footer avec fond vert et texture herbe */
-.footer-inner {
-    background-color: #87CC37;
-    background-image: url('herbe.png'); /* Fond herbe répétitif */
-    background-repeat: repeat;
-    padding: 50px 20px;
-    color: #FFFFFF;
-    font-family: 'Montserrat Alternates', sans-serif;
-}
-
-.footer-container {
-    max-width: 1150px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 60px;
-    flex-wrap: wrap;
-}
-
-/* Style de la carte */
-.map-img {
-    max-width: 480px;
-    width: 100%;
-    border-radius: 25px; /* Coins arrondis comme l'image */
-    display: block;
-    align: center;
-    
-}
-
-/* Logo et Nom de la ferme */
-.brand-header {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    margin-bottom: 30px;
-}
-
-.logo-img {
-    width: 95px;
-    height: auto;
-}
-
-.farm-title {
-    font-family: 'Fraunces', serif;
-    color: #5A662F;
-    font-size: 2.4rem;
-    line-height: 1;
-    margin: 0;
-}
-
-/* Bloc textes Infos Pratiques */
-.info-label {
-    font-size: 1.9rem;
-    margin-bottom: 25px;
-    font-weight: 400;
-}
-
-.info-row {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 20px;
-    font-size: 1.2rem;
-}
-
-.info-row.start {
-    align-items: flex-start;
-}
-
-.footer-icon {
-    width: 30px;
-    height: auto;
-}
-
-.schedule p {
-    margin: 0;
-    line-height: 1.4;
-}
-
-/* Responsive pour mobiles */
-@media (max-width: 900px) {
-    .footer-container {
-        flex-direction: column;
-        text-align: center;
-    }
-    .brand-header, .info-row {
-        justify-content: center;
-        text-align: left; /* Garde le texte aligné aux icônes */
-    }
-}
-/* Responsive Tablette/Mobile */
-@media (max-width: 768px) {
-    .footer-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .brand-header, .info-item {
-        justify-content: center;
-    }
-
-    .brand-title {
-        font-size: 1.5rem;
-    }
-}
-
-
-
 
 
     
