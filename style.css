@@ -224,136 +224,98 @@ body {
 /*footer*/
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat+Alternates:wght@400;700&display=swap');
 
-/* Reset de base pour éviter les marges invisibles */
-* { box-sizing: border-box; margin: 0; padding: 0; }
+/* Reset de sécurité */
+.farm-footer * { box-sizing: border-box; margin: 0; padding: 0; }
 
-.footer-farm {
-    position: relative;
+.farm-footer { width: 100%; }
+
+.grass-divider {
     width: 100%;
-    margin-top: 60px; /* Laisse l'herbe dépasser */
+    display: block;
+    margin-bottom: -1px; /* Supprime le liseré blanc entre l'image et le bloc vert */
 }
 
-/* L'herbe du haut qui fait la découpe */
-.grass-top {
-    width: 100%;
-    height: 60px;
-    background: url('herbe.png') repeat-x bottom;
-    background-size: contain;
-    position: absolute;
-    top: -59px;
-    z-index: 5;
-}
-
-/* Le bloc vert principal qui englobe TOUT */
 .footer-green-zone {
     background-color: #87CC37;
-    padding: 50px 5%;
+    padding: 40px 5%;
     color: white;
     font-family: 'Montserrat Alternates', sans-serif;
 }
 
-.footer-container {
-    max-width: 1200px;
+.footer-layout {
+    max-width: 1100px;
     margin: 0 auto;
     display: flex;
+    flex-wrap: wrap; /* Déclenche le responsive exactement quand il n'y a plus de place */
     justify-content: center;
     align-items: center;
     gap: 40px;
-    flex-wrap: wrap; /* Gère le passage à la ligne sur mobile */
 }
 
-/* CARTE RESPONSIVE */
-.map-wrapper {
-    flex: 1;
-    min-width: 300px; /* Se réduit avant de passer en dessous */
+/* EXACTITUDE DU BLOC CARTE */
+.map-container {
+    flex: 1 1 400px; /* S'étire, se réduit, mais vise 400px */
     display: flex;
     justify-content: center;
 }
 
-.responsive-map {
-    max-width: 100%; /* Ne dépasse jamais du bloc vert */
-    height: auto;
+.map-img {
+    max-width: 450px;
+    width: 100%;
     border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
-/* INFOS RESPONSIVES */
-.info-wrapper {
-    flex: 1;
+/* EXACTITUDE DU BLOC INFOS */
+.info-container {
+    flex: 1 1 400px;
     min-width: 320px;
 }
 
-.brand-row {
+.brand-header {
     display: flex;
     align-items: center;
-    gap: 15px;
-    margin-bottom: 25px;
+    gap: 20px;
+    margin-bottom: 30px;
 }
 
-.logo-img {
-    width: clamp(60px, 10vw, 90px); /* Taille fluide selon l'écran */
-}
+.logo-img { width: 85px; height: auto; }
 
-.farm-title {
+.farm-name {
     font-family: 'Fraunces', serif;
-    color: #5A662F;
-    font-size: clamp(1.4rem, 4vw, 2.2rem);
+    color: #5A662F; /* Vert foncé exact */
+    font-size: 2.1rem;
     line-height: 1.1;
 }
 
-.info-heading {
+.info-title {
     font-size: 1.8rem;
     margin-bottom: 20px;
     font-weight: 400;
 }
 
-.contact-row {
+.detail-row {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 15px;
     margin-bottom: 12px;
-    font-size: 1.1rem;
 }
 
-.contact-row.align-top { align-items: flex-start; }
+.detail-row.start { align-items: flex-start; }
 
 .icon { width: 25px; height: auto; }
 
-/* AJUSTEMENT MOBILE : Quand l'écran est petit */
-@media (max-width: 850px) {
-    .footer-container {
-        flex-direction: column; /* On empile la carte et le texte */
+/* RESPONSIVE : Bascule mathématique */
+@media (max-width: 880px) {
+    .footer-layout {
+        flex-direction: column;
         text-align: center;
     }
-    .brand-row, .contact-row {
+    .brand-header, .detail-row {
         justify-content: center;
         text-align: left;
     }
-}
-
-/* Responsive pour mobiles et tablettes */
-@media (max-width: 850px) {
-    .footer-flex-container {
-        flex-direction: column;
-        text-align: center;
-    }
-    .brand-header, .info-item {
-        justify-content: center;
-        text-align: left;
-    }
-}
-
-/* RESPONSIVE : Mobile et Tablettes */
-@media (max-width: 768px) {
-    .footer-container {
-        flex-direction: column;
-        text-align: center;
-    }
-    .footer-branding {
-        flex-direction: column;
-    }
-    .ligne-contact {
-        justify-content: center;
-    }
+    .info-container { margin-top: 20px; }
 }
 /* --- RESPONSIVE --- */
 @media (max-width: 1024px) {
