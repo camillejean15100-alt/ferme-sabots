@@ -224,19 +224,25 @@ body {
 /*footer*/
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat+Alternates:wght@400;700&display=swap');
 
-/* Reset */
-.ferme-footer * { box-sizing: border-box; margin: 0; padding: 0; }
+/* Reset pour éviter les décalages de calcul */
+.ferme-footer * { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+}
 
-.ferme-footer { width: 100%; }
+.ferme-footer {
+    width: 100%;
+}
 
-/* Jonction herbe/vert */
+/* Fixation de l'herbe : pas d'espace blanc */
 .border-grass {
     width: 100%;
     display: block;
-    margin-bottom: -1px;
+    margin-bottom: -1px; /* Fusionne l'image avec le bloc vert */
 }
 
-/* Bloc vert parent */
+/* BLOC VERT : Il emprisonne tout le contenu */
 .green-block {
     background-color: #87CC37;
     padding: 40px 5%;
@@ -244,20 +250,20 @@ body {
     font-family: 'Montserrat Alternates', sans-serif;
 }
 
-/* Conteneur Flexbox pour le responsive */
+/* Conteneur Flexbox Responsive */
 .content-wrapper {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    flex-wrap: wrap; /* Bascule sur mobile automatiquement */
+    flex-wrap: wrap; /* Force l'empilement sur mobile */
     justify-content: center;
     align-items: center;
     gap: 40px;
 }
 
-/* Colonne Carte */
+/* Zone Carte : Exactitude du centrage */
 .side-map {
-    flex: 1 1 350px;
+    flex: 1 1 400px; /* Vise 400px mais s'adapte */
     display: flex;
     justify-content: center;
 }
@@ -268,9 +274,10 @@ body {
     border-radius: 20px;
 }
 
-/* Colonne Infos */
+/* Zone Infos : Reste à droite sur PC, passe dessous sur Mobile */
 .side-info {
-    flex: 1 1 350px;
+    flex: 1 1 400px;
+    min-width: 320px;
 }
 
 .header-brand {
@@ -282,11 +289,12 @@ body {
 
 .footer-logo {
     width: 85px;
+    height: auto;
 }
 
 .title-ferme {
     font-family: 'Fraunces', serif;
-    color: #5A662F; /* Vert foncé spécifique */
+    color: #5A662F; /* Vert foncé exact */
     font-size: 2.2rem;
     line-height: 1.1;
 }
@@ -301,12 +309,34 @@ body {
     display: flex;
     align-items: center;
     gap: 15px;
-    margin-bottom: 12px;
+    margin-bottom: 15px;
 }
 
-.info-row.start { align-items: flex-start; }
+.info-row.start { 
+    align-items: flex-start; 
+}
 
-.footer-icon { width: 25px; }
+.footer-icon {
+    width: 25px;
+    height: auto;
+}
+
+/* --- RESPONSIVE : EXACTITUDE MOBILE --- */
+@media (max-width: 880px) {
+    .content-wrapper {
+        flex-direction: column; /* Empile la carte AU-DESSUS du texte */
+        text-align: center;
+    }
+    
+    .header-brand, .info-row {
+        justify-content: center; /* Centre le logo et les lignes d'info */
+        text-align: left; /* Garde le texte aligné à gauche des icônes */
+    }
+
+    .side-info {
+        margin-top: 20px;
+    }
+}
 
 /* Responsive Mobile */
 @media (max-width: 850px) {
