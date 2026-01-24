@@ -269,53 +269,111 @@ body {
 }
 
 /* Infos de la ferme */
-.footer-info {
-    max-width: 500px;
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat+Alternates:wght@400;700&display=swap');
+
+.main-footer {
+    position: relative;
+    width: 100%;
+    margin-top: 100px; /* Espace pour la bordure haute */
 }
 
-.brand-header {
+/* Bordure haute (l'herbe qui dépasse) */
+.grass-top-border {
+    width: 100%;
+    height: 60px;
+    background: url('herbe.png') repeat-x bottom;
+    background-size: contain;
+    position: absolute;
+    top: -58px;
+    left: 0;
+    z-index: 10;
+}
+
+/* Corps du footer avec le fond herbe.png */
+.footer-content-bg {
+    background-color: #87CC37; /* Couleur de secours et de base */
+    background-image: url('herbe.png'); /* Ton image en fond */
+    background-repeat: repeat; /* Se répète sur tout l'arrière-plan */
+    padding: 60px 20px;
+    color: white;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.footer-inner-flex {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+/* Style de la carte */
+.map-img {
+    max-width: 420px;
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    display: block;
+}
+
+/* Branding */
+.brand-identity {
     display: flex;
     align-items: center;
-    gap: 15px;
-    margin-bottom: 20px;
+    gap: 20px;
+    margin-bottom: 30px;
 }
 
 .footer-logo {
-    width: 80px;
+    width: 85px;
     height: auto;
 }
 
-.brand-title {
+.farm-title {
     font-family: 'Fraunces', serif;
-    color: #5A662F;
-    font-size: 2rem;
+    color: #5A662F; /* Vert foncé exact */
+    font-size: 2.2rem;
     line-height: 1.1;
     margin: 0;
 }
 
-.practical-info h3 {
+/* Infos */
+.section-title {
     font-size: 1.8rem;
     margin-bottom: 20px;
     font-weight: 400;
 }
 
-.info-item {
+.detail-item {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 15px;
     margin-bottom: 15px;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 
 .icon {
     width: 25px;
     height: auto;
+    margin-top: 3px;
 }
 
-.schedule-text {
-    line-height: 1.4;
+.hours-group p {
+    margin: 0;
 }
 
+/* Responsive */
+@media (max-width: 800px) {
+    .footer-inner-flex {
+        flex-direction: column;
+        text-align: center;
+    }
+    .brand-identity, .detail-item {
+        justify-content: center;
+    }
+}
 /* Responsive Tablette/Mobile */
 @media (max-width: 768px) {
     .footer-container {
