@@ -222,15 +222,114 @@ body {
 
 
 /*footer*/
-.footer{
-    float:left;
-    width:100%;
-    line-height: 60px;
-    bottom:0;
-    height:120px;
-    background-color:#222222;
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat+Alternates:wght@400;700&display=swap');
+
+.main-footer {
+    width: 100%;
+    position: relative;
 }
 
+/* Bordure herbe.png */
+.footer-grass-border {
+    width: 100%;
+    display: block;
+    margin-bottom: -2px; /* Fusion parfaite avec le bloc vert */
+}
+
+/* Bloc vert principal */
+.footer-green-bg {
+    background-color: #87CC37; /* Vert herbe exact */
+    padding: 40px 5%;
+    color: white;
+    font-family: 'Montserrat Alternates', sans-serif; /* Typo blanche */
+}
+
+.footer-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Équilibre carte et texte */
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Placement de la carte vers le milieu */
+.footer-map {
+    flex: 1; 
+    display: flex;
+    justify-content: center; /* Centre la carte horizontalement dans sa moitié */
+    min-width: 320px;
+}
+
+.map-img {
+    max-width: 450px;
+    width: 100%;
+    border-radius: 20px; /* Coins arrondis du design */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Infos et Logo */
+.footer-info {
+    flex: 1;
+    min-width: 320px;
+}
+
+.brand-line {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.footer-logo {
+    width: 90px;
+    height: auto;
+}
+
+.farm-name {
+    font-family: 'Fraunces', serif;
+    color: #5A662F; /* Couleur spécifique */
+    font-size: 2.2rem;
+    line-height: 1.1;
+    margin: 0;
+}
+
+.section-subtitle {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.detail-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.detail-row.start {
+    align-items: flex-start;
+}
+
+.footer-icon {
+    width: 28px;
+    height: auto;
+}
+
+.hours p {
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 850px) {
+    .footer-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+    .brand-line, .detail-row {
+        justify-content: center;
+    }
 
     
 
