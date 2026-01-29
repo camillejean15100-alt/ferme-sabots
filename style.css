@@ -212,8 +212,6 @@ body {
 .image-circle {
     width: 150px;
     height: 150px;
-    border-radius: 50%;
-    border: 5px solid #8cae43;
     overflow: hidden;
     flex-shrink: 0;
 }
