@@ -94,13 +94,19 @@ body {
 
 /* --- FOOTER HERBE --- */
 .footer-fixe {
-    position: relative;
-    background-color: #8CC63F;
+    position: relative; /* On ne le fixe plus pour que l'herbe ne passe pas sous le site */
+    width: 100%;
+    background-color: #8CC63F; /* Le vert de la ferme */
+    
+    /* L'herbe est placée ici en haut du bloc */
     background-image: url('herbe.png');
     background-repeat: repeat-x;
-    background-position: top;
-    padding: 120px 20px 40px 20px;
-    margin-top: 60px;
+    background-position: top center;
+    background-size: auto 100px; /* Ajuste la taille des brins d'herbe */
+    
+    /* On ajoute un énorme padding en haut pour que le contenu ne touche pas l'herbe */
+    padding: 120px 20px 40px 20px; 
+    margin-top: 80px;
     color: white;
 }
 
@@ -110,6 +116,12 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 40px;
 }
 
-.image-map { width: 100%; max-width: 400px; border-radius: 20px; }
+.image-map { 
+    width: 100%; 
+    max-width: 400px; 
+    border-radius: 20px; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
