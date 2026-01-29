@@ -58,7 +58,7 @@ body {
 .site-footer { 
     background: #8CC63F; 
     color: white; 
-    padding: 40px 8%; /* HAUTEUR RÉDUITE */
+    padding: 30px 8%; /* HAUTEUR RÉDUITE */
 }
 .footer-container { 
     max-width: 1100px; margin: 0 auto; 
