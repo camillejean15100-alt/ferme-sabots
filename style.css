@@ -54,8 +54,6 @@ body { font-family: 'Montserrat Alternates', sans-serif; overflow-x: hidden; }
 .site-footer {
     position: relative;
     background-image: url('herbe.png');
-    background-repeat: repeat-x;
-    background-position: top;
     padding: 80px 20px 40px 20px;
     margin-top: 50px;
     color: white;
