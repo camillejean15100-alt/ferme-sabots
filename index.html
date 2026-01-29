@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La Ferme aux Sabots Fendus</title>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat+Alternates:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -22,70 +21,73 @@
         </nav>
     </header>
 
-    <main class="content-wrapper">
-        <div class="banner">
-            <img src="header.png" alt="Bannière">
-            <div class="texte-superpose">
-                "Bienvenue à la<br>Ferme aux Sabots Fendus !"
+    <div class="banner">
+        <img src="header.png" alt="Bannière">
+        <div class="texte-superpose">
+            "Bienvenue à la<br>Ferme aux Sabots Fendus !"
+        </div>
+    </div>
+    
+    <section class="hero-section">
+        <p class="description">
+            Nous élevons avec passion un troupeau de chèvres ainsi <br>
+            qu'un troupeau de brebis BMC conduit en agriculture biologique. <br>
+            Deux élevages complémentaires unies par une même exigence : <br>
+            la qualité et la saveur de nos produits.
+        </p>
+        <a href="#" class="btn-discover">DÉCOUVRIR NOS PRODUITS</a>
+    </section>
+
+    <section class="stars-section">
+        <h2 class="main-title">Nos Stars du Goût</h2>
+        <div class="stars-container">
+            <div class="product-card">
+                <div class="image-circle">
+                    <img src="biquette.png" alt="Chèvre">
+                </div>
+                <div class="card-content">
+                    <h3>YAOURTS & GLACES</h3>
+                    <p>on vous prévient, nos produits vous rendrons accros !</p>
+                    <p class="highlight">100% lait de la ferme</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="image-circle">
+                    <img src="brebis.png" alt="Brebis">
+                </div>
+                <div class="card-content">
+                    <h3>NOS CAISSETTES</h3>
+                    <p>Acheter notre viande <strong>BIO</strong>, c'est savourer une viande de qualité produite à la ferme</p>
+                </div>
             </div>
         </div>
-        
-        <section class="hero-section">
-            <p class="description">
-                Nous élevons avec passion un troupeau de chèvres ainsi <br>
-                qu'un troupeau de brebis BMC conduit en agriculture biologique. <br>
-                Deux élevages complémentaires unies par une même exigence : <br>
-                la qualité et la saveur de nos produits.
-            </p>
-            <a href="#" class="btn-discover">DÉCOUVRIR NOS PRODUITS</a>
-        </section>
+    </section>
 
-        <section class="stars-section">
-            <h2 class="main-title">Nos Stars du Goût</h2>
-            <div class="stars-container">
-                <div class="product-card">
-                    <div class="image-circle">
-                        <img src="biquette.png" alt="Chèvre">
-                    </div>
-                    <div class="card-content">
-                        <h3>YAOURTS & GLACES</h3>
-                        <p>on vous prévient, nos produits vous rendrons accros !</p>
-                        <p class="highlight">100% lait de la ferme</p>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="image-circle">
-                        <img src="brebis.png" alt="Brebis">
-                    </div>
-                    <div class="card-content">
-                        <h3>NOS CAISSETTES</h3>
-                        <p>Acheter notre viande <strong>BIO</strong>, c'est savourer une viande de qualité produite à la ferme</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer-concept">
-        <div class="footer-inner">
-            <div class="footer-map">
+    <footer class="footer-final">
+        <div class="footer-container">
+            <div class="footer-left">
                 <img src="maps.png" alt="Carte" class="map-img">
             </div>
-            <div class="footer-info">
-                <div class="footer-logo-block">
+            <div class="footer-right">
+                <div class="footer-header">
                     <img src="logofermeauxsabotsfendus.png" alt="Logo">
-                    <h2 class="footer-farm-name">La Ferme aux <br> Sabots Fendus</h2>
+                    <h2 class="footer-farm-title">La Ferme aux <br> Sabots Fendus</h2>
                 </div>
-                <div class="footer-contacts">
+                <div class="footer-details">
                     <h3>Infos pratique</h3>
-                    <div class="contact-line"><img src="adresse.png"> <p><strong>Adresse :</strong></p></div>
-                    <div class="contact-line"><img src="telephone.png"> <p><strong>Tel :</strong> 06 XX XX XX XX</p></div>
-                    <div class="contact-line">
-                        <img src="horaire.png"> 
-                        <div>
+                    <div class="footer-line">
+                        <img src="adresse.png" class="footer-icon">
+                        <p><strong>Adresse :</strong></p>
+                    </div>
+                    <div class="footer-line">
+                        <img src="telephone.png" class="footer-icon">
+                        <p><strong>Tel :</strong> 06 XX XX XX XX</p>
+                    </div>
+                    <div class="footer-line">
+                        <img src="horaire.png" class="footer-icon">
+                        <div class="hours">
                             <p><strong>Horaires :</strong></p>
-                            <p>Vente à la ferme : le mardi et le jeudi</p>
+                            <p>Vente à la ferme : <br> le mardi et le jeudi</p>
                         </div>
                     </div>
                 </div>
