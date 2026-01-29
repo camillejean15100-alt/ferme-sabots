@@ -3,94 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La Ferme aux Sabots Fendus</title>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat+Alternates:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>La Ferme aux Sabots Fendus | Élevage Bio & Produits Fermiers</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat+Alternates:wght@400;500;600&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header class="site-header">
         <div class="logo-container">
-            <img src="logofermeauxsabotsfendus.png" alt="Logo">
+            <img src="logofermeauxsabotsfendus.png" alt="Logo La Ferme aux Sabots Fendus">
             <h1 class="logo-text">La Ferme aux<br>Sabots Fendus</h1>
         </div>
+
         <nav class="nav-links">
-            <a href="#">Accueil</a> <span class="barre">|</span>
-            <a href="#">L'Élevage</a> <span class="barre">|</span>
-            <a href="#">Boutique</a> <span class="barre">|</span>
-            <a href="#">Nous Contacter</a>
+            <a href="#accueil">Accueil</a>
+            <span class="barre">|</span>
+            <a href="#elevage">L'Élevage</a>
+            <span class="barre">|</span>
+            <a href="#boutique">Boutique</a>
+            <span class="barre">|</span>
+            <a href="#contact">Nous Contacter</a>
         </nav>
     </header>
 
-    <div class="banner">
-        <img src="header.png" alt="Bannière">
-        <div class="texte-superpose">
-            "Bienvenue à la<br>Ferme aux Sabots Fendus !"
-        </div>
-    </div>
-    
-    <section class="hero-section">
-        <p class="description">
-            Nous élevons avec passion un troupeau de chèvres ainsi <br>
-            qu'un troupeau de brebis BMC conduit en agriculture biologique. <br>
-            Deux élevages complémentaires unies par une même exigence : <br>
-            la qualité et la saveur de nos produits.
-        </p>
-        <a href="#" class="btn-discover">DÉCOUVRIR NOS PRODUITS</a>
-    </section>
-
-    <section class="stars-section">
-        <h2 class="main-title">Nos Stars du Goût</h2>
-        <div class="stars-container">
-            <div class="product-card">
-                <div class="image-circle"><img src="biquette.png"></div>
-                <div class="card-content">
-                    <h3>YAOURTS & GLACES</h3>
-                    <p>on vous prévient, nos produits vous rendrons accros !</p>
-                    <p class="highlight">100% lait de la ferme</p>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="image-circle"><img src="brebis.png"></div>
-                <div class="card-content">
-                    <h3>NOS CAISSETTES</h3>
-                    <p>Acheter notre viande <strong>BIO</strong>, c'est savourer une viande de qualité produite à la ferme</p>
-                </div>
+    <main>
+        <div class="banner">
+            <img src="header.png" alt="Troupeau de la ferme">
+            <div class="texte-superpose">
+                "Bienvenue à la<br>Ferme aux Sabots Fendus !"
             </div>
         </div>
-    </section>
+        
+        <section class="hero-section" id="accueil">
+            <div class="container">
+                <p class="description">
+                    Nous élevons avec passion un troupeau de chèvres ainsi <br>
+                    qu'un troupeau de brebis BMC conduit en agriculture biologique. <br>
+                    Deux élevages complémentaires unis par une même exigence : <br>
+                    la qualité et la saveur de nos produits.
+                </p>
+                <a href="#boutique" class="btn-discover">DÉCOUVRIR NOS PRODUITS</a>
+            </div>
+        </section>
 
-    <footer class="site-footer">
+        <section class="stars-section" id="boutique">
+            <h2 class="main-title">Nos Stars du Goût</h2>
+
+            <div class="stars-container">
+                <article class="product-card">
+                    <div class="image-circle">
+                        <img src="biquette.png" alt="Nos chèvres laitières">
+                    </div>
+                    <div class="card-content">
+                        <h3>YAOURTS & GLACES</h3>
+                        <p>On vous prévient, nos produits vous rendront accros !</p>
+                        <p class="highlight">100% lait de la ferme</p>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="image-circle">
+                        <img src="brebis.png" alt="Nos brebis BMC">
+                    </div>
+                    <div class="card-content">
+                        <h3>NOS CAISSETTES</h3>
+                        <p>Acheter notre viande <strong>BIO</strong>, c'est savourer une viande de qualité produite à la ferme.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer" id="contact">
         <div class="conteneur">
             <div class="bloc-gauche">
-                <img src="maps.png" alt="Carte" class="image-map">
+                <img src="maps.png" alt="Localisation de la ferme à Montredon-Labessonnié" class="image-map">
             </div>
+
             <div class="bloc-droite">
                 <div class="entete-logo">
-                    <img src="logofermeauxsabotsfendus.png" alt="Logo" class="logo-white">
+                    <img src="logofermeauxsabotsfendus.png" alt="Logo blanc" class="logo">
                     <h2 class="titre-ferme">La Ferme aux <br> Sabots Fendus</h2>
                 </div>
+
                 <div class="liste-infos">
-                    <h3>Infos pratique</h3>
+                    <h3>Infos pratiques</h3>
+                    
                     <div class="ligne">
-                        <img src="adresse.png" class="icone">
-                        <p><strong>Adresse :</strong></p>
+                        <img src="adresse.png" alt="Icône adresse" class="icone">
+                        <p><strong>Adresse :</strong> La Vitarelle, 81120 Montredon-Labessonnié</p>
                     </div>
+
                     <div class="ligne">
-                        <img src="telephone.png" class="icone">
-                        <p><strong>Tel :</strong> 06 XX XX XX XX</p>
+                        <img src="telephone.png" alt="Icône téléphone" class="icone">
+                        <p><strong>Tel :</strong> 06 12 34 56 78</p>
                     </div>
+
                     <div class="ligne">
-                        <img src="horaire.png" class="icone">
+                        <img src="horaire.png" alt="Icône horaires" class="icone">
                         <div class="texte-horaire">
                             <p><strong>Horaires :</strong></p>
-                            <p>Vente à la ferme : <br> le mardi et le jeudi</p>
+                            <p>Vente à la ferme : <br> le mardi et le jeudi (16h - 19h)</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
-
+    
 </body>
 </html>
