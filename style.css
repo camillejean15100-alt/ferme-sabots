@@ -47,7 +47,6 @@ body { font-family: 'Montserrat Alternates', sans-serif; overflow-x: hidden; }
     width: 180px; height: 180px; border-radius: 50%; border: 5px solid #8cae43;
     overflow: hidden; flex-shrink: 0;
 }
-.image-circle img { width: 100%; height: 100%; object-fit: cover; }
 .card-content { margin-left: 20px; text-align: left; color: #888; }
 .card-content h3 { color: #8cb342; font-family: 'Fraunces', serif; font-size: 1.5rem; margin-bottom: 10px; }
 .highlight { font-weight: bold; margin-top: 10px; }
