@@ -35,7 +35,7 @@ body { font-family: 'Montserrat Alternates', sans-serif; color: #709241; backgro
 .stars-container { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; }
 .product-card { background: #f9f7ef; border-radius: 40px; display: flex; align-items: center; padding: 30px; width: 550px; text-align: left; }
 .image-circle { width: 150px; height: 150px;  overflow: hidden; flex-shrink: 0; }
-.image-circle img { width: 100%; height: 100%; }
+.image-circle img { width: 100%; height: 100%; object-fit: cover; }
 .card-content { margin-left: 20px; }
 .card-content h3 { font-family: 'Fraunces', serif; color: #8cb342; font-size: 1.6rem; }
 
