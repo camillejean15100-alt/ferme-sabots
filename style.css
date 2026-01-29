@@ -19,19 +19,20 @@ body { font-family: 'Montserrat Alternates', sans-serif; overflow-x: hidden; }
 
 /* BANNER */
 .banner {
+    width: 100vw;       /* Occupe 100% de la largeur de la fenêtre (viewport width) */
     position: relative;
-    width: 100%;
-    /* On ajoute de l'espace en haut et en bas pour aérer par rapport au header et au texte */
-    margin: 20px 0; 
+    left: 50%;          /* On pousse à 50% du parent */
+    right: 50%;         /* On tire à 50% du parent */
+    margin-left: -50vw; /* On décale de la moitié de l'écran à gauche */
+    margin-right: -50vw;/* On décale de la moitié de l'écran à droite */
+    overflow: hidden;   /* Évite les barres de défilement bizarres */
 }
+
 .banner img {
-    width: 100%;
-    /* Ajuste cette valeur (ex: 550px ou 600px) pour trouver le juste milieu */
-    height: 550px; 
-    object-fit: cover; 
+    width: 100%;        /* L'image prend toute la largeur du bloc banner */
+    height: 550px;      /* Ta hauteur qui te convient */
+    object-fit: cover;  /* Garde les proportions sans déformer */
     display: block;
-    /* Optionnel : si tu veux garder les bords arrondis du bas de ton image */
-    border-radius: 0 0 50px 50px; 
 }
 .texte-superpose {
     position: absolute;
