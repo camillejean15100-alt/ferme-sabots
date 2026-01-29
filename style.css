@@ -222,118 +222,100 @@ body {
 
 
 /*footer*/
-/* Import des polices */
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@400;700&display=swap');
+/* Nettoyage forcé */
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-    margin: 0;
-    padding-bottom: 350px; /* Espace pour ne pas cacher le contenu sous le footer fixe */
+    padding-bottom: 300px !important; /* Espace vital pour ne pas chevaucher le contenu */
 }
 
 .site-footer {
-    /* --- FIXE EN BAS --- */
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    z-index: 999;
-
-    /* --- DESIGN --- */
+    position: fixed !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: auto;
+    min-height: 250px;
+    z-index: 99999;
+    
     background-color: #8CC63F; 
-    background-image: url('herbe.png'); 
+    background-image: url('herbe.png');
     background-repeat: repeat-x;
     background-position: top;
-    padding: 60px 20px 20px 20px;
+    padding: 50px 20px 20px 20px;
     color: white;
     font-family: 'Montserrat', sans-serif;
-    box-shadow: 0 -5px 15px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .footer-inner {
+    width: 100%;
     max-width: 1100px;
-    margin: 0 auto;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    gap: 30px;
+    gap: 40px;
 }
 
-/* Bloc Carte */
+/* Bloc Carte - Taille exacte image */
+.footer-map-container {
+    flex: 0 0 40%;
+}
+
 .footer-map-img {
-    width: 350px; /* Taille fixe pour garder l'aspect de la maquette */
-    height: auto;
+    width: 100%;
+    max-height: 220px;
+    object-fit: cover;
     border-radius: 15px;
     display: block;
 }
 
-/* Bloc Infos */
+/* Bloc Infos - Alignement Montserrat / Fraunces */
 .footer-info-container {
-    display: flex;
-    flex-direction: column;
+    flex: 0 0 50%;
+    text-align: left;
 }
 
 .footer-brand {
     display: flex;
     align-items: center;
     gap: 15px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .footer-logo {
-    width: 70px;
+    width: 65px;
 }
 
 .footer-title {
     font-family: 'Fraunces', serif;
-    font-size: 1.8rem;
-    line-height: 1;
+    font-size: 1.7rem;
+    line-height: 1.1;
     color: #435128;
-    margin: 0;
 }
 
 .details-heading {
-    font-size: 1.6rem;
-    margin-bottom: 15px;
+    font-size: 1.5rem;
+    margin: 10px 0;
     font-weight: 400;
 }
 
 .detail-row {
     display: flex;
-    align-items: center; /* Aligné sur la maquette */
-    gap: 12px;
-    margin-bottom: 8px;
-    font-size: 1.1rem;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 5px;
 }
 
 .footer-icon {
-    width: 20px;
+    width: 18px;
+    margin-top: 3px;
 }
 
-.vente-ferme {
-    font-weight: 400;
-    margin-top: 5px;
-}
-
-/* --- RESPONSIVE --- */
-@media (max-width: 850px) {
-    .site-footer {
-        position: relative; /* On retire le mode fixe sur mobile pour éviter de manger l'écran */
-        padding-top: 50px;
-    }
-    
-    body {
-        padding-bottom: 0;
-    }
-
-    .footer-inner {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .footer-brand, .detail-row {
-        justify-content: center;
-    }
-}
+/* --- ASTUCE POUR VOIR LE CHANGEMENT IMMÉDIAT --- */
+/* Si tu ne vois rien, appuie sur CTRL + F5 dans ton navigateur */
 /* Responsive Mobile */
 @media (max-width: 850px) {
     .content-wrapper {
