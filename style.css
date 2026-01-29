@@ -1,4 +1,4 @@
-/* --- RESET --- */
+/* --- RESET & BASE --- */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: 'Montserrat Alternates', sans-serif; overflow-x: hidden; width: 100%; }
 
@@ -7,91 +7,93 @@ body { font-family: 'Montserrat Alternates', sans-serif; overflow-x: hidden; wid
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 5%;
-    background: white;
+    padding: 15px 5%;
+    background: #fff;
 }
-.logo-container img { width: 70px; height: auto; }
+.logo-container { display: flex; align-items: center; gap: 15px; }
+.logo-container img { width: 60px; height: auto; }
+.logo-text { font-family: 'Fraunces', serif; color: #709241; font-size: 1.2rem; line-height: 1.1; }
 
-/* --- BANNIÈRE (Vague Parfaite & Largeur Totale) --- */
-.banner {
-    width: 100%;
-    position: relative;
-    background: white;
-}
+.nav-links { display: flex; gap: 10px; align-items: center; font-size: 0.9rem; }
+.nav-links a { text-decoration: none; color: #709241; font-weight: 500; }
+.barre { color: #709241; }
 
+/* --- BANNER (VAGUE INTACTE) --- */
+.banner { position: relative; width: 100%; }
 .banner img {
     width: 100%;
-    height: auto; /* Garde la vague du fichier header.png intacte */
+    height: auto; /* Respecte la forme de la vague */
     display: block;
-    object-fit: contain;
 }
-
 .texte-superpose {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
+    color: #fff;
     font-family: 'Fraunces', serif;
-    font-size: 3rem;
-    font-weight: 700;
+    font-size: clamp(1.2rem, 5vw, 2.8rem); /* Taille adaptative */
     text-align: center;
     width: 90%;
-    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.4);
 }
 
-/* --- CARTES PRODUITS (SANS AUCUNE BORDURE) --- */
+/* --- HERO SECTION --- */
+.hero-section { text-align: center; padding: 60px 20px; color: #999; line-height: 1.6; }
+.btn-discover {
+    display: inline-block;
+    background: #F1C06D;
+    color: #fff;
+    padding: 15px 35px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 25px;
+}
+
+/* --- SECTION STARS (ZÉRO BORDURE) --- */
+.main-title { color: #709241; font-family: 'Fraunces', serif; text-align: center; font-size: 2rem; margin-bottom: 40px; }
 .stars-container {
     display: flex;
     justify-content: center;
     gap: 30px;
-    padding: 60px 20px;
+    padding: 0 20px 80px;
+    flex-wrap: wrap; /* Passage à la ligne auto */
 }
-
 .product-card {
-    background-color: #f9f7ef;
+    background: #F9F7EF;
     border-radius: 40px;
     display: flex;
     align-items: center;
     padding: 25px;
-    width: 500px;
-    box-shadow: 6px 6px 12px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.05);
 }
-
-.image-circle, .circle-img {
-    width: 160px;
-    height: 160px;
+.image-circle {
+    width: 140px;
+    height: 140px;
     border-radius: 50%;
     overflow: hidden;
     flex-shrink: 0;
-    border: none !important; /* SUPPRESSION RADICALE DU CONTOUR */
+    border: none !important; /* Bordure dégagée */
 }
+.image-circle img { width: 100%; height: 100%; object-fit: cover; }
+.card-content { margin-left: 20px; color: #777; font-size: 0.9rem; }
+.card-content h3 { color: #8cb342; font-family: 'Fraunces', serif; margin-bottom: 5px; }
 
-.image-circle img, .circle-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* --- FOOTER (L'HERBE NON DE DIEU) --- */
-.footer-fixe {
-    position: relative; /* On ne le fixe plus pour que l'herbe ne passe pas sous le site */
-    width: 100%;
-    background-color: #8CC63F; /* Le vert de la ferme */
-    
-    /* L'herbe est placée ici en haut du bloc */
+/* --- FOOTER (HERBE & ICÔNES) --- */
+.site-footer {
+    background-color: #8CC63F;
     background-image: url('herbe.png');
     background-repeat: repeat-x;
     background-position: top center;
-    background-size: auto 100px; /* Ajuste la taille des brins d'herbe */
-    
-    /* On ajoute un énorme padding en haut pour que le contenu ne touche pas l'herbe */
-    padding: 120px 20px 40px 20px; 
-    margin-top: 80px;
-    color: white;
+    background-size: auto 80px; /* L'herbe en haut */
+    padding: 100px 5% 40px;
+    color: #fff;
+    margin-top: 50px;
 }
-
-.conteneur {
+.conteneur-footer {
     max-width: 1100px;
     margin: 0 auto;
     display: flex;
@@ -99,10 +101,26 @@ body { font-family: 'Montserrat Alternates', sans-serif; overflow-x: hidden; wid
     align-items: center;
     gap: 40px;
 }
+.image-map { width: 45%; border-radius: 20px; }
+.footer-info { flex: 1; }
+.footer-brand { display: flex; align-items: center; gap: 15px; margin-bottom: 25px; }
+.logo-f { width: 60px; }
+.brand-text h3 { font-family: 'Fraunces', serif; line-height: 1.1; }
 
-.image-map { 
-    width: 100%; 
-    max-width: 400px; 
-    border-radius: 20px; 
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+.contact-list { list-style: none; }
+.contact-list li { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 15px; }
+.ico { width: 20px; margin-top: 3px; }
+
+/* --- RESPONSIVE MOBILE --- */
+@media (max-width: 850px) {
+    .site-header { flex-direction: column; gap: 15px; }
+    .nav-links { flex-wrap: wrap; justify-content: center; }
+    
+    .conteneur-footer { flex-direction: column; text-align: center; }
+    .image-map { width: 100%; }
+    .footer-brand { justify-content: center; }
+    .contact-list li { justify-content: center; text-align: left; }
+    
+    .product-card { flex-direction: column; text-align: center; }
+    .card-content { margin-left: 0; margin-top: 15px; }
 }
