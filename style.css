@@ -19,21 +19,23 @@ body { font-family: 'Montserrat Alternates', sans-serif; overflow-x: hidden; }
 
 /* BANNER */
 .banner {
-    width: 100vw;       /* Occupe 100% de la largeur de la fenêtre (viewport width) */
     position: relative;
-    left: 50%;          /* On pousse à 50% du parent */
-    right: 50%;         /* On tire à 50% du parent */
-    margin-left: -50vw; /* On décale de la moitié de l'écran à gauche */
-    margin-right: -50vw;/* On décale de la moitié de l'écran à droite */
-    overflow: hidden;   /* Évite les barres de défilement bizarres */
+    width: 100%;
+    /* overflow: hidden est indispensable pour que la vague ne dépasse pas du bloc */
+    overflow: hidden; 
 }
 
 .banner img {
-    width: 100%;        /* L'image prend toute la largeur du bloc banner */
-    height: 550px;      /* Ta hauteur qui te convient */
-    object-fit: cover;  /* Garde les proportions sans déformer */
+    width: 100%;
+    /* MODIFIE LA VALEUR CI-DESSOUS (ex: 500px, 600px, etc.) */
+    height: 500px; 
     display: block;
+    /* Empêche de déformer l'image et la vague */
+    object-fit: cover; 
+    /* Aligne l'image vers le haut pour être sûr que la vague en bas soit bien cadrée */
+    object-position: center top; 
 }
+
 .texte-superpose {
     position: absolute;
     top: 50%;
@@ -41,46 +43,11 @@ body { font-family: 'Montserrat Alternates', sans-serif; overflow-x: hidden; }
     transform: translate(-50%, -50%);
     color: white;
     font-family: 'Fraunces', serif;
-    /* On augmente un peu la taille pour suivre la bannière */
-    font-size: 3.5rem; 
-    font-weight: 700;
-    text-align: center;
-    width: 90%;
-    /* Ombre portée pour détacher le texte de l'image */
-    text-shadow: 3px 3px 10px rgba(0,0,0,0.6); 
-}
-.banner {
-    width: 100%;
-    position: relative;
-    /* On enlève les marges qui pourraient bloquer l'image */
-    margin: 0; 
-    padding: 0;
-    overflow: hidden;
-}
-
-.banner img {
-    /* Largeur totale pour occuper tout l'espace */
-    width: 100%; 
-    /* IMPORTANT : height auto pour que la vague ne soit pas écrasée ou coupée */
-    height: auto; 
-    display: block;
-    /* On s'assure que rien ne limite la largeur de l'image */
-    max-width: none; 
-}
-
-.texte-superpose {
-    position: absolute;
-    /* On centre le texte mais on le remonte un peu (40%) pour qu'il ne chevauche pas la vague */
-    top: 40%; 
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-family: 'Fraunces', serif;
     font-size: 3rem;
     font-weight: 700;
     text-align: center;
-    width: 85%;
-    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    width: 80%;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
 }
 /* HERO */
 .hero-section { padding: 100px 20px; text-align: center; }
