@@ -30,7 +30,7 @@ body {
 .nav-links a { text-decoration: none; color: #709241; margin-left: 10px; }
 .barre { opacity: 0.3; margin: 0 5px; }
 
-/* --- BANNIERE & VAGUE --- */
+/* --- BANNIERE --- */
 .banner { position: relative; width: 100%; height: 500px; overflow: hidden; }
 .banner img { width: 100%; height: 100%; object-fit: cover; border: none !important; }
 
@@ -43,7 +43,7 @@ body {
 .wave-container { position: absolute; bottom: -1px; width: 100%; line-height: 0; z-index: 5; }
 .wave-container svg { width: 100%; height: 160px; }
 
-/* --- SECTION TEXTE (ESPACEMENT MAX) --- */
+/* --- SECTION TEXTE --- */
 .hero-center { 
     text-align: center; 
     padding: 160px 20px; 
@@ -66,31 +66,6 @@ body {
     box-shadow: 0 10px 20px rgba(241, 192, 109, 0.3);
 }
 
-/* --- CARTES PRODUITS (OMBRES SOMBRES & ZERO BORDURE) --- */
+/* --- CARTES PRODUITS --- */
 .stars-section { padding: 100px 20px 180px; text-align: center; }
-.main-title { font-family: 'Fraunces', serif; font-size: 3.2rem; color: #4c6b2f; margin-bottom: 110px; }
-
-.stars-container { 
-    display: flex; 
-    justify-content: center; 
-    gap: 80px; 
-    flex-wrap: wrap; 
-}
-
-.product-card { 
-    background: #f9f7ef; 
-    border-radius: 45px; 
-    display: flex; 
-    align-items: center; 
-    padding: 50px; 
-    width: 100%; 
-    max-width: 620px; 
-    border: none !important; 
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); 
-    text-align: left;
-}
-
-.image-circle { 
-    width: 180px; height: 180px; border-radius: 50%; 
-    overflow: hidden; flex-shrink: 0; border: none !important; 
-}
+.main-title { font-family: 'Fraunces', serif;
