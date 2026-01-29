@@ -27,7 +27,7 @@ body { font-family: 'Montserrat Alternates', sans-serif; overflow-x: hidden; }
 }
 
 /* HERO */
-.hero-section { padding: 60px 20px; text-align: center; }
+.hero-section { padding: 100px 20px; text-align: center; }
 .description { color: #a5a5a5; font-size: 1.5rem; line-height: 1.4; margin-bottom: 40px; }
 .btn-discover {
     display: inline-block; background-color: #f1c06d; color: white;
