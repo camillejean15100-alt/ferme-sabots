@@ -1,215 +1,160 @@
-/* Importation des polices Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,700&family=Montserrat:wght@400;600&display=swap');
+/* --- 1. FONTS & RESET --- */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat+Alternates:wght@400;500;700&family=Montserrat:wght@400;700&display=swap');
+
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
 
 body {
-    margin: 0;
-    padding: 0;
-    /* Montserrat pour le texte par défaut */
-    font-family: 'Montserrat', sans-serif;
-    color: #5d6d4e;
-    line-height: 1.6;
-    background-color: #ffffff;
+    font-family: 'Montserrat Alternates', sans-serif;
+    padding-bottom: 350px !important; 
 }
 
-/* Titres en Fraunces */
-h1, h2, h3, .hero-text {
-    font-family: 'Fraunces', serif;
-    font-weight: 700;
-}
-
-/* Header & Nav */
-header nav {
+/* --- 2. HEADER --- */
+.site-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 50px;
+    padding: 15px 5%;
+    background-color: white;
 }
 
-header .logo img { height: 70px; }
-
-header ul {
-    display: flex;
-    list-style: none;
-    margin: 0;
-}
-
-header ul li a {
-    text-decoration: none;
-    color: #748c5e;
-    margin-left: 25px;
-    font-size: 0.85em;
-    font-weight: 600;
-    text-transform: capitalize;
-}
-
-/* Hero Section */
-.hero {
-    position: relative;
-    text-align: center;
-    overflow: hidden;
-}
-
-.hero-bg {
-    width: 100%;
-    display: block;
-    /* L'image header.png doit déjà avoir sa forme de vague 
-       pour un rendu fidèle à la maquette */
-}
-
-.hero-text {
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    width: 80%;
-}
-
-.hero-text h1 {
-    font-size: 2.8em;
-    line-height: 1.1;
-    margin: 0;
-    text-shadow: 1px 1px 10px rgba(0,0,0,0.2);
-}
-
-/* Intro */
-.intro {
-    text-align: center;
-    padding: 60px 22%;
-    color: #8a8a8a;
-    font-size: 0.95em;
-}
-
-.btn-produits {
-    display: inline-block;
-    background-color: #f3c677;
-    color: white;
-    padding: 12px 25px;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: 600;
-    margin-top: 30px;
-    font-size: 0.9em;
-    letter-spacing: 0.5px;
-}
-
-/* Cards Section */
-.stars { text-align: center; padding-bottom: 80px; }
-.stars h2 { 
-    color: #5d6d4e; 
-    font-size: 2.2em; 
-    margin-bottom: 40px; 
-}
-
-.cards-container {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
-}
-
-.card {
-    background-image: url('fondbeige.png');
-    background-size: cover;
-    border-radius: 25px;
-    width: 380px;
-    padding: 25px;
+.logo-container {
     display: flex;
     align-items: center;
-    box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+    gap: 15px;
 }
 
-.card-img img {
-    width: 130px;
-    height: 130px;
-    border-radius: 50%;
-    border: 6px solid #ffffff;
-    object-fit: cover;
+.logo-container img {
+    width: 80px;
+    height: auto;
 }
 
-.card-content { 
-    text-align: left; 
-    padding-left: 20px; 
+.logo-text {
+    font-family: 'Fraunces', serif;
+    color: #709241;
+    font-size: 1.5rem;
+    line-height: 1.1;
 }
 
-.card-content h3 { 
-    margin: 0; 
-    color: #8cb369; 
-    font-size: 1.1em;
-    text-transform: uppercase;
-    font-family: 'Montserrat', sans-serif; /* Montserrat pour les petits titres de cartes */
-    font-weight: 700;
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
-.card-content p {
-    font-size: 0.9em;
-    margin: 8px 0;
-    color: #666;
+.nav-links a {
+    text-decoration: none;
+    color: #709241;
+    font-weight: 500;
 }
 
-.subtext {
-    font-size: 0.8em;
-    color: #888;
-}
+/* --- 3. BANNIERE & HERO --- */
+.banner { position: relative; width: 100%; }
+.banner img { width: 100%; display: block; }
 
-/* Footer */
-footer {
-    background-color: #8cb369;
-    color: white;
-    position: relative;
-    padding-top: 60px;
-    margin-top: 100px;
-}
-
-.grass-divider {
+.texte-superpose {
     position: absolute;
-    top: -35px;
-    left: 0;
-    width: 100%;
-    line-height: 0;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: 'Fraunces', serif;
+    font-size: 3rem;
+    text-align: center;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
 }
 
-.grass-divider img { 
-    width: 100%; 
-    height: auto; 
+.hero-section { padding: 60px 20px; text-align: center; }
+.main-title { color: #4c6b2f; font-family: 'Fraunces', serif; font-size: 2.5rem; margin-bottom: 40px; }
+.description { color: #a5a5a5; font-size: 1.5rem; margin-bottom: 40px; }
+.btn-discover { 
+    background-color: #f1c06d; color: white; padding: 18px 45px; 
+    border-radius: 15px; text-decoration: none; text-transform: uppercase; 
 }
 
-.footer-content {
+/* --- 4. CARTES PRODUITS --- */
+.stars-container {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    gap: 100px;
-    padding: 50px;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 20px;
 }
 
-.map img {
-    border-radius: 20px;
-    width: 350px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-.infos h3 { 
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.4em;
-    margin-bottom: 20px;
-}
-
-.footer-logo {
-    height: 80px;
-    margin-bottom: 15px;
-}
-
-.infos p {
+.product-card {
+    background-color: #f9f7ef;
+    border-radius: 40px;
     display: flex;
-    align-items: flex-start;
-    margin: 15px 0;
-    font-size: 0.95em;
+    align-items: center;
+    padding: 25px;
+    width: 100%;
+    max-width: 550px;
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.3);
 }
 
-.icon { 
-    width: 22px; 
-    margin-right: 15px; 
-    margin-top: 3px;
+.image-circle {
+    width: 180px; height: 180px;
+    border-radius: 50%;
+    border: 5px solid #8cae43;
+    overflow: hidden;
+    flex-shrink: 0;
 }
 
-strong { font-weight: 600; }
+.image-circle img { width: 100%; height: 100%; object-fit: cover; }
+
+.card-content { margin-left: 20px; color: #888; }
+.card-content h3 { color: #8cb342; font-family: 'Fraunces', serif; }
+
+/* --- 5. FOOTER FIXE (EXACTITUDE VISUELLE) --- */
+.footer-fixe {
+    position: fixed !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    z-index: 9999;
+    background-color: #8CC63F !important;
+    background-image: url('herbe.png') !important; /* */
+    background-repeat: repeat-x;
+    background-position: top;
+    padding: 60px 20px 30px 20px;
+    color: white !important;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.conteneur {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.image-map { /* */
+    width: 100%;
+    max-width: 450px;
+    border-radius: 20px;
+    display: block;
+}
+
+.entete-logo { display: flex; align-items: center; gap: 20px; margin-bottom: 20px; }
+.logo { width: 80px; } /* */
+
+.titre-ferme {
+    font-family: 'Fraunces', serif;
+    font-size: 2rem;
+    color: #435128;
+}
+
+.ligne { display: flex; align-items: flex-start; gap: 15px; margin-bottom: 10px; }
+.icone { width: 20px; margin-top: 5px; } /* */
+
+/* --- 6. RESPONSIVE --- */
+@media (max-width: 800px) {
+    body { padding-bottom: 0 !important; }
+    .footer-fixe { position: relative !important; }
+    .conteneur { flex-direction: column; text-align: center; }
+    .entete-logo, .ligne { justify-content: center; }
+}
