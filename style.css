@@ -40,7 +40,7 @@ body {
     text-align: center; 
 }
 .main-title { font-family: 'Fraunces', serif; font-size: 2.8rem; color: #4c6b2f; margin-bottom: 60px; }
-.stars-container { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
+.stars-container { display: flex; justify-content: center; gap: 70px; flex-wrap: wrap; }
 
 /* --- CARTES : OMBRE NETTE --- */
 .product-card { 
