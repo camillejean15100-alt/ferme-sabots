@@ -7,11 +7,10 @@ body { font-family: 'Montserrat Alternates', sans-serif; overflow-x: hidden; }
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 5%;
-}
+   padding: 10px 5%; /* Réduit de 15px à 10px */}
 
 .logo-container { display: flex; align-items: center; gap: 15px; }
-.logo-container img { width: 80px; }
+.logo-container img { width: 60px; }
 .logo-text { font-family: 'Fraunces', serif; color: #709241; font-size: 1.5rem; line-height: 1.1; }
 
 .nav-links { display: flex; align-items: center; gap: 15px; }
@@ -20,7 +19,7 @@ body { font-family: 'Montserrat Alternates', sans-serif; overflow-x: hidden; }
 
 /* BANNER */
 .banner { position: relative; width: 100%; }
-.banner img { width: 100%; display: block; }
+.banner img { width: 500px; display: block; }
 .texte-superpose {
     position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
     color: white; font-family: 'Fraunces', serif; font-size: 3rem; text-align: center; width: 80%;
