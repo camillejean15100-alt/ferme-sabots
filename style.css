@@ -1,127 +1,56 @@
-/* --- CONFIGURATION GÉNÉRALE --- */
-* { 
-    margin: 0; 
-    padding: 0; 
-    box-sizing: border-box; 
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Montserrat Alternates', sans-serif; color: #709241; background: #fff; }
 
-body { 
-    font-family: 'Montserrat Alternates', sans-serif; 
-    color: #709241; 
-    background-color: #ffffff;
-    overflow-x: hidden;
-}
-
-/* --- ANIMATION D'ENTRÉE --- */
-@keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* --- HEADER --- */
-.site-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 5%;
-    max-width: 1400px;
-    margin: 0 auto;
-}
+/* HEADER */
+.site-header { display: flex; justify-content: space-between; align-items: center; padding: 15px 5%; }
 .logo-container { display: flex; align-items: center; gap: 15px; }
-.logo-container img { width: 60px; }
-.logo-text { font-family: 'Fraunces', serif; font-size: 1.4rem; line-height: 1.1; }
-.nav-links { font-weight: 500; font-size: 1rem; }
-.nav-links a { text-decoration: none; color: inherit; transition: color 0.3s; }
-.nav-links a:hover { color: #8cb342; }
-.barre { margin: 0 10px; opacity: 0.5; }
+.logo-container img { width: 75px; }
+.logo-text { font-family: 'Fraunces', serif; font-size: 1.4rem; line-height: 1.1; text-align: left; }
+.nav-links { display: flex; align-items: center; gap: 10px; }
+.nav-links a { text-decoration: none; color: #709241; font-weight: 500; }
 
-/* --- BANNER (Vague) --- */
-.banner {
-    position: relative;
-    height: 480px;
-    overflow: hidden;
-    clip-path: ellipse(145% 100% at 50% 0%);
-}
+/* BANNIERE + VAGUE */
+.banner { position: relative; width: 100%; height: 400px; overflow: hidden; }
 .banner img { width: 100%; height: 100%; object-fit: cover; }
-.texte-superpose {
-    position: absolute;
-    top: 45%; left: 50%; transform: translate(-50%, -50%);
-    color: white; font-family: 'Fraunces', serif; font-size: 3rem;
-    text-align: center; width: 80%; text-shadow: 2px 2px 15px rgba(0,0,0,0.4);
+.texte-superpose { 
+    position: absolute; top: 45%; left: 50%; transform: translate(-50%, -50%);
+    color: white; font-family: 'Fraunces', serif; font-size: 3.5rem; width: 100%; text-align: center;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.4); z-index: 2;
+}
+.wave-container { position: absolute; bottom: -1px; left: 0; width: 100%; line-height: 0; z-index: 3; }
+.wave-container svg { width: 100%; height: 80px; }
+
+/* TEXTE CENTRÉ ET BOUTON ORANGE */
+.hero-center { text-align: center; padding: 60px 20px; max-width: 900px; margin: 0 auto; }
+.intro-p { color: #a5a5a5; font-size: 1.5rem; margin-bottom: 30px; line-height: 1.4; }
+.btn-orange { 
+    display: inline-block; background: #f1c06d; color: white; padding: 18px 40px; 
+    border-radius: 15px; text-decoration: none; font-weight: bold; font-size: 1.1rem;
+    text-transform: uppercase; box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* --- SECTION HERO --- */
-.hero-section { padding: 80px 10%; text-align: center; }
-.description { color: #a5a5a5; font-size: 1.3rem; line-height: 1.6; margin-bottom: 40px; }
-.btn-discover {
-    display: inline-block; background-color: #f1c06d; color: white;
-    text-decoration: none; padding: 18px 45px; border-radius: 15px;
-    font-weight: 700; box-shadow: 0 4px 15px rgba(241, 192, 109, 0.4);
-    transition: all 0.3s ease;
-}
-.btn-discover:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(241, 192, 109, 0.6); }
-
-/* --- CARTES PRODUITS --- */
-.stars-section { padding-bottom: 100px; text-align: center; }
-.main-title { font-family: 'Fraunces', serif; font-size: 2.5rem; margin-bottom: 60px; color: #8cb342; }
-.stars-container { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
-
-.product-card {
-    background-color: #f9f7ef; border-radius: 45px; display: flex;
-    align-items: center; padding: 35px; width: 550px;
-    box-shadow: 15px 15px 35px rgba(0, 0, 0, 0.08);
-    opacity: 0; animation: fadeInUp 0.8s ease-out forwards;
-}
-.product-card:nth-child(2) { animation-delay: 0.2s; }
-
-.image-circle {
-    width: 160px; height: 160px; border-radius: 50%; border: 8px solid #8cb342;
-    overflow: hidden; flex-shrink: 0; transition: transform 0.4s ease;
-}
-.product-card:hover .image-circle { transform: scale(1.08) rotate(3deg); }
+/* CARTES (Bordure Simple) */
+.stars-section { padding-bottom: 80px; text-align: center; }
+.main-title { font-family: 'Fraunces', serif; font-size: 2.8rem; color: #669933; margin-bottom: 50px; }
+.stars-container { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; }
+.product-card { background: #f9f7ef; border-radius: 40px; display: flex; align-items: center; padding: 30px; width: 550px; text-align: left; }
+.image-circle { width: 150px; height: 150px;  overflow: hidden; flex-shrink: 0; }
 .image-circle img { width: 100%; height: 100%; object-fit: cover; }
+.card-content { margin-left: 20px; }
+.card-content h3 { font-family: 'Fraunces', serif; color: #8cb342; font-size: 1.6rem; }
 
-.card-content { margin-left: 25px; text-align: left; }
-.card-content h3 { font-family: 'Fraunces', serif; color: #8cb342; font-size: 1.5rem; margin-bottom: 10px; }
-.card-content p { color: #888; font-size: 1rem; }
-.highlight { font-weight: 700; color: #8cb342; margin-top: 5px; }
+/* FOOTER (CARTE GAUCHE) */
+.site-footer { background: #8CC63F; color: white; padding: 80px 5% 50px; margin-top: 50px; }
+.footer-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 50px; }
+.footer-map { flex: 0 0 45%; }
+.map-img { width: 100%; border-radius: 20px; }
+.footer-infos { flex: 1; text-align: left; }
+.footer-header { display: flex; align-items: center; gap: 20px; margin-bottom: 25px; }
+.footer-logo { width: 80px; filter: brightness(0) invert(1); }
+.footer-farm-name { font-family: 'Fraunces', serif; font-size: 2.2rem; line-height: 1.1; }
 
-/* --- FOOTER FINAL --- */
-.site-footer {
-    position: relative;
-    background-color: #8CC63F; /* Le vert pomme */
-    padding: 100px 5% 60px;
-    margin-top: 100px;
-    color: white;
-}
-.site-footer::before {
-    content: "";
-    position: absolute;
-    top: -58px; left: 0; width: 100%; height: 65px;
-    background: url('herbe.png') no-repeat center bottom;
-    background-size: cover; z-index: 10;
-}
-.conteneur {
-    max-width: 1200px; margin: 0 auto;
-    display: flex; justify-content: space-between;
-    align-items: center; gap: 50px;
-}
-.bloc-gauche { flex: 0 0 45%; }
-.image-map { width: 100%; border-radius: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); }
-.bloc-droite { flex: 1; text-align: left; }
-.entete-logo { display: flex; align-items: center; gap: 20px; margin-bottom: 30px; }
-.logo, .icone { filter: brightness(0) invert(1); }
-.logo { width: 85px; }
-.titre-ferme { font-family: 'Fraunces', serif; font-size: 2.2rem; line-height: 1.1; color: white; }
-.liste-infos h3 { font-size: 1.8rem; margin-bottom: 25px; font-weight: 500; }
-.ligne { display: flex; align-items: flex-start; gap: 15px; margin-bottom: 18px; font-size: 1.2rem; }
-.icone { width: 24px; margin-top: 5px; }
-
-/* --- RESPONSIVE --- */
-@media (max-width: 950px) {
-    .conteneur { flex-direction: column; text-align: center; }
-    .bloc-gauche, .bloc-droite { width: 100%; }
-    .entete-logo, .ligne { justify-content: center; }
-    .product-card { width: 100%; max-width: 500px; flex-direction: column; text-align: center; padding: 25px; }
-    .card-content { margin-left: 0; margin-top: 20px; }
+@media (max-width: 900px) {
+    .footer-container, .product-card { flex-direction: column; text-align: center; }
+    .footer-infos, .card-content { margin-left: 0; margin-top: 20;}
+    .footer-header { justify-content: center; }
 }
