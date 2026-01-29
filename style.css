@@ -222,114 +222,118 @@ body {
 
 
 /*footer*/
-/* Import des typos */
-/* Import des typos */
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@400;700&display=swap');
+/* Import des polices */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@400;700&display=swap');
 
-.main-footer {
-    background-color: #8CC63F; /* Le vert de votre image */
-    background-image: url('herbe.png'); /* L'herbe en haut */
+body {
+    margin: 0;
+    padding-bottom: 350px; /* Espace pour ne pas cacher le contenu sous le footer fixe */
+}
+
+.site-footer {
+    /* --- FIXE EN BAS --- */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+
+    /* --- DESIGN --- */
+    background-color: #8CC63F; 
+    background-image: url('herbe.png'); 
     background-repeat: repeat-x;
     background-position: top;
-    padding: 60px 20px 40px 20px;
+    padding: 60px 20px 20px 20px;
     color: white;
     font-family: 'Montserrat', sans-serif;
+    box-shadow: 0 -5px 15px rgba(0,0,0,0.1);
 }
 
-.footer-container {
-    max-width: 1000px;
+.footer-inner {
+    max-width: 1100px;
     margin: 0 auto;
     display: flex;
-    align-items: center;
     justify-content: space-around;
-    gap: 40px;
+    align-items: center;
+    gap: 30px;
 }
 
-/* Style de la carte */
-.map-img {
-    max-width: 100%;
+/* Bloc Carte */
+.footer-map-img {
+    width: 350px; /* Taille fixe pour garder l'aspect de la maquette */
+    height: auto;
     border-radius: 15px;
-    border: 5px solid rgba(255,255,255,0.3);
+    display: block;
 }
 
-/* Bloc de droite */
-.footer-content {
-    flex: 1;
+/* Bloc Infos */
+.footer-info-container {
+    display: flex;
+    flex-direction: column;
 }
 
-.logo-area {
+.footer-brand {
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
+    gap: 15px;
+    margin-bottom: 15px;
 }
 
-.logo-farm {
-    height: 80px;
-    margin-right: 15px;
+.footer-logo {
+    width: 70px;
 }
 
-.farm-name {
+.footer-title {
     font-family: 'Fraunces', serif;
     font-size: 1.8rem;
     line-height: 1;
-    color: #4A5D23; /* Couleur sombre du texte logo */
+    color: #435128;
+    margin: 0;
 }
 
-.infos-pratiques h3 {
-    font-size: 1.5rem;
+.details-heading {
+    font-size: 1.6rem;
     margin-bottom: 15px;
     font-weight: 400;
 }
 
-.info-item {
+.detail-row {
     display: flex;
-    align-items: flex-start;
-    margin-bottom: 10px;
+    align-items: center; /* Aligné sur la maquette */
+    gap: 12px;
+    margin-bottom: 8px;
     font-size: 1.1rem;
 }
 
-.icon {
+.footer-icon {
     width: 20px;
-    margin-right: 15px;
+}
+
+.vente-ferme {
+    font-weight: 400;
     margin-top: 5px;
 }
 
 /* --- RESPONSIVE --- */
-@media (max-width: 768px) {
-    .footer-container {
+@media (max-width: 850px) {
+    .site-footer {
+        position: relative; /* On retire le mode fixe sur mobile pour éviter de manger l'écran */
+        padding-top: 50px;
+    }
+    
+    body {
+        padding-bottom: 0;
+    }
+
+    .footer-inner {
         flex-direction: column;
         text-align: center;
     }
 
-    .logo-area {
+    .footer-brand, .detail-row {
         justify-content: center;
     }
-
-    .info-item {
-        justify-content: center;
-    }
-    
-    .map-img {
-        width: 100%;
-    }
 }
-/* --- RESPONSIVE : EXACTITUDE MOBILE --- */
-@media (max-width: 880px) {
-    .content-wrapper {
-        flex-direction: column; /* Empile la carte AU-DESSUS du texte */
-        text-align: center;
-    }
-    
-    .header-brand, .info-row {
-        justify-content: center; /* Centre le logo et les lignes d'info */
-        text-align: left; /* Garde le texte aligné à gauche des icônes */
-    }
-
-    .side-info {
-        margin-top: 20px;
-    }
-}
-
 /* Responsive Mobile */
 @media (max-width: 850px) {
     .content-wrapper {
