@@ -76,32 +76,97 @@ body { font-family: 'Montserrat Alternates', sans-serif; overflow-x: hidden; }
 /* FOOTER - SANS FOND VERT CLAIR, SANS POSITION FIXE */
 .site-footer {
     position: relative;
-    background-image: url('herbe.png');
-    padding: 80px 20px 40px 20px;
-    margin-top: 50px;
+    background-color: #8CC63F; /* Le vert pomme de ton image */
+    padding: 100px 5% 60px;
+    margin-top: 80px;
     color: white;
 }
 
-.conteneur {
-    max-width: 1100px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 40px;
+/* L'herbe en haut du footer */
+.site-footer::before {
+    content: "";
+    position: absolute;
+    top: -55px;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: url('herbe.png') repeat-x bottom;
+    background-size: contain;
+    z-index: 10;
 }
 
-.image-map { width: 100%; max-width: 450px; border-radius: 20px; }
+.conteneur {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; /* Écarte la carte et le texte */
+    align-items: center; /* Aligne verticalement */
+    gap: 60px;
+}
 
-.bloc-droite { text-align: left; }
-.entete-logo { display: flex; align-items: center; gap: 20px; margin-bottom: 20px; }
-.logo { width: 80px; }
-.titre-ferme { font-family: 'Fraunces', serif; font-size: 2rem; color: #435128; line-height: 1.1; }
+/* Image de la carte */
+.image-map { 
+    width: 100%; 
+    max-width: 480px; /* Taille fidèle à ton image_197991 */
+    border-radius: 25px; 
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15); 
+}
 
-.liste-infos h3 { font-size: 1.8rem; margin-bottom: 15px; font-weight: 400; }
-.ligne { display: flex; align-items: flex-start; gap: 15px; margin-bottom: 10px; font-size: 1.2rem; }
-.icone { width: 22px; margin-top: 4px; }
+/* Bloc de droite */
+.bloc-droite {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
 
+.entete-logo { 
+    display: flex; 
+    align-items: center; 
+    gap: 25px; 
+    margin-bottom: 40px; 
+}
+
+/* On blanchit le logo et les icônes s'ils sont sombres à la base */
+.logo, .icone { 
+    filter: brightness(0) invert(1); 
+}
+
+.logo { width: 90px; }
+
+.titre-ferme { 
+    font-family: 'Fraunces', serif; 
+    font-size: 2.3rem; 
+    line-height: 1.1; 
+    color: white;
+}
+
+.liste-infos h3 { 
+    font-size: 1.8rem; 
+    margin-bottom: 25px; 
+    font-weight: 400; 
+}
+
+.ligne { 
+    display: flex; 
+    align-items: flex-start; 
+    gap: 15px; 
+    margin-bottom: 20px; 
+    font-size: 1.2rem; 
+}
+
+.icone { width: 24px; margin-top: 5px; }
+
+.texte-horaire p { line-height: 1.4; }
+
+/* Correction pour mobile */
+@media (max-width: 900px) {
+    .conteneur { 
+        flex-direction: column; 
+        text-align: center; 
+    }
+    .entete-logo, .ligne { justify-content: center; }
+    .image-map { max-width: 100%; }
+}
 /* RESPONSIVE */
 @media (max-width: 850px) {
     .conteneur { flex-direction: column; text-align: center; }
