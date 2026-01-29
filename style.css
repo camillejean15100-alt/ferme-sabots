@@ -114,7 +114,6 @@ body {
     left: 0 !important;
     width: 100% !important;
     z-index: 9999;
-    background-color: #8CC63F !important;
     background-image: url('herbe.png') !important; /* */
     background-repeat: repeat-x;
     background-position: top;
