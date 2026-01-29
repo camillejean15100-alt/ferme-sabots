@@ -110,7 +110,6 @@ body {
     width: 180px;
     height: 180px;
     border-radius: 50%;
-    border: 6px solid #8cae43;
     overflow: hidden;
     flex-shrink: 0;
 }
