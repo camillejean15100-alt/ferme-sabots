@@ -71,7 +71,7 @@ body {
     background-color: #f9f7ef; border-radius: 40px; display: flex; align-items: center;
     padding: 30px; width: 550px; box-shadow: 6px 6px 10px rgba(0,0,0,0.2);
 }
-.image-circle { width: 180px; height: 180px; border-radius: 50%; border: 4px solid #8cb342; overflow: hidden; flex-shrink: 0; }
+.image-circle { width: 180px; height: 180px;  overflow: hidden; flex-shrink: 0; }
 .image-circle img { width: 100%; height: 100%; object-fit: cover; }
 
 .card-content { margin-left: 20px; text-align: left; color: #888; }
