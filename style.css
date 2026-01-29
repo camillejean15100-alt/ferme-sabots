@@ -1,44 +1,29 @@
-/* --- RESET TOTAL --- */
-* { 
-    margin: 0; 
-    padding: 0; 
-    box-sizing: border-box; 
-}
-
-body {
-    font-family: 'Montserrat Alternates', sans-serif;
-    overflow-x: hidden;
-    width: 100%;
-}
+/* --- RESET --- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Montserrat Alternates', sans-serif; overflow-x: hidden; width: 100%; }
 
 /* --- HEADER --- */
 .site-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 5%;
+    padding: 10px 5%;
     background: white;
 }
-
-.logo-container { display: flex; align-items: center; gap: 15px; }
 .logo-container img { width: 70px; height: auto; }
-.logo-text { font-family: 'Fraunces', serif; color: #709241; font-size: 1.4rem; }
 
-.nav-links { display: flex; gap: 15px; align-items: center; }
-.nav-links a { text-decoration: none; color: #709241; font-weight: 500; }
-
-/* --- LA BANNIÈRE (Vague et Pleine Largeur) --- */
+/* --- BANNIÈRE (Vague Parfaite & Largeur Totale) --- */
 .banner {
-    width: 100vw; /* Utilise 100% de la largeur de l'écran */
+    width: 100%;
     position: relative;
-    margin-left: 50%;
-    transform: translateX(-50%); /* Force le centrage bord à bord */
+    background: white;
 }
 
 .banner img {
     width: 100%;
-    height: auto; /* Garde la forme de la vague intacte sans l'écraser */
+    height: auto; /* Garde la vague du fichier header.png intacte */
     display: block;
+    object-fit: contain;
 }
 
 .texte-superpose {
@@ -48,19 +33,18 @@ body {
     transform: translate(-50%, -50%);
     color: white;
     font-family: 'Fraunces', serif;
-    font-size: clamp(1.5rem, 4vw, 3rem); /* S'adapte à la taille de l'écran */
+    font-size: 3rem;
     font-weight: 700;
     text-align: center;
-    width: 80%;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+    width: 90%;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
 }
 
-/* --- CARTES PRODUITS (SANS CONTOUR) --- */
+/* --- CARTES PRODUITS (SANS AUCUNE BORDURE) --- */
 .stars-container {
     display: flex;
     justify-content: center;
     gap: 30px;
-    flex-wrap: wrap;
     padding: 60px 20px;
 }
 
@@ -70,29 +54,26 @@ body {
     display: flex;
     align-items: center;
     padding: 25px;
-    max-width: 550px;
-    box-shadow: 6px 6px 15px rgba(0,0,0,0.1);
+    width: 500px;
+    box-shadow: 6px 6px 12px rgba(0,0,0,0.1);
 }
 
-.image-circle {
-    width: 180px;
-    height: 180px;
+.image-circle, .circle-img {
+    width: 160px;
+    height: 160px;
     border-radius: 50%;
     overflow: hidden;
     flex-shrink: 0;
-    /* AUCUNE BORDURE ICI, C'EST NETTOYÉ */
+    border: none !important; /* SUPPRESSION RADICALE DU CONTOUR */
 }
 
-.image-circle img {
+.image-circle img, .circle-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.card-content { margin-left: 20px; color: #888; }
-.card-content h3 { color: #8cb342; font-family: 'Fraunces', serif; margin-bottom: 5px; }
-
-/* --- FOOTER HERBE --- */
+/* --- FOOTER (L'HERBE NON DE DIEU) --- */
 .footer-fixe {
     position: relative; /* On ne le fixe plus pour que l'herbe ne passe pas sous le site */
     width: 100%;
