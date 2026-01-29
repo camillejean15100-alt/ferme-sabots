@@ -5,7 +5,96 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La Ferme aux Sabots Fendus</title>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat+Alternates:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* --- RESET & TYPO --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Montserrat Alternates', sans-serif; 
+            color: #709241; 
+            background: #fff; 
+            overflow-x: hidden; 
+        }
+
+        /* --- HEADER --- */
+        .site-header { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            padding: 30px 6%; 
+        }
+        .logo-container { display: flex; align-items: center; gap: 15px; }
+        .logo-container img { width: 80px; }
+        .logo-text { 
+            font-family: 'Fraunces', serif; 
+            font-size: 1.5rem; 
+            line-height: 1.1; 
+            font-weight: 700;
+        }
+        .nav-links { font-weight: 700; text-transform: uppercase; font-size: 0.85rem; }
+        .nav-links a { text-decoration: none; color: #709241; margin: 0 10px; }
+        .barre { opacity: 0.3; }
+
+        /* --- BANNIERE --- */
+        .banner { position: relative; width: 100%; height: 500px; overflow: hidden; }
+        .banner img { width: 100%; height: 100%; object-fit: cover; }
+        .texte-superpose { 
+            position: absolute; top: 40%; left: 50%; transform: translate(-50%, -50%);
+            color: white; font-family: 'Fraunces', serif; font-size: clamp(2rem, 5vw, 3rem); 
+            text-align: center; text-shadow: 2px 2px 12px rgba(0,0,0,0.6); z-index: 10; width: 90%;
+        }
+        .wave-container { position: absolute; bottom: -1px; width: 100%; line-height: 0; z-index: 5; }
+        .wave-container svg { width: 100%; height: 150px; }
+
+        /* --- SECTION INTRO --- */
+        .hero-center { text-align: center; padding: 140px 20px; max-width: 850px; margin: 0 auto; }
+        .intro-p { color: #a5a5a5; font-size: 1.6rem; line-height: 1.6; margin-bottom: 40px; }
+        .btn-orange { 
+            display: inline-block; background: #f1c06d; color: white; padding: 20px 45px; 
+            border-radius: 12px; text-decoration: none; font-weight: 800; text-transform: uppercase;
+            box-shadow: 0 8px 15px rgba(241, 192, 109, 0.4);
+        }
+
+        /* --- CARTES : OMBRES SOMBRES & ZÉRO BORDURE --- */
+        .stars-section { padding: 80px 20px; text-align: center; }
+        .main-title { font-family: 'Fraunces', serif; font-size: 3rem; color: #4c6b2f; margin-bottom: 80px; }
+        .stars-container { display: flex; justify-content: center; gap: 60px; flex-wrap: wrap; }
+        
+        .product-card { 
+            background: #f9f7ef; border-radius: 40px; display: flex; align-items: center; 
+            padding: 40px; width: 100%; max-width: 600px; 
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); /* Ombre courte et sombre */
+            text-align: left; border: none;
+        }
+        .image-circle { width: 160px; height: 160px; border-radius: 50%; overflow: hidden; flex-shrink: 0; }
+        .image-circle img { width: 100%; height: 100%; object-fit: cover; }
+        .card-content { margin-left: 35px; }
+        .card-content h3 { font-family: 'Fraunces', serif; color: #8cb342; font-size: 1.8rem; margin-bottom: 10px; }
+
+        /* --- FOOTER : CONTRANSTE AMÉLIORÉ --- */
+        .site-footer { 
+            background: #f9f7ef; /* Fond crème pour que tes images couleurs soient visibles */
+            color: #4c6b2f; 
+            padding: 100px 6% 80px; 
+            border-top: 4px solid #8CC63F;
+        }
+        .footer-container { 
+            max-width: 1200px; margin: 0 auto; 
+            display: flex; justify-content: space-between; align-items: center; gap: 60px; 
+        }
+        .footer-map img { width: 100%; max-width: 450px; border-radius: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .footer-header { display: flex; align-items: center; gap: 20px; margin-bottom: 30px; }
+        .footer-logo { width: 90px; } /* Pas de filtre, affiche ton fichier tel quel */
+        .footer-farm-name { font-family: 'Fraunces', serif; font-size: 2.2rem; line-height: 1.1; color: #4c6b2f; }
+        .footer-details h3 { font-family: 'Fraunces', serif; font-size: 1.5rem; margin-bottom: 20px; color: #8cb342; }
+        .footer-details p { font-size: 1.1rem; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; font-weight: 500; }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 950px) {
+            .site-header, .footer-container, .product-card { flex-direction: column; text-align: center; }
+            .card-content { margin-left: 0; margin-top: 25px; }
+            .footer-header, .footer-details p { justify-content: center; }
+        }
+    </style>
 </head>
 <body>
 
@@ -23,14 +112,9 @@
 
     <section class="banner">
         <img src="header.png" alt="Bannière">
-        <div class="texte-superpose">
-            Bienvenue à <br>
-            <span>La Ferme aux Sabots Fendus</span>
-        </div>
+        <div class="texte-superpose">Bienvenue à <br><span>La Ferme aux Sabots Fendus</span></div>
         <div class="wave-container">
-            <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
-                <path fill="#ffffff" d="M0,224 C360,350 1080,50 1440,224 L1440,320 L0,320 Z"></path>
-            </svg>
+            <svg viewBox="0 0 1440 320" preserveAspectRatio="none"><path fill="#ffffff" d="M0,224 C360,350 1080,50 1440,224 L1440,320 L0,320 Z"></path></svg>
         </div>
     </section>
 
@@ -43,18 +127,17 @@
         <h2 class="main-title">Nos Stars du Goût</h2>
         <div class="stars-container">
             <div class="product-card">
-                <div class="image-circle"><img src="biquette.png"></div>
+                <div class="image-circle"><img src="biquette.png" alt="Chèvre"></div>
                 <div class="card-content">
                     <h3>YAOURTS & GLACES</h3>
                     <p>On vous prévient, nos produits vous rendront accros !</p>
-                    <p class="highlight">100% lait de la ferme</p>
                 </div>
             </div>
             <div class="product-card">
-                <div class="image-circle"><img src="brebis.png"></div>
+                <div class="image-circle"><img src="brebis.png" alt="Brebis"></div>
                 <div class="card-content">
                     <h3>NOS CAISSETTES</h3>
-                    <p>Acheter notre viande BIO, c'est savourer une viande de qualité produite à la ferme.</p>
+                    <p>Savourer une viande de qualité produite à la ferme.</p>
                 </div>
             </div>
         </div>
@@ -62,17 +145,17 @@
 
     <footer class="site-footer">
         <div class="footer-container">
-            <div class="footer-map"><img src="maps.png" class="map-img"></div>
+            <div class="footer-map"><img src="maps.png" alt="Carte"></div>
             <div class="footer-infos">
                 <div class="footer-header">
                     <img src="logofermeauxsabotsfendus.png" class="footer-logo">
                     <h2 class="footer-farm-name">La Ferme aux<br>Sabots Fendus</h2>
                 </div>
                 <div class="footer-details">
-                    <h3>Infos pratique</h3>
-                    <p><img src="adresse.png" width="20"> <strong>Adresse :</strong> Ton adresse ici</p>
-                    <p><img src="telephone.png" width="20"> <strong>Tel :</strong> 06 XX XX XX XX</p>
-                    <p><img src="horaire.png" width="20"> <strong>Horaires :</strong> Vente à la ferme : mardi et jeudi</p>
+                    <h3>Infos pratiques</h3>
+                    <p><img src="adresse.png" width="20"> Ton adresse ici</p>
+                    <p><img src="telephone.png" width="20"> 06 XX XX XX XX</p>
+                    <p><img src="horaire.png" width="20"> Mardi et Jeudi</p>
                 </div>
             </div>
         </div>
