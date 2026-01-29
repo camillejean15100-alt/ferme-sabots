@@ -3,73 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat+Alternates:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
     <title>La Ferme aux Sabots Fendus</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat+Alternates:wght@400;500;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header class="site-header">
-        <div class="logo-group">
+        <div class="logo-container">
             <img src="logofermeauxsabotsfendus.png" alt="Logo">
-            <h1>La Ferme aux<br>Sabots Fendus</h1>
+            <p class="logo-text">La Ferme aux<br>Sabots Fendus</p>
         </div>
-        <nav>
-            <a href="#">Accueil</a> | <a href="#">L'Élevage</a> | <a href="#">Boutique</a> | <a href="#">Nous Contacter</a>
+        <nav class="nav-links">
+            <a href="#">Accueil</a>
+            <span class="barre">|</span>
+            <a href="#">L'Élevage</a>
+            <span class="barre">|</span>
+            <a href="#">Boutique</a>
+            <span class="barre">|</span>
+            <a href="#">Nous Contacter</a>
         </nav>
     </header>
 
-    <div class="hero-banner">
-        <img src="header.png" alt="Bannière">
-        <div class="hero-text">"Bienvenue à la<br>Ferme aux Sabots Fendus !"</div>
+    <div class="banner">
+        <img src="header.png" alt="Bannière ferme">
+        <div class="texte-superpose">"Bienvenue à la<br>Ferme aux Sabots Fendus !"</div>
     </div>
-    
-    <section class="intro-text">
-        <p>
-            Nous élevons avec passion un troupeau de chèvres ainsi <br>
-            qu'un troupeau de brebis BMC conduit en agriculture biologique. <br>
-            Deux élevages complémentaires unies par une même exigence : <br>
-            la qualité et la saveur de nos produits.
-        </p>
-        <a href="#" class="cta-button">DÉCOUVRIR NOS PRODUITS</a>
-    </section>
 
-    <section class="product-stars">
-        <h2 class="section-title">Nos Stars du Goût</h2>
-        <div class="product-grid">
-            <div class="item-card">
-                <div class="circle-img"><img src="biquette.png" alt="Chèvre"></div>
-                <div class="item-details">
-                    <h3>YAOURTS & GLACES</h3>
-                    <p>on vous prévient, nos produits vous rendrons accros !</p>
-                    <p class="highlight">100% lait de la ferme</p>
-                </div>
-            </div>
-            <div class="item-card">
-                <div class="circle-img"><img src="brebis.png" alt="Brebis"></div>
-                <div class="item-details">
-                    <h3>NOS CAISSETTES</h3>
-                    <p>Acheter notre viande <strong>BIO</strong>, c'est savourer une viande de qualité produite à la ferme</p>
-                </div>
-            </div>
+    <section class="hero-section">
+        <div class="container">
+            <p class="description">
+                Nous élevons avec passion un troupeau de chèvres ainsi <br>
+                qu'un troupeau de brebis BMC conduit en agriculture biologique. <br>
+                Deux élevages complémentaires unies par une même exigence : <br>
+                la qualité et la saveur de nos produits.
+            </p>
+            <a href="#" class="btn-discover">DÉCOUVRIR NOS PRODUITS</a>
         </div>
     </section>
 
-    <footer class="site-footer">
-        <div class="footer-container">
-            <img src="maps.png" alt="Plan" class="footer-map">
-            <div class="footer-info">
-                <div class="footer-brand">
-                    <img src="logofermeauxsabotsfendus.png" alt="Logo">
-                    <h2>La Ferme aux <br> Sabots Fendus</h2>
+    <h2 class="main-title">Nos Stars du Goût</h2>
+    
+    <div class="stars-container">
+        <div class="product-card">
+            <div class="image-circle">
+                <img src="biquette.png" alt="Yaourts et Glaces">
+            </div>
+            <div class="card-content">
+                <h3>YAOURTS & GLACES</h3>
+                <p>on vous prévient, nos produits vous rendrons accros !</p>
+                <p class="highlight">100% lait de la ferme</p>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="image-circle">
+                <img src="brebis.png" alt="Nos caissettes">
+            </div>
+            <div class="card-content">
+                <h3>NOS CAISSETTES</h3>
+                <p>Acheter notre viande <strong>BIO</strong>, c'est savourer une viande de qualité produite à la ferme</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer-fixe">
+        <div class="conteneur">
+            <img src="maps.png" alt="Plan d'accès" class="image-map">
+            
+            <div class="infos-droite">
+                <div class="entete-logo">
+                    <img src="logofermeauxsabotsfendus.png" alt="Logo" class="logo">
+                    <h2 class="titre-ferme">La Ferme aux <br> Sabots Fendus</h2>
                 </div>
-                <div class="contact-data">
+                
+                <div class="liste-infos">
                     <h3>Infos pratique</h3>
-                    <div class="data-row"><img src="adresse.png"> <strong>Adresse :</strong></div>
-                    <div class="data-row"><img src="telephone.png"> <strong>Tel :</strong> 06 XX XX XX XX</div>
-                    <div class="data-row">
-                        <img src="horaire.png">
-                        <span><strong>Horaires :</strong><br>Vente à la ferme : le mardi et le jeudi</span>
+                    <div class="ligne">
+                        <img src="adresse.png" class="icone">
+                        <p><strong>Adresse :</strong> [Ton Adresse ici]</p>
+                    </div>
+                    <div class="ligne">
+                        <img src="telephone.png" class="icone">
+                        <p><strong>Tel :</strong> 06 XX XX XX XX</p>
+                    </div>
+                    <div class="ligne">
+                        <img src="horaire.png" class="icone">
+                        <p><strong>Horaires :</strong><br>Vente à la ferme : le mardi et le jeudi</p>
                     </div>
                 </div>
             </div>
