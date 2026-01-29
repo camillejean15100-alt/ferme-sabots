@@ -19,7 +19,7 @@ body { font-family: 'Montserrat Alternates', sans-serif; overflow-x: hidden; }
 
 /* BANNER */
 .banner { position: relative; width: 100%; }
-.banner img { width: 500px; display: block; }
+.banner img { width: 70%; display: block; }
 .texte-superpose {
     position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
     color: white; font-family: 'Fraunces', serif; font-size: 3rem; text-align: center; width: 80%;
