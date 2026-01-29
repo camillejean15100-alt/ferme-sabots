@@ -1,52 +1,69 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>La Ferme aux Sabots Fendus</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat+Alternates:wght@400;500;600&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header class="header">
-        <div class="logo-box">
+    <header class="site-header">
+        <div class="logo-container">
             <img src="logofermeauxsabotsfendus.png" alt="Logo">
-            <div class="logo-text">La Ferme aux<br>Sabots Fendus</div>
+            <h1 class="logo-text">La Ferme aux<br>Sabots Fendus</h1>
         </div>
-        <nav class="nav">
-            <a href="#">Accueil</a> | <a href="#">L'Élevage</a> | <a href="#">Boutique</a> | <a href="#">Nous Contacter</a>
+
+        <nav class="nav-links">
+            <a href="#">Accueil</a>
+            <span class="barre">|</span>
+            <a href="#">L'Élevage</a>
+            <span class="barre">|</span>
+            <a href="#">Boutique</a>
+            <span class="barre">|</span>
+            <a href="#">Nous Contacter</a>
         </nav>
     </header>
 
     <div class="banner">
-        <div class="wave-box">
-            <img src="header.png" alt="Bannière">
-            <div class="banner-title">
-                "Bienvenue à la<br>Ferme aux Sabots Fendus !"
-            </div>
+        <img src="header.png" alt="Bannière">
+        <div class="texte-superpose">
+            "Bienvenue à la<br>Ferme aux Sabots Fendus !"
         </div>
     </div>
-
-    <section class="intro">
-        <p>Nous élevons avec passion un troupeau de chèvres ainsi<br>
-        qu'un troupeau de brebis BMC conduit en agriculture biologique.<br>
-        Deux élevages complémentaires unis par une même exigence :<br>
-        la qualité et la saveur de nos produits.</p>
-        <a href="#" class="btn-yellow">DÉCOUVRIR NOS PRODUITS</a>
+    
+    <section class="hero-section">
+        <div class="container">
+            <p class="description">
+                Nous élevons avec passion un troupeau de chèvres ainsi <br>
+                qu'un troupeau de brebis BMC conduit en agriculture biologique. <br>
+                Deux élevages complémentaires unies par une même exigence : <br>
+                la qualité et la saveur de nos produits.
+            </p>
+            <a href="#" class="btn-discover">DÉCOUVRIR NOS PRODUITS</a>
+        </div>
     </section>
 
-    <section class="stars">
-        <h2 class="title-green">Nos Stars du Goûts</h2>
-        <div class="cards">
-            <div class="card">
-                <div class="img-circle"><img src="biquette.png"></div>
-                <div class="card-text">
+    <section class="stars-section">
+        <h2 class="main-title">Nos Stars du Goût</h2>
+
+        <div class="stars-container">
+            <div class="product-card">
+                <div class="image-circle">
+                    <img src="biquette.png" alt="Chèvre">
+                </div>
+                <div class="card-content">
                     <h3>YAOURTS & GLACES</h3>
-                    <p>on vous prévient, nos produits vous rendront accros !<br>100% lait de la ferme</p>
+                    <p>on vous prévient, nos produits vous rendrons accros !</p>
+                    <p class="highlight">100% lait de la ferme</p>
                 </div>
             </div>
-            <div class="card">
-                <div class="img-circle"><img src="brebis.png"></div>
-                <div class="card-text">
+
+            <div class="product-card">
+                <div class="image-circle">
+                    <img src="brebis.png" alt="Brebis">
+                </div>
+                <div class="card-content">
                     <h3>NOS CAISSETTES</h3>
                     <p>Acheter notre viande <strong>BIO</strong>, c'est savourer une viande de qualité produite à la ferme</p>
                 </div>
@@ -54,26 +71,42 @@
         </div>
     </section>
 
-    <footer class="footer">
-        <div class="grass-border"></div>
-        <div class="footer-wrap">
-            <img src="maps.png" class="map-img">
-            <div class="footer-info">
-                <div class="footer-head">
-                    <img src="logofermeauxsabotsfendus.png" class="logo-white">
-                    <div>
-                        <h3>La Ferme aux<br>Sabots Fendus</h3>
-                        <p>Infos pratique</p>
-                    </div>
+    <footer class="site-footer">
+        <div class="conteneur">
+            <div class="bloc-gauche">
+                <img src="maps.png" alt="Carte" class="image-map">
+            </div>
+
+            <div class="bloc-droite">
+                <div class="entete-logo">
+                    <img src="logofermeauxsabotsfendus.png" alt="Logo" class="logo">
+                    <h2 class="titre-ferme">La Ferme aux <br> Sabots Fendus</h2>
                 </div>
-                <div class="contact-list">
-                    <div class="item"><img src="adresse.png"><strong>Adresse :</strong></div>
-                    <div class="item"><img src="telephone.png"><strong>Tel :</strong> 06 XX XX XX XX</div>
-                    <div class="item"><img src="horaire.png"><strong>Horaires :</strong><br>Vente à la ferme : le mardi et le jeudi</div>
+
+                <div class="liste-infos">
+                    <h3>Infos pratique</h3>
+                    
+                    <div class="ligne">
+                        <img src="adresse.png" class="icone">
+                        <p><strong>Adresse :</strong></p>
+                    </div>
+
+                    <div class="ligne">
+                        <img src="telephone.png" class="icone">
+                        <p><strong>Tel :</strong> 06 XX XX XX XX</p>
+                    </div>
+
+                    <div class="ligne">
+                        <img src="horaire.png" class="icone">
+                        <div class="texte-horaire">
+                            <p><strong>Horaires :</strong></p>
+                            <p>Vente à la ferme : <br> le mardi et le jeudi</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </footer>
-
+    
 </body>
 </html>
