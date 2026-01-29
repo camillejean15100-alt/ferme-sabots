@@ -21,19 +21,15 @@ body { font-family: 'Montserrat Alternates', sans-serif; overflow-x: hidden; }
 .banner {
     position: relative;
     width: 100%;
-    /* overflow: hidden est indispensable pour que la vague ne dépasse pas du bloc */
-    overflow: hidden; 
 }
 
 .banner img {
     width: 100%;
-    /* MODIFIE LA VALEUR CI-DESSOUS (ex: 500px, 600px, etc.) */
-    height: 500px; 
+    /* TU MODIFIES LA HAUTEUR ICI SELON TON BESOIN */
+    height: 400px; 
     display: block;
-    /* Empêche de déformer l'image et la vague */
-    object-fit: cover; 
-    /* Aligne l'image vers le haut pour être sûr que la vague en bas soit bien cadrée */
-    object-position: center top; 
+    /* Force l'image entière (vague comprise) dans la hauteur choisie */
+    object-fit: fill; 
 }
 
 .texte-superpose {
