@@ -1,70 +1,66 @@
-/* --- CONFIG GLOBALE --- */
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Montserrat Alternates', sans-serif; overflow-x: hidden; width: 100%; }
+body { font-family: 'Montserrat Alternates', sans-serif; color: #709241; overflow-x: hidden; }
 
-/* --- HEADER --- */
-.site-header { display: flex; justify-content: space-between; align-items: center; padding: 15px 5%; }
-.logo { display: flex; align-items: center; gap: 12px; }
-.logo img { width: 50px; }
-.logo-text { font-family: 'Fraunces', serif; color: #709241; font-size: 1.1rem; line-height: 1.1; }
-.nav { color: #709241; font-size: 0.85rem; }
+/* HEADER */
+.header { display: flex; justify-content: space-between; align-items: center; padding: 20px 5%; }
+.logo-group { display: flex; align-items: center; gap: 15px; }
+.logo-group img { width: 60px; }
+.logo-text { font-family: 'Fraunces', serif; line-height: 1.1; font-size: 1.2rem; }
+.nav { font-size: 0.9rem; }
 .nav a { text-decoration: none; color: inherit; margin: 0 5px; }
 
-/* --- BANNIERE VAGUE (image_2801d1) --- */
-.banner { position: relative; width: 100%; line-height: 0; }
-.wave-img { width: 100%; height: auto; display: block; }
-.banner-text {
-    position: absolute; top: 45%; left: 50%; transform: translate(-50%, -50%);
-    color: white; font-family: 'Fraunces', serif; font-size: clamp(1rem, 4vw, 2.5rem);
-    text-align: center; width: 80%; text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+/* BANNIERE VAGUE */
+.vague-conteneur { position: relative; width: 100%; height: 450px; overflow: hidden; clip-path: ellipse(120% 100% at 50% 0%); }
+.vague-conteneur img { width: 100%; height: 100%; object-fit: cover; }
+.titre-banniere {
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    color: white; font-family: 'Fraunces', serif; font-size: 3rem; text-align: center;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.4); width: 100%;
 }
 
-/* --- HERO --- */
-.hero { text-align: center; padding: 50px 10%; color: #999; line-height: 1.6; }
-.btn-yellow { 
-    display: inline-block; background: #F1C06D; color: white; padding: 15px 35px; 
-    border-radius: 12px; text-decoration: none; font-weight: bold; margin-top: 30px; 
+/* PRESENTATION */
+.presentation { text-align: center; padding: 60px 10%; color: #999; line-height: 1.5; }
+.bouton-jaune { 
+    display: inline-block; background: #F1C06D; color: white; padding: 15px 40px; 
+    border-radius: 10px; text-decoration: none; font-weight: bold; margin-top: 30px; 
 }
 
-/* --- CARTES (ZÉRO BORDURE) --- */
-.section-title { color: #709241; font-family: 'Fraunces', serif; text-align: center; margin: 30px 0; font-size: 2rem; }
-.cards-container { display: flex; justify-content: center; gap: 30px; padding: 0 5% 80px; flex-wrap: wrap; }
-.card { 
-    background: #F9F7EF; border-radius: 35px; padding: 25px; width: 100%; max-width: 480px;
-    display: flex; align-items: center; box-shadow: 4px 4px 15px rgba(0,0,0,0.05);
+/* PRODUITS */
+.titre-vert { text-align: center; font-family: 'Fraunces', serif; font-size: 2.5rem; margin-bottom: 40px; }
+.grille-cartes { display: flex; justify-content: center; gap: 40px; padding-bottom: 100px; flex-wrap: wrap; }
+.carte-produit { 
+    background: #F9F7EF; border-radius: 40px; padding: 30px; width: 500px;
+    display: flex; align-items: center; box-shadow: 5px 5px 15px rgba(0,0,0,0.05);
 }
-.card-img { 
-    width: 140px; height: 140px; border-radius: 50%; overflow: hidden; 
-    flex-shrink: 0; border: none !important; /* AUCUNE BORDURE ICI */
-}
-.card-img img { width: 100%; height: 100%; object-fit: cover; }
-.card-info { margin-left: 20px; color: #777; font-size: 0.9rem; }
-.card-info h3 { color: #8cb342; margin-bottom: 5px; }
+.cercle-image { width: 150px; height: 150px; border-radius: 50%; overflow: hidden; flex-shrink: 0; border: none !important; }
+.cercle-image img { width: 100%; height: 100%; object-fit: cover; }
+.info-carte { margin-left: 20px; color: #777; font-size: 0.95rem; }
+.info-carte h3 { color: #8cb342; margin-bottom: 5px; }
 
-/* --- FOOTER HERBE (image_2810ed) --- */
+/* FOOTER HERBE & ICONS FRANCAIS */
 .footer {
-    background-color: #8CC63F;
-    background-image: url('herbe.png');
-    background-repeat: repeat-x;
-    background-position: top center;
-    background-size: auto 75px; /* Herbe calée en haut */
-    padding: 100px 5% 40px; color: white; margin-top: 50px;
+    background-color: #8CC63F; position: relative;
+    padding: 80px 5% 60px; color: white; margin-top: 60px;
 }
-.footer-wrap { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; gap: 50px; }
-.footer-map { width: 45%; border-radius: 20px; }
-.footer-logo-row { display: flex; align-items: center; gap: 15px; margin-bottom: 25px; }
-.footer-logo-row img { width: 65px; }
-.contact-items { list-style: none; }
-.contact-items li { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; }
-.contact-items img { width: 18px; margin-top: 3px; }
+.herbe-divider {
+    position: absolute; top: -45px; left: 0; width: 100%; height: 50px;
+    background-image: url('herbe.png'); background-repeat: repeat-x; background-position: bottom;
+}
+.footer-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; gap: 60px; }
+.footer-carte img { width: 420px; border-radius: 15px; }
+.footer-entete { display: flex; align-items: center; gap: 15px; margin-bottom: 25px; }
+.footer-entete img { width: 75px; }
+.footer-titres h3 { font-family: 'Fraunces', serif; font-size: 1.7rem; line-height: 1.1; }
+.contact-liste { display: flex; flex-direction: column; gap: 12px; }
+.contact-ligne { display: flex; align-items: flex-start; gap: 10px; }
+.icon-footer { width: 22px; height: auto; margin-top: 4px; }
 
-/* --- MOBILE RESPONSIVE --- */
-@media (max-width: 800px) {
-    .nav { display: none; } /* Cache le menu texte sur petit mobile */
-    .footer-wrap { flex-direction: column; text-align: center; }
-    .footer-map { width: 100%; }
-    .footer-logo-row { justify-content: center; }
-    .contact-items li { justify-content: center; text-align: left; }
-    .card { flex-direction: column; text-align: center; }
-    .card-info { margin-left: 0; margin-top: 15px; }
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .footer-inner { flex-direction: column; text-align: center; }
+    .footer-carte img { width: 100%; }
+    .footer-entete { justify-content: center; }
+    .contact-ligne { justify-content: center; text-align: left; }
+    .carte-produit { flex-direction: column; text-align: center; }
+    .info-carte { margin-left: 0; margin-top: 20px; }
 }
